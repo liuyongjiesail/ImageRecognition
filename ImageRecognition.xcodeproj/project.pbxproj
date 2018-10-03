@@ -24,7 +24,15 @@
 		EDB75BD321647B6C00FFA793 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BD121647B6C00FFA793 /* libGDTMobSDK.a */; };
 		EDB75BD721647CB700FFA793 /* UIButton+XRBigFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BD621647CB700FFA793 /* UIButton+XRBigFrame.m */; };
 		EDB75BDB2164973E00FFA793 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BDA2164973E00FFA793 /* MBProgressHUD+MJ.m */; };
-		EDDF26B9215F647300D7A3E3 /* XRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26B8215F647300D7A3E3 /* XRHomeViewController.m */; };
+		EDB75BED216504B600FFA793 /* XRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BEC216504B600FFA793 /* XRSettingViewController.m */; };
+		EDB75BF12165108500FFA793 /* NSBundle+XLAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BF02165108500FFA793 /* NSBundle+XLAppInfo.m */; };
+		EDB75BF82165132400FFA793 /* UIApplication+XRAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BF72165132400FFA793 /* UIApplication+XRAppStore.m */; };
+		EDB75BFC2165159500FFA793 /* XRRecognitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BFB2165159500FFA793 /* XRRecognitionManager.m */; };
+		EDB75BFF216515A400FFA793 /* XRSettingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BFE216515A400FFA793 /* XRSettingManager.m */; };
+		EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C01216526F200FFA793 /* UIViewController+Alert.m */; };
+		EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C05216527D100FFA793 /* UIViewController+Find.m */; };
+		EDB75C0921653CF500FFA793 /* user_protocol.html in Resources */ = {isa = PBXBuildFile; fileRef = EDB75C0821653CF500FFA793 /* user_protocol.html */; };
+		EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */; };
 		EDDF26C421607A7300D7A3E3 /* XRVendorServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */; };
 		EDDF26C8216081D000D7A3E3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C7216081D000D7A3E3 /* AdSupport.framework */; };
 		EDDF26CA216081E100D7A3E3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C9216081E100D7A3E3 /* CoreTelephony.framework */; };
@@ -50,7 +58,6 @@
 		EDE56DA3215CD4EA009FD8D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDE56DA2215CD4EA009FD8D5 /* Assets.xcassets */; };
 		EDE56DA9215CD4EA009FD8D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE56DA8215CD4EA009FD8D5 /* main.m */; };
 		EDE56DBB215CDBEF009FD8D5 /* libTalkingData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE56DBA215CDBEE009FD8D5 /* libTalkingData.a */; };
-		EDE56DBF215CF2EA009FD8D5 /* XRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE56DBE215CF2E9009FD8D5 /* XRMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,8 +103,23 @@
 		EDB75BD621647CB700FFA793 /* UIButton+XRBigFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XRBigFrame.m"; sourceTree = "<group>"; };
 		EDB75BD92164973E00FFA793 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		EDB75BDA2164973E00FFA793 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
-		EDDF26B7215F647300D7A3E3 /* XRHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRHomeViewController.h; sourceTree = "<group>"; };
-		EDDF26B8215F647300D7A3E3 /* XRHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRHomeViewController.m; sourceTree = "<group>"; };
+		EDB75BEB216504B600FFA793 /* XRSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSettingViewController.h; sourceTree = "<group>"; };
+		EDB75BEC216504B600FFA793 /* XRSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSettingViewController.m; sourceTree = "<group>"; };
+		EDB75BEF2165108500FFA793 /* NSBundle+XLAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+XLAppInfo.h"; sourceTree = "<group>"; };
+		EDB75BF02165108500FFA793 /* NSBundle+XLAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+XLAppInfo.m"; sourceTree = "<group>"; };
+		EDB75BF62165132400FFA793 /* UIApplication+XRAppStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+XRAppStore.h"; sourceTree = "<group>"; };
+		EDB75BF72165132400FFA793 /* UIApplication+XRAppStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+XRAppStore.m"; sourceTree = "<group>"; };
+		EDB75BFA2165159500FFA793 /* XRRecognitionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRRecognitionManager.h; sourceTree = "<group>"; };
+		EDB75BFB2165159500FFA793 /* XRRecognitionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRRecognitionManager.m; sourceTree = "<group>"; };
+		EDB75BFD216515A400FFA793 /* XRSettingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRSettingManager.h; sourceTree = "<group>"; };
+		EDB75BFE216515A400FFA793 /* XRSettingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRSettingManager.m; sourceTree = "<group>"; };
+		EDB75C01216526F200FFA793 /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
+		EDB75C02216526F200FFA793 /* UIViewController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
+		EDB75C04216527D100FFA793 /* UIViewController+Find.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Find.h"; sourceTree = "<group>"; };
+		EDB75C05216527D100FFA793 /* UIViewController+Find.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Find.m"; sourceTree = "<group>"; };
+		EDB75C0821653CF500FFA793 /* user_protocol.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = user_protocol.html; sourceTree = "<group>"; };
+		EDDF26B7215F647300D7A3E3 /* XRTodayHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRTodayHistoryViewController.h; sourceTree = "<group>"; };
+		EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRTodayHistoryViewController.m; sourceTree = "<group>"; };
 		EDDF26BA215F64AF00D7A3E3 /* XRAppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRAppMacro.h; sourceTree = "<group>"; };
 		EDDF26BB215F652D00D7A3E3 /* XRUserDefaultsConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRUserDefaultsConst.h; sourceTree = "<group>"; };
 		EDDF26BC215F653D00D7A3E3 /* XRNetworkConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRNetworkConst.h; sourceTree = "<group>"; };
@@ -151,8 +173,6 @@
 		EDE56DB9215CDBEE009FD8D5 /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
 		EDE56DBA215CDBEE009FD8D5 /* libTalkingData.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingData.a; sourceTree = "<group>"; };
 		EDE56DBC215CDD53009FD8D5 /* XRAppConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRAppConst.h; sourceTree = "<group>"; };
-		EDE56DBD215CF2E9009FD8D5 /* XRMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRMainViewController.h; sourceTree = "<group>"; };
-		EDE56DBE215CF2E9009FD8D5 /* XRMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRMainViewController.m; sourceTree = "<group>"; };
 		EDE56DC8215DBBCC009FD8D5 /* ImageRecognition-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageRecognition-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -302,7 +322,45 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		EDDF26B6215F645C00D7A3E3 /* Home */ = {
+		EDB75BEA216504B600FFA793 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				EDB75BEB216504B600FFA793 /* XRSettingViewController.h */,
+				EDB75BEC216504B600FFA793 /* XRSettingViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		EDB75BEE2165108500FFA793 /* NSBundle */ = {
+			isa = PBXGroup;
+			children = (
+				EDB75BEF2165108500FFA793 /* NSBundle+XLAppInfo.h */,
+				EDB75BF02165108500FFA793 /* NSBundle+XLAppInfo.m */,
+			);
+			path = NSBundle;
+			sourceTree = "<group>";
+		};
+		EDB75BF2216510AF00FFA793 /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				EDB75BF62165132400FFA793 /* UIApplication+XRAppStore.h */,
+				EDB75BF72165132400FFA793 /* UIApplication+XRAppStore.m */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		EDB75C00216526DE00FFA793 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EDB75C04216527D100FFA793 /* UIViewController+Find.h */,
+				EDB75C05216527D100FFA793 /* UIViewController+Find.m */,
+				EDB75C02216526F200FFA793 /* UIViewController+Alert.h */,
+				EDB75C01216526F200FFA793 /* UIViewController+Alert.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		EDDF26B6215F645C00D7A3E3 /* History */ = {
 			isa = PBXGroup;
 			children = (
 				EDDF26BD215FA72400D7A3E3 /* Controller */,
@@ -310,14 +368,14 @@
 				EDDF26BF215FA73A00D7A3E3 /* Model */,
 				EDDF26BE215FA73100D7A3E3 /* View */,
 			);
-			path = Home;
+			path = History;
 			sourceTree = "<group>";
 		};
 		EDDF26BD215FA72400D7A3E3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				EDDF26B7215F647300D7A3E3 /* XRHomeViewController.h */,
-				EDDF26B8215F647300D7A3E3 /* XRHomeViewController.m */,
+				EDDF26B7215F647300D7A3E3 /* XRTodayHistoryViewController.h */,
+				EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */,
 				EDDF26EC2160C16D00D7A3E3 /* XREventDetailViewController.h */,
 				EDDF26ED2160C16D00D7A3E3 /* XREventDetailViewController.m */,
 			);
@@ -356,6 +414,10 @@
 			children = (
 				EDDF26C221607A7300D7A3E3 /* XRVendorServiceManager.h */,
 				EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */,
+				EDB75BFA2165159500FFA793 /* XRRecognitionManager.h */,
+				EDB75BFB2165159500FFA793 /* XRRecognitionManager.m */,
+				EDB75BFD216515A400FFA793 /* XRSettingManager.h */,
+				EDB75BFE216515A400FFA793 /* XRSettingManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -364,12 +426,15 @@
 			isa = PBXGroup;
 			children = (
 				EDDF26D62160927500D7A3E3 /* XRCategory.h */,
+				EDB75C00216526DE00FFA793 /* UIViewController */,
+				EDB75BF2216510AF00FFA793 /* UIApplication */,
+				EDB75BEE2165108500FFA793 /* NSBundle */,
+				EDDF26DD2160A6FF00D7A3E3 /* NSDate */,
 				EDB75BD82164973E00FFA793 /* MBProgressHUD */,
 				EDB75BD421647CA400FFA793 /* UIButton */,
 				EDB75B7C2162256300FFA793 /* UIView */,
 				EDDF26FE2160CFAD00D7A3E3 /* UIColor */,
 				EDDF26FA2160CE8800D7A3E3 /* UILabel */,
-				EDDF26DD2160A6FF00D7A3E3 /* NSDate */,
 				EDDF26D72160927E00D7A3E3 /* UITableView */,
 			);
 			path = Category;
@@ -504,6 +569,7 @@
 			isa = PBXGroup;
 			children = (
 				EDE56DA2215CD4EA009FD8D5 /* Assets.xcassets */,
+				EDB75C0821653CF500FFA793 /* user_protocol.html */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -526,10 +592,9 @@
 			isa = PBXGroup;
 			children = (
 				EDDF26F02160CB6700D7A3E3 /* Base */,
-				EDDF26B6215F645C00D7A3E3 /* Home */,
-				EDE56DC1215CF316009FD8D5 /* Feed */,
-				EDE56DB7215CD8D7009FD8D5 /* Main */,
+				EDDF26B6215F645C00D7A3E3 /* History */,
 				EDE56DC0215CF2FB009FD8D5 /* Recognition */,
+				EDB75BEA216504B600FFA793 /* Setting */,
 				EDB75B962163C41400FFA793 /* WebView */,
 			);
 			path = Module;
@@ -574,15 +639,6 @@
 			path = Vendor;
 			sourceTree = "<group>";
 		};
-		EDE56DB7215CD8D7009FD8D5 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				EDE56DBD215CF2E9009FD8D5 /* XRMainViewController.h */,
-				EDE56DBE215CF2E9009FD8D5 /* XRMainViewController.m */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		EDE56DB8215CDBDA009FD8D5 /* TalkingData */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,18 +651,11 @@
 		EDE56DC0215CF2FB009FD8D5 /* Recognition */ = {
 			isa = PBXGroup;
 			children = (
-				EDB75B892163416900FFA793 /* Model */,
 				EDB75B742162246000FFA793 /* Controller */,
+				EDB75B892163416900FFA793 /* Model */,
 				EDB75B752162246C00FFA793 /* View */,
 			);
 			path = Recognition;
-			sourceTree = "<group>";
-		};
-		EDE56DC1215CF316009FD8D5 /* Feed */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Feed;
 			sourceTree = "<group>";
 		};
 		FBDAFE211613956B50F982C2 /* Frameworks */ = {
@@ -691,6 +740,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDE56DA3215CD4EA009FD8D5 /* Assets.xcassets in Resources */,
+				EDB75C0921653CF500FFA793 /* user_protocol.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,21 +818,27 @@
 				EDB75B7F2162297900FFA793 /* UIView+Frame.m in Sources */,
 				EDB75B782162248000FFA793 /* XRRecognitionView.m in Sources */,
 				EDB75B95216364CA00FFA793 /* XRCorrelationResultCell.m in Sources */,
+				EDB75BF12165108500FFA793 /* NSBundle+XLAppInfo.m in Sources */,
 				EDB75BDB2164973E00FFA793 /* MBProgressHUD+MJ.m in Sources */,
 				EDDF26EB2160BD0900D7A3E3 /* XRHistoryEventModel.m in Sources */,
+				EDB75BFC2165159500FFA793 /* XRRecognitionManager.m in Sources */,
 				EDE56D9B215CD4E8009FD8D5 /* AppDelegate.m in Sources */,
 				EDB75B8421630A5B00FFA793 /* XRBaiduYunApi.m in Sources */,
 				EDDF26E42160AE9600D7A3E3 /* XRNetworkManager.m in Sources */,
+				EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */,
 				EDDF27012160CFBE00D7A3E3 /* UIColor+XRString.m in Sources */,
+				EDB75BED216504B600FFA793 /* XRSettingViewController.m in Sources */,
 				EDB75B8C216341AA00FFA793 /* XRIdentifyResultsModel.m in Sources */,
 				EDDF270921621A3600D7A3E3 /* AVCaptureManager.m in Sources */,
 				EDDF26EE2160C16D00D7A3E3 /* XREventDetailViewController.m in Sources */,
-				EDE56DBF215CF2EA009FD8D5 /* XRMainViewController.m in Sources */,
+				EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */,
+				EDB75BFF216515A400FFA793 /* XRSettingManager.m in Sources */,
 				EDB75B992163C43700FFA793 /* XRWebViewController.m in Sources */,
 				EDB75B8F2163459800FFA793 /* XRRecognitionListViewController.m in Sources */,
 				EDDF26F32160CB8500D7A3E3 /* XRBaseTableViewCell.m in Sources */,
 				EDDF26F62160CDCD00D7A3E3 /* XREventDetailContentCell.m in Sources */,
 				EDDF26FD2160CF2900D7A3E3 /* UILabel+XRInitialize.m in Sources */,
+				EDB75BF82165132400FFA793 /* UIApplication+XRAppStore.m in Sources */,
 				EDB75BA821645C2200FFA793 /* XRGDTBannerApi.m in Sources */,
 				EDB75B922163474400FFA793 /* XRBestResultCell.m in Sources */,
 				EDDF26DA216092C400D7A3E3 /* UITableView+XRRegister.m in Sources */,
@@ -791,7 +847,7 @@
 				EDB75BD721647CB700FFA793 /* UIButton+XRBigFrame.m in Sources */,
 				EDDF26F92160CDE300D7A3E3 /* XREventDetailImageCell.m in Sources */,
 				EDDF26E82160B33300D7A3E3 /* XRJuHeApi.m in Sources */,
-				EDDF26B9215F647300D7A3E3 /* XRHomeViewController.m in Sources */,
+				EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -923,7 +979,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ImageRecognition/Supporting Files/ImageRecognition-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ImageRecognition/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
@@ -949,7 +1008,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ImageRecognition/Supporting Files/ImageRecognition-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ImageRecognition/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",

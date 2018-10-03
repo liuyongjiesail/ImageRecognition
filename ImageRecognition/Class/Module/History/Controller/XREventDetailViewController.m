@@ -68,7 +68,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return [self.tableView fd_heightForCellWithIdentifier:NSStringFromClass(XREventDetailContentCell.class)  configuration:^(XREventDetailContentCell *cell) {
+        return [self.tableView fd_heightForCellWithIdentifier:NSStringFromClass(XREventDetailContentCell.class) cacheByIndexPath:indexPath configuration:^(XREventDetailContentCell *cell) {
             [cell configModelData:self.eventModel];
         }];
     } else {

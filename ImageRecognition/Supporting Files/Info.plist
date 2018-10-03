@@ -20,6 +20,10 @@
 	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
 	<string>100</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>zh_CN</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -27,8 +31,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-    <key>NSCameraUsageDescription</key>
-    <string>摄像头权限</string>
+	<key>NSCameraUsageDescription</key>
+	<string>拍拍识图需要您的同意才能访问相机</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>拍拍识图需要您的同意才能访问相册</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -10,14 +10,16 @@
 #import "XRRecognitionView.h"
 #import "AVCaptureManager.h"
 #import "XRBaiduYunApi.h"
-#import "XRHomeViewController.h"
+#import "XRTodayHistoryViewController.h"
 #import "XRIdentifyResultsModel.h"
 #import "XRRecognitionListViewController.h"
+#import "XRSettingViewController.h"
+#import <Photos/Photos.h>
 
-@interface XRRecognitionViewController () <XRRecognitionViewDelegate>
+@interface XRRecognitionViewController () <XRRecognitionViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @property (strong, nonatomic) AVCaptureManager *sessionManager;
-@property (strong, nonatomic) XRRecognitionView *shootView;
+@property (strong, nonatomic) XRRecognitionView *recognitionView;
 
 @property (strong, nonatomic) UIImage *tempImage;
 
@@ -52,14 +54,18 @@
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"today_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(leftBarButtonItemAction)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(leftBarButtonItemAction)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(settingAction)];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     
 }
 
 - (void)leftBarButtonItemAction {
-    [self showViewController:[XRHomeViewController new] sender:nil];
+    [self showViewController:[XRTodayHistoryViewController new] sender:nil];
+}
+
+- (void)settingAction {
+    [self showViewController:[XRSettingViewController new] sender:nil];
 }
 
 /**
@@ -72,7 +78,7 @@
         [self.sessionManager captureSessionPreviewLayer:^(AVCaptureVideoPreviewLayer *previewLayer) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.view.layer addSublayer:previewLayer];
-                [self.view bringSubviewToFront:self.shootView];
+                [self.view bringSubviewToFront:self.recognitionView];
                 //开始捕获
                 [self.sessionManager startRunning];
 
@@ -81,9 +87,9 @@
     });
     
     //自定义图层
-    self.shootView = [[XRRecognitionView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.shootView.delegate = self;
-    [self.view addSubview:self.shootView];
+    self.recognitionView = [[XRRecognitionView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.recognitionView.delegate = self;
+    [self.view addSubview:self.recognitionView];
     
 }
 
@@ -91,25 +97,34 @@
 
 - (void)recognitionAction:(UIImage *)image {
     
-    [MBProgressHUD showMessage:@"识别中..." toView:self.view];
-    [XRBaiduYunApi recognitionImage:image classify:self.shootView.imageClassifyURL success:^(id responseDict) {
-        [MBProgressHUD hideHUDForView:self.view];
+    [MBProgressHUD showMessage:@"识别中..."];
+    [XRBaiduYunApi recognitionImage:image classify:self.recognitionView.imageClassifyURL success:^(id responseDict) {
+        [MBProgressHUD hideHUD];
         NSMutableArray<XRIdentifyResultsModel *> *dataArray = [NSArray yy_modelArrayWithClass:XRIdentifyResultsModel.class json:responseDict[@"result"]].mutableCopy;
         
-        if (dataArray.count == 1 && [dataArray.firstObject.name hasPrefix:@"非"]) {
-            [MBProgressHUD showError:[NSString stringWithFormat:@"该物体%@，请选择其他类别试试看！", dataArray.firstObject.name] time:3];
+        if (dataArray.count == 0 || (dataArray.count == 1 && [dataArray.firstObject.name hasPrefix:@"非"])) {
+            [MBProgressHUD showError:[NSString stringWithFormat:@"该物体不是%@，请选择其他类别试试看！", self.recognitionView.imageClassifyString] time:3];
             return;
         }
         
         XRRecognitionListViewController *listVC = [XRRecognitionListViewController new];
-        listVC.title = [NSString stringWithFormat:@"%@ - AI 深度识别", self.shootView.imageClassifyString];
+        listVC.title = [NSString stringWithFormat:@"%@ - AI 深度识别", self.recognitionView.imageClassifyString];
         listVC.dataArray = dataArray;
-        [self showViewController:listVC sender:nil];
+        [[UIViewController currentViewController] showViewController:listVC sender:nil];
         
     } failure:^(NSInteger errorCode) {
-        [MBProgressHUD hideHUDForView:self.view];
+        [MBProgressHUD hideHUD];
         [MBProgressHUD showError:@"识别失败"];
     }];
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info {
+    
+    UIImage *resultImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    self.tempImage = resultImage;
+    [self recognitionAction:resultImage];
+    
 }
 
 #pragma mark - ShootViewDelegateAction
@@ -122,10 +137,23 @@
 }
 
 /**
- 关闭
+ 相册
  */
 - (void)photosAction {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+         dispatch_async(dispatch_get_main_queue(),^{
+            if (status != PHAuthorizationStatusAuthorized) {
+                [self showAlertWithTitle:@"相册访问权限关闭了" message:@"请前往iPhone的“设置-隐私-照片”中打开拍拍识图的相册访问权限" actionTitles:@[@"好"] actionHandler:nil];
+                return;
+            }
+             UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];
+             pickerController.sourceType =  UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+             pickerController.delegate = self;
+             [self presentViewController:pickerController animated:YES completion:nil];
+        });
+     }];
+    
 }
 
 /**
@@ -140,14 +168,17 @@
  */
 - (void)shootAction {
     
-    [self.sessionManager shootImage:^(UIImage *image) {
-        [self.shootView shootComplete];
-        [self.sessionManager stopRunning];
-        self.tempImage = image;
-        
-        [self recognitionAction:image];
-        
-    }];
+    if ([self.sessionManager isCanUseCamera]) {
+        [self.sessionManager shootImage:^(UIImage *image) {
+            [self.recognitionView shootComplete];
+            [self.sessionManager stopRunning];
+            self.tempImage = image;
+            
+            [self recognitionAction:image];
+            
+        }];
+    }
+
 }
 
 /**

@@ -217,14 +217,13 @@
  @return 是/否
  */
 - (BOOL)isCanUseCamera {
+    
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if (authStatus == AVAuthorizationStatusDenied) {
-        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"请打开相机权限" message:@"设置-隐私-相机" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
-        alertView.tag = 100;
-        [alertView show];
+        [[UIViewController currentViewController] showAlertWithTitle:@"相机访问权限关闭了" message:@"请前往iPhone的“设置-隐私-相机”中打开拍拍识图的相机访问权限" actionTitles:@[@"好"] actionHandler:nil];
         return NO;
     }
-    else{
+    else {
         return YES;
     }
     return YES;

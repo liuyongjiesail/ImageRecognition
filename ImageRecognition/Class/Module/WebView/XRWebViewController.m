@@ -27,10 +27,16 @@
 
     [self.view addSubview:self.webView];
     [self.webView.layer addSublayer:self.progressLayer];
-    [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.urlString]]];
-    
+    NSURL *url;
+    if ([self.urlString hasPrefix:@"http"]) {
+        url = [NSURL URLWithString:self.urlString];
+    } else {
+        url = [NSURL fileURLWithPath:self.urlString];
+    }
+    [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
     //添加广告
     [self.bannerApi loadBannerAdView:self];
+    
 }
 
 - (void)dealloc{

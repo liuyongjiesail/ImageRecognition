@@ -9,5 +9,7 @@
 #ifndef XRUserDefaultsConst_h
 #define XRUserDefaultsConst_h
 
+static NSString * const XRUserDefaultsBaiduYunToken       = @"BaiduYun_Token";
+static NSString * const XRUserDefaultsTokenExpirationTime = @"Token_Expiration_Time";
 
 #endif /* XRUserDefaultsConst_h */

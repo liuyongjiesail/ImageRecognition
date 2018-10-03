@@ -15,5 +15,9 @@
 #import "UILabel+XRInitialize.h"
 #import "UIView+Frame.h"
 #import "MBProgressHUD+MJ.h"
+#import "UIApplication+XRAppStore.h"
+#import "UIViewController+Alert.h"
+#import "UIViewController+Find.h"
+#import "NSBundle+XLAppInfo.h"
 
 #endif /* XRCategory_h */

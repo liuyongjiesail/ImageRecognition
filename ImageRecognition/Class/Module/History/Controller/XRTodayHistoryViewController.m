@@ -6,13 +6,13 @@
 //  Copyright © 2018 刘永杰. All rights reserved.
 //
 
-#import "XRHomeViewController.h"
+#import "XRTodayHistoryViewController.h"
 #import "XRJuHeApi.h"
 #import "XRHistoryEventModel.h"
 #import "XREventDetailViewController.h"
 #import "XRRecognitionViewController.h"
 
-@interface XRHomeViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface XRTodayHistoryViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
 
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation XRHomeViewController
+@implementation XRTodayHistoryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

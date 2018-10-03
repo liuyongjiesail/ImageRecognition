@@ -9,6 +9,8 @@
 #ifndef XRAppConst_h
 #define XRAppConst_h
 
+static NSString * const XRApplicationAppID     = @"1381390129";
+
 static NSString * const XRBaiduYunAppID        = @"14300809";
 static NSString * const XRBaiduYunAPIKey       = @"gOmMHGFsZy9XjgnFkj3RaLbY";
 static NSString * const XRBaiduYunSecretKey    = @"r5cCjYGEweMRtnbxbv7fzhHqxH36GU8a";

@@ -1,8 +1,8 @@
 //
-//  XRMainViewController.h
+//  XRSettingViewController.h
 //  ImageRecognition
 //
-//  Created by 刘永杰 on 2018/9/27.
+//  Created by 刘永杰 on 2018/10/3.
 //  Copyright © 2018 刘永杰. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XRMainViewController : UITabBarController
+@interface XRSettingViewController : UIViewController
 
 @end
 

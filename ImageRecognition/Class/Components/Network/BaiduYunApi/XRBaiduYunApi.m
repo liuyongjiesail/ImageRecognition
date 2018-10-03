@@ -7,18 +7,22 @@
 //
 
 #import "XRBaiduYunApi.h"
+#import "XRRecognitionManager.h"
 
 @implementation XRBaiduYunApi
 
 + (void)fetchBaiduYunTokenSuccess:(SuccessBlock)success failure:(FailureBlock)failure {
     
-    return;
-    [XRNetworkManager.shared POST:[self tokenURL] parameters:[self tokenRequestDictionary] success:^(id responseDict) {
+    if (XRRecognitionManager.shared.isExpiration) {
         
-        
-    } failure:^(NSInteger errorCode) {
-        
-    }];
+        [XRNetworkManager.shared POST:[self tokenURL] parameters:[self tokenRequestDictionary] success:^(id responseDict) {
+            
+            [XRRecognitionManager.shared setBaiduYunToken:responseDict[@"access_token"] expirationTime:responseDict[@"expires_in"]];
+            
+        } failure:^(NSInteger errorCode) {
+            
+        }];
+    }
 }
 
 + (void)recognitionImage:(UIImage *)image classify:(NSString *)classify success:(SuccessBlock)success failure:(FailureBlock)failure {
@@ -63,7 +67,7 @@
 }
 
 + (NSDictionary *)imageClassifyDictionary:(UIImage *)image {
-    return @{@"access_token" : @"24.f0cca009f21cf4061ca31b8431a804ca.2592000.1541048487.282335-14300809",
+    return @{@"access_token" : XRRecognitionManager.shared.baiduYunToken,
              @"image" :  [[NSString alloc] initWithData:[GTMBase64 encodeData:UIImagePNGRepresentation(image)]  encoding:NSUTF8StringEncoding],
              @"baike_num" : @"6"
              };

@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "XRVendorServiceManager.h"
-#import "XRMainViewController.h"
 #import "XRRecognitionViewController.h"
 
 @interface AppDelegate ()
@@ -34,11 +33,10 @@
     
     RTRootNavigationController *rootNavigation =  [[RTRootNavigationController alloc] initWithRootViewController:[XRRecognitionViewController new]];
     rootNavigation.useSystemBackBarButtonItem = YES;
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
 
     self.window.rootViewController = rootNavigation;
     [self.window makeKeyAndVisible];
-    
-    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     
 }
 
