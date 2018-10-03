@@ -1,0 +1,23 @@
+platform :ios, '8.0'
+use_frameworks!
+
+target 'ImageRecognition' do
+    
+    pod 'AFNetworking'
+    pod 'SDWebImage'
+    pod 'SDWebImage/GIF'
+    pod 'FLAnimatedImage'
+    pod 'YYModel'
+    
+    pod 'GTMBase64'
+    pod 'UICKeyChainStore'
+    
+    pod 'FDFullscreenPopGesture'
+    pod 'MBProgressHUD'
+    pod 'Masonry'
+    pod 'MJRefresh'
+    pod 'UITableView+FDTemplateLayoutCell'
+    pod 'RTRootNavigationController'
+    
+end
+

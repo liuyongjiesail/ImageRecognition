@@ -1,0 +1,29 @@
+//
+//  ImageRecognition-Prefix.pch
+//  ImageRecognition
+//
+//  Created by 刘永杰 on 2018/9/28.
+//  Copyright © 2018 刘永杰. All rights reserved.
+//
+
+#ifndef ImageRecognition_Prefix_pch
+#define ImageRecognition_Prefix_pch
+
+#import <Foundation/Foundation.h>
+
+#import "XRConst.h"
+#import "XRMacro.h"
+#import "XRCategory.h"
+#import "XRNetwork.h"
+
+#import "TalkingData.h"
+#import "AFNetworking.h"
+#import "YYModel.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "Masonry.h"
+#import "GTMBase64.h"
+#import "RTRootNavigationController.h"
+
+#endif /* ImageRecognition_Prefix_pch */
