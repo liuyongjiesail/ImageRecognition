@@ -8,11 +8,15 @@
 
 #import "XRSettingViewController.h"
 #import "XRWebViewController.h"
+#import "XRSettingManager.h"
+#import "XRGDTBannerApi.h"
 
 @interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSArray *dataArray;
+
+@property (strong, nonatomic) XRGDTBannerApi *bannerApi;
 
 @end
 
@@ -26,6 +30,10 @@
     self.dataArray = @[@[@"分享给朋友"], @[@"帮助与反馈", @"去评分"], @[@"福利社", @"精品推荐"], @[@"用户协议", @"关于"]];
     
     [self.view addSubview:self.tableView];
+    
+    //添加广告
+    [self.bannerApi loadBannerAdView:self];
+    
 }
 
 #pragma mark - UITableViewDataSource
@@ -63,6 +71,7 @@
         case 1: {
             switch (indexPath.row) {
                 case 0: {
+                    [XRSettingManager.shared openFeedbackViewController];
                     break;
                 }
                 case 1: {
@@ -113,8 +122,16 @@
         _tableView.sectionHeaderHeight = 20;
         _tableView.sectionFooterHeight = 0;
         _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 20)];
+        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
     }
     return _tableView;
+}
+
+- (XRGDTBannerApi *)bannerApi {
+    if (!_bannerApi) {
+        _bannerApi = [XRGDTBannerApi new];
+    }
+    return _bannerApi;
 }
 
 @end

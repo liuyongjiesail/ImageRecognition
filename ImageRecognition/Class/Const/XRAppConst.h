@@ -23,4 +23,7 @@ static NSString * const XRJuHeAppKey           = @"25cc8fdf2560a96d9227ab2f2aa4a
 static NSString * const XRGDTAppId             = @"1105344611";
 static NSString * const XRGDTBannerPlacementId = @"4090812164690039";
 
+static NSString * const XRAliyunAppKey         = @"25099258";
+static NSString * const XRAliyunAppSecret      = @"da67c96d09e0ee219cce9022a4a61650";
+
 #endif /* XRAppConst_h */

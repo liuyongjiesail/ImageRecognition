@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XRSettingManager : NSObject
 
++ (instancetype)shared;
+
+- (void)openFeedbackViewController;
+
 @end
 
 NS_ASSUME_NONNULL_END

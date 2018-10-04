@@ -32,6 +32,7 @@
 		EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C01216526F200FFA793 /* UIViewController+Alert.m */; };
 		EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C05216527D100FFA793 /* UIViewController+Find.m */; };
 		EDB75C0921653CF500FFA793 /* user_protocol.html in Resources */ = {isa = PBXBuildFile; fileRef = EDB75C0821653CF500FFA793 /* user_protocol.html */; };
+		EDB75C0A2165CF0E00FFA793 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BBB2164789700FFA793 /* libxml2.tbd */; };
 		EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */; };
 		EDDF26C421607A7300D7A3E3 /* XRVendorServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */; };
 		EDDF26C8216081D000D7A3E3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C7216081D000D7A3E3 /* AdSupport.framework */; };
@@ -181,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB75C0A2165CF0E00FFA793 /* libxml2.tbd in Frameworks */,
 				EDB75BAE2164746300FFA793 /* QuartzCore.framework in Frameworks */,
 				EDB75BAC2164744D00FFA793 /* CoreLocation.framework in Frameworks */,
 				EDB75BAA2164742C00FFA793 /* StoreKit.framework in Frameworks */,
@@ -691,6 +693,7 @@
 				EDE56D93215CD4E8009FD8D5 /* Frameworks */,
 				EDE56D94215CD4E8009FD8D5 /* Resources */,
 				A3B4FA193CEE1224780E0125 /* [CP] Embed Pods Frameworks */,
+				753F412B7AB31DB53E61C71D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -763,6 +766,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		753F412B7AB31DB53E61C71D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-resources.sh",
+				"${PODS_ROOT}/AlicloudFeedback/feedback/YWFeedbackBundle.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YWFeedbackBundle.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A3B4FA193CEE1224780E0125 /* [CP] Embed Pods Frameworks */ = {
@@ -987,7 +1008,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/GDTMob",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sail.xrecognition.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1016,7 +1036,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/GDTMob",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sail.xrecognition.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
