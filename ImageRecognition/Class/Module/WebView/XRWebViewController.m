@@ -8,15 +8,12 @@
 
 #import "XRWebViewController.h"
 #import <WebKit/WebKit.h>
-#import "XRGDTBannerApi.h"
 
 @interface XRWebViewController ()<WKUIDelegate,WKNavigationDelegate>
 
 @property (strong, nonatomic) WKWebView *webView;
 @property (strong, nonatomic) CALayer   *progressLayer;
 @property (assign, nonatomic) CGFloat   navigationBarHeight;
-
-@property (strong, nonatomic) XRGDTBannerApi *bannerApi;
 
 @end
 
@@ -34,8 +31,6 @@
         url = [NSURL fileURLWithPath:self.urlString];
     }
     [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:url]];
-    //添加广告
-    [self.bannerApi loadBannerAdView:self];
     
 }
 
@@ -112,13 +107,6 @@
         _progressLayer.backgroundColor = [UIColor colorWithString:COLOR39AF34].CGColor;
     }
     return _progressLayer;
-}
-
-- (XRGDTBannerApi *)bannerApi {
-    if (!_bannerApi) {
-        _bannerApi = [XRGDTBannerApi new];
-    }
-    return _bannerApi;
 }
 
 - (CGFloat)navigationBarHeight {

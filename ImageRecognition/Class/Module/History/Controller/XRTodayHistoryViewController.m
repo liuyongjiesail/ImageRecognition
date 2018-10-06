@@ -30,7 +30,7 @@
     }
     
     [self.view addSubview:self.tableView];
-    self.title = [NSDate wholeToday];
+    self.title = [NSString stringWithFormat:@"历史上%@都发生了什么", [NSDate wholeToday]];
     
     [self fetchToadyOnHistory];
 }

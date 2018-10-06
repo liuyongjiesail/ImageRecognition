@@ -27,7 +27,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"设置";
     
-    self.dataArray = @[@[@"分享给朋友"], @[@"帮助与反馈", @"去评分"], @[@"福利社", @"精品推荐"], @[@"用户协议", @"关于"]];
+    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"福利社", @"精选APP与游戏（推荐）"], @[@"用户协议", @"关于"]];
     
     [self.view addSubview:self.tableView];
     

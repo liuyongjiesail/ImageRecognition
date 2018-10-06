@@ -61,6 +61,8 @@
 - (UIImageView *)contentImageView {
     if (!_contentImageView) {
         _contentImageView = [UIImageView new];
+        _contentImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _contentImageView.layer.masksToBounds = YES;
     }
     return _contentImageView;
 }

@@ -32,13 +32,13 @@
 
 - (void)shareApplicationToFriends {
     //分享的标题
-    NSString *textToShare = [NSString stringWithFormat:@"我在用《%@》认识万物，你来吗？- 人工智能深度识别", NSBundle.appName];
+    NSString *textToShare = [NSString stringWithFormat:@"我在用《%@》识别万物，你来吗？- 人工智能深度识别", NSBundle.appName];
     //分享的图片
-//    UIImage *imageToShare = [UIImage imageNamed:@"312.jpg"];
+    UIImage *imageToShare = [UIImage imageNamed:@"app_icon"];
     //分享的url
     NSURL *urlToShare = [NSURL URLWithString:self.appStoreURLString];
     //在这里呢 如果想分享图片 就把图片添加进去  文字什么的通上
-    NSArray *activityItems = @[textToShare, urlToShare];
+    NSArray *activityItems = @[textToShare, imageToShare, urlToShare];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     //不出现在活动项目
     if (@available(iOS 9.0, *)) {

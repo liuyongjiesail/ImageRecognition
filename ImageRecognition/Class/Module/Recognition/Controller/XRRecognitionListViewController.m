@@ -24,10 +24,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"share"] style:UIBarButtonItemStyleDone target:self action:@selector(shareAction)];
+    
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
     //添加广告
     [self.bannerApi loadBannerAdView:self];
+}
+
+- (void)shareAction {
+    
+    [UIApplication.sharedApplication shareApplicationToFriends];
 }
 
 #pragma mark - UITableViewDataSource

@@ -22,8 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.view addSubview:self.tableView];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self fetchHistoryEventDetailInfo];
     
@@ -40,6 +39,7 @@
         self.eventModel = model;
         self.eventModel.date = tempString;
         
+        [self.view addSubview:self.tableView];
         [self.tableView reloadData];
         
     } failure:^(NSInteger errorCode) {
@@ -68,7 +68,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        return [self.tableView fd_heightForCellWithIdentifier:NSStringFromClass(XREventDetailContentCell.class) cacheByIndexPath:indexPath configuration:^(XREventDetailContentCell *cell) {
+        return [self.tableView fd_heightForCellWithIdentifier:NSStringFromClass(XREventDetailContentCell.class) cacheByKey:self.eventModel.title configuration:^(XREventDetailContentCell *cell) {
             [cell configModelData:self.eventModel];
         }];
     } else {

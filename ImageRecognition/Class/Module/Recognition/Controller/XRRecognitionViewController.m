@@ -144,7 +144,7 @@
     [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
          dispatch_async(dispatch_get_main_queue(),^{
             if (status != PHAuthorizationStatusAuthorized) {
-                [self showAlertWithTitle:@"相册访问权限关闭了" message:@"请前往iPhone的“设置-隐私-照片”中打开拍拍识图的相册访问权限" actionTitles:@[@"好"] actionHandler:nil];
+                [self showAlertWithTitle:@"相册访问权限关闭了" message:@"请前往iPhone的“设置-隐私-照片”中打开识图相机的相册访问权限" actionTitles:@[@"好"] actionHandler:nil];
                 return;
             }
              UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];
