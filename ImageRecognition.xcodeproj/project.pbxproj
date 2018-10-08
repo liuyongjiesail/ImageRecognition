@@ -33,6 +33,7 @@
 		EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C05216527D100FFA793 /* UIViewController+Find.m */; };
 		EDB75C0921653CF500FFA793 /* user_protocol.html in Resources */ = {isa = PBXBuildFile; fileRef = EDB75C0821653CF500FFA793 /* user_protocol.html */; };
 		EDB75C0A2165CF0E00FFA793 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BBB2164789700FFA793 /* libxml2.tbd */; };
+		EDB75C132168F48700FFA793 /* XRGoogleRewardVideoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C122168F48600FFA793 /* XRGoogleRewardVideoApi.m */; };
 		EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */; };
 		EDDF26C421607A7300D7A3E3 /* XRVendorServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */; };
 		EDDF26C8216081D000D7A3E3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C7216081D000D7A3E3 /* AdSupport.framework */; };
@@ -119,6 +120,8 @@
 		EDB75C04216527D100FFA793 /* UIViewController+Find.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Find.h"; sourceTree = "<group>"; };
 		EDB75C05216527D100FFA793 /* UIViewController+Find.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Find.m"; sourceTree = "<group>"; };
 		EDB75C0821653CF500FFA793 /* user_protocol.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = user_protocol.html; sourceTree = "<group>"; };
+		EDB75C112168F48600FFA793 /* XRGoogleRewardVideoApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRGoogleRewardVideoApi.h; sourceTree = "<group>"; };
+		EDB75C122168F48600FFA793 /* XRGoogleRewardVideoApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRGoogleRewardVideoApi.m; sourceTree = "<group>"; };
 		EDDF26B7215F647300D7A3E3 /* XRTodayHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRTodayHistoryViewController.h; sourceTree = "<group>"; };
 		EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRTodayHistoryViewController.m; sourceTree = "<group>"; };
 		EDDF26BA215F64AF00D7A3E3 /* XRAppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRAppMacro.h; sourceTree = "<group>"; };
@@ -281,13 +284,13 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
-		EDB75BA521645BE400FFA793 /* GDT */ = {
+		EDB75BA521645BE400FFA793 /* GDTAd */ = {
 			isa = PBXGroup;
 			children = (
 				EDB75BA621645C2200FFA793 /* XRGDTBannerApi.h */,
 				EDB75BA721645C2200FFA793 /* XRGDTBannerApi.m */,
 			);
-			path = GDT;
+			path = GDTAd;
 			sourceTree = "<group>";
 		};
 		EDB75BB0216475B900FFA793 /* GDTMob */ = {
@@ -360,6 +363,15 @@
 				EDB75C01216526F200FFA793 /* UIViewController+Alert.m */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		EDB75C0D2168F2AB00FFA793 /* GoogleAd */ = {
+			isa = PBXGroup;
+			children = (
+				EDB75C112168F48600FFA793 /* XRGoogleRewardVideoApi.h */,
+				EDB75C122168F48600FFA793 /* XRGoogleRewardVideoApi.m */,
+			);
+			path = GoogleAd;
 			sourceTree = "<group>";
 		};
 		EDDF26B6215F645C00D7A3E3 /* History */ = {
@@ -454,7 +466,8 @@
 		EDDF26DB2160A4E000D7A3E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EDB75BA521645BE400FFA793 /* GDT */,
+				EDB75C0D2168F2AB00FFA793 /* GoogleAd */,
+				EDB75BA521645BE400FFA793 /* GDTAd */,
 				EDDF2706216219DA00D7A3E3 /* AVCaptureManager */,
 				EDDF26DC2160A4FD00D7A3E3 /* Network */,
 			);
@@ -847,6 +860,7 @@
 				EDB75B8421630A5B00FFA793 /* XRBaiduYunApi.m in Sources */,
 				EDDF26E42160AE9600D7A3E3 /* XRNetworkManager.m in Sources */,
 				EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */,
+				EDB75C132168F48700FFA793 /* XRGoogleRewardVideoApi.m in Sources */,
 				EDDF27012160CFBE00D7A3E3 /* UIColor+XRString.m in Sources */,
 				EDB75BED216504B600FFA793 /* XRSettingViewController.m in Sources */,
 				EDB75B8C216341AA00FFA793 /* XRIdentifyResultsModel.m in Sources */,

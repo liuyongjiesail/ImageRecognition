@@ -27,7 +27,7 @@
 }
 
 - (NSString *)appStoreURLString {
-    return [NSString stringWithFormat:@"itms-apps://itunes.apple.com/us/app/twitter/id%@?mt=8", XRApplicationAppID];
+    return [NSString stringWithFormat:@"itms-apps://itunes.apple.com/us/app/twitter/id%@?mt=8", XRAppStoreAppID];
 }
 
 - (void)shareApplicationToFriends {

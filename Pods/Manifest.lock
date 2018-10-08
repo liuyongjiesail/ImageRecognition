@@ -24,6 +24,7 @@ PODS:
     - AlicloudUTDID
   - FDFullscreenPopGesture (1.1)
   - FLAnimatedImage (1.0.12)
+  - Google-Mobile-Ads-SDK (7.33.1)
   - GTMBase64 (1.0.1)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
@@ -46,6 +47,7 @@ DEPENDENCIES:
   - AlicloudFeedback (~> 3.2.0)
   - FDFullscreenPopGesture
   - FLAnimatedImage
+  - Google-Mobile-Ads-SDK
   - GTMBase64
   - Masonry
   - MBProgressHUD
@@ -67,6 +69,7 @@ SPEC REPOS:
     - AFNetworking
     - FDFullscreenPopGesture
     - FLAnimatedImage
+    - Google-Mobile-Ads-SDK
     - GTMBase64
     - Masonry
     - MBProgressHUD
@@ -85,6 +88,7 @@ SPEC CHECKSUMS:
   AlicloudUtils: 36bd836fdd5c040ee0c9c06b0e1e1096a8c59c44
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  Google-Mobile-Ads-SDK: 71c6d3e8d8f52673fa5a83fc0d027623b11fde16
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
@@ -95,6 +99,6 @@ SPEC CHECKSUMS:
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 04d03e8050404ef155da64722980fcb4a7bd6c23
+PODFILE CHECKSUM: 5ea8eb1a35a0c14dd5068340556a20b235636653
 
 COCOAPODS: 1.5.0

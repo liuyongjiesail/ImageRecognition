@@ -7,6 +7,7 @@
 //
 
 #import "XRVendorServiceManager.h"
+#import "XRGoogleRewardVideoApi.h"
 
 @implementation XRVendorServiceManager
 
@@ -27,6 +28,9 @@
         [TalkingData sessionStarted:XRTakingDataAppID withChannelId:XRTakingDataAppChannel];
         //开启崩溃日志捕获
         [TalkingData setExceptionReportEnabled:YES];
+        
+        /** Google Ad **/
+        [XRGoogleRewardVideoApi sharedReward];
         
     }
     return self;

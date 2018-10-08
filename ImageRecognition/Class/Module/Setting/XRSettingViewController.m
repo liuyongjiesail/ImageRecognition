@@ -10,6 +10,7 @@
 #import "XRWebViewController.h"
 #import "XRSettingManager.h"
 #import "XRGDTBannerApi.h"
+#import "XRGoogleRewardVideoApi.h"
 
 @interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -87,6 +88,7 @@
                     break;
                 }
                 case 1: {
+                    [XRGoogleRewardVideoApi.sharedReward showRewardedVideoForViewController:self];
                     break;
                 }
             }

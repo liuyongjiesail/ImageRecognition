@@ -25,5 +25,7 @@ target 'ImageRecognition' do
     
     pod 'AlicloudFeedback', '~> 3.2.0'
     
+    pod 'Google-Mobile-Ads-SDK'
+    
 end
 
