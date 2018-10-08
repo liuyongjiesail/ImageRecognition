@@ -35,6 +35,7 @@
 		EDB75C0A2165CF0E00FFA793 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BBB2164789700FFA793 /* libxml2.tbd */; };
 		EDB75C132168F48700FFA793 /* XRGoogleRewardVideoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C122168F48600FFA793 /* XRGoogleRewardVideoApi.m */; };
 		EDB75C16216B335600FFA793 /* XREventListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C15216B335600FFA793 /* XREventListCell.m */; };
+		EDB75C19216B427500FFA793 /* XRMirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C18216B427500FFA793 /* XRMirrorViewController.m */; };
 		EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */; };
 		EDDF26C421607A7300D7A3E3 /* XRVendorServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */; };
 		EDDF26C8216081D000D7A3E3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C7216081D000D7A3E3 /* AdSupport.framework */; };
@@ -125,6 +126,8 @@
 		EDB75C122168F48600FFA793 /* XRGoogleRewardVideoApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRGoogleRewardVideoApi.m; sourceTree = "<group>"; };
 		EDB75C14216B335600FFA793 /* XREventListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XREventListCell.h; sourceTree = "<group>"; };
 		EDB75C15216B335600FFA793 /* XREventListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XREventListCell.m; sourceTree = "<group>"; };
+		EDB75C17216B427500FFA793 /* XRMirrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRMirrorViewController.h; sourceTree = "<group>"; };
+		EDB75C18216B427500FFA793 /* XRMirrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRMirrorViewController.m; sourceTree = "<group>"; };
 		EDDF26B7215F647300D7A3E3 /* XRTodayHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRTodayHistoryViewController.h; sourceTree = "<group>"; };
 		EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRTodayHistoryViewController.m; sourceTree = "<group>"; };
 		EDDF26BA215F64AF00D7A3E3 /* XRAppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRAppMacro.h; sourceTree = "<group>"; };
@@ -335,6 +338,8 @@
 			children = (
 				EDB75BEB216504B600FFA793 /* XRSettingViewController.h */,
 				EDB75BEC216504B600FFA793 /* XRSettingViewController.m */,
+				EDB75C17216B427500FFA793 /* XRMirrorViewController.h */,
+				EDB75C18216B427500FFA793 /* XRMirrorViewController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -878,6 +883,7 @@
 				EDB75B8F2163459800FFA793 /* XRRecognitionListViewController.m in Sources */,
 				EDDF26F32160CB8500D7A3E3 /* XRBaseTableViewCell.m in Sources */,
 				EDDF26F62160CDCD00D7A3E3 /* XREventDetailContentCell.m in Sources */,
+				EDB75C19216B427500FFA793 /* XRMirrorViewController.m in Sources */,
 				EDDF26FD2160CF2900D7A3E3 /* UILabel+XRInitialize.m in Sources */,
 				EDB75BF82165132400FFA793 /* UIApplication+XRAppStore.m in Sources */,
 				EDB75BA821645C2200FFA793 /* XRGDTBannerApi.m in Sources */,

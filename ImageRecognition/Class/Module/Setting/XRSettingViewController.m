@@ -11,6 +11,7 @@
 #import "XRSettingManager.h"
 #import "XRGDTBannerApi.h"
 #import "XRGoogleRewardVideoApi.h"
+#import "XRMirrorViewController.h"
 
 @interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -28,7 +29,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"设置";
     
-    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"福利社", @"精选APP与游戏（推荐）"], @[@"用户协议", @"关于"]];
+    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"😄镜子😄", @"精选APP与游戏（推荐）"], @[@"用户协议", @"关于"]];
     
     [self.view addSubview:self.tableView];
     
@@ -85,6 +86,7 @@
         case 2: {
             switch (indexPath.row) {
                 case 0: {
+                    [self presentViewController:[XRMirrorViewController new] animated:NO completion:nil];
                     break;
                 }
                 case 1: {
