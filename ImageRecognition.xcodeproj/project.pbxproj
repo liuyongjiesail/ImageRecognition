@@ -34,6 +34,7 @@
 		EDB75C0921653CF500FFA793 /* user_protocol.html in Resources */ = {isa = PBXBuildFile; fileRef = EDB75C0821653CF500FFA793 /* user_protocol.html */; };
 		EDB75C0A2165CF0E00FFA793 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BBB2164789700FFA793 /* libxml2.tbd */; };
 		EDB75C132168F48700FFA793 /* XRGoogleRewardVideoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C122168F48600FFA793 /* XRGoogleRewardVideoApi.m */; };
+		EDB75C16216B335600FFA793 /* XREventListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C15216B335600FFA793 /* XREventListCell.m */; };
 		EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */; };
 		EDDF26C421607A7300D7A3E3 /* XRVendorServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */; };
 		EDDF26C8216081D000D7A3E3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C7216081D000D7A3E3 /* AdSupport.framework */; };
@@ -122,6 +123,8 @@
 		EDB75C0821653CF500FFA793 /* user_protocol.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = user_protocol.html; sourceTree = "<group>"; };
 		EDB75C112168F48600FFA793 /* XRGoogleRewardVideoApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRGoogleRewardVideoApi.h; sourceTree = "<group>"; };
 		EDB75C122168F48600FFA793 /* XRGoogleRewardVideoApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRGoogleRewardVideoApi.m; sourceTree = "<group>"; };
+		EDB75C14216B335600FFA793 /* XREventListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XREventListCell.h; sourceTree = "<group>"; };
+		EDB75C15216B335600FFA793 /* XREventListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XREventListCell.m; sourceTree = "<group>"; };
 		EDDF26B7215F647300D7A3E3 /* XRTodayHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRTodayHistoryViewController.h; sourceTree = "<group>"; };
 		EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRTodayHistoryViewController.m; sourceTree = "<group>"; };
 		EDDF26BA215F64AF00D7A3E3 /* XRAppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRAppMacro.h; sourceTree = "<group>"; };
@@ -399,6 +402,8 @@
 		EDDF26BE215FA73100D7A3E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EDB75C14216B335600FFA793 /* XREventListCell.h */,
+				EDB75C15216B335600FFA793 /* XREventListCell.m */,
 				EDDF26F42160CDCD00D7A3E3 /* XREventDetailContentCell.h */,
 				EDDF26F52160CDCD00D7A3E3 /* XREventDetailContentCell.m */,
 				EDDF26F72160CDE300D7A3E3 /* XREventDetailImageCell.h */,
@@ -854,6 +859,7 @@
 				EDB75B95216364CA00FFA793 /* XRCorrelationResultCell.m in Sources */,
 				EDB75BF12165108500FFA793 /* NSBundle+XLAppInfo.m in Sources */,
 				EDB75BDB2164973E00FFA793 /* MBProgressHUD+MJ.m in Sources */,
+				EDB75C16216B335600FFA793 /* XREventListCell.m in Sources */,
 				EDDF26EB2160BD0900D7A3E3 /* XRHistoryEventModel.m in Sources */,
 				EDB75BFC2165159500FFA793 /* XRRecognitionManager.m in Sources */,
 				EDE56D9B215CD4E8009FD8D5 /* AppDelegate.m in Sources */,

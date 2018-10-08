@@ -11,6 +11,7 @@
 #import "XRHistoryEventModel.h"
 #import "XREventDetailViewController.h"
 #import "XRRecognitionViewController.h"
+#import "XREventListCell.h"
 
 @interface XRTodayHistoryViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -33,6 +34,9 @@
     self.title = [NSString stringWithFormat:@"历史上%@都发生了什么", [NSDate wholeToday]];
     
     [self fetchToadyOnHistory];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"sort"] style:UIBarButtonItemStyleDone target:self action:@selector(sortAction)];
+    
 }
 
 #pragma mark - CustomEvent
@@ -52,6 +56,12 @@
     
 }
 
+- (void)sortAction {
+    
+    self.dataArray = [[self.dataArray reverseObjectEnumerator] allObjects].mutableCopy;
+    [self.tableView reloadData];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count;
@@ -59,10 +69,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView xr_dequeueReusableCellWithClass:[UITableViewCell class] forIndexPath:indexPath];
+    XREventListCell *cell = [tableView xr_dequeueReusableCellWithClass:[XREventListCell class] forIndexPath:indexPath];
     XRHistoryEventModel *model = self.dataArray[indexPath.row];
-    cell.textLabel.text = model.title;
-    cell.detailTextLabel.text = model.date;
+    [cell configModelData:model];
+    
+    if (indexPath.row == 0) {
+        [cell updateTimeLineTop:kMarginVertical];
+    } else {
+        [cell updateTimeLineTop:0];
+    }
     
     return cell;
 }
@@ -86,7 +101,9 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [UIView new];
-        [_tableView xr_registerClass:[UITableViewCell class]];
+        _tableView.rowHeight = 90;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_tableView xr_registerClass:[XREventListCell class]];
     }
     return _tableView;
 }
