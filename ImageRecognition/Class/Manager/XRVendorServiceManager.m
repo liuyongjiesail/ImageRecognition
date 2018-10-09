@@ -7,7 +7,7 @@
 //
 
 #import "XRVendorServiceManager.h"
-#import "XRGoogleRewardVideoApi.h"
+#import "XRMintegralRewardVideoApi.h"
 
 @implementation XRVendorServiceManager
 
@@ -30,7 +30,7 @@
         [TalkingData setExceptionReportEnabled:YES];
         
         /** Google Ad **/
-        [XRGoogleRewardVideoApi sharedReward];
+        [XRMintegralRewardVideoApi sharedReward];
         
     }
     return self;

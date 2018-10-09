@@ -9,7 +9,7 @@
 #ifndef XRAppConst_h
 #define XRAppConst_h
 
-static NSString * const XRAppStoreAppID     = @"1381390129";
+static NSString * const XRAppStoreAppID        = @"1438496462";
 
 static NSString * const XRBaiduYunAppID        = @"14300809";
 static NSString * const XRBaiduYunAPIKey       = @"gOmMHGFsZy9XjgnFkj3RaLbY";
@@ -26,12 +26,9 @@ static NSString * const XRGDTBannerPlacementId = @"4090812164690039";
 static NSString * const XRAliyunAppKey         = @"25099258";
 static NSString * const XRAliyunAppSecret      = @"da67c96d09e0ee219cce9022a4a61650";
 
-#ifdef DEBUG
-static NSString * const XRGoogleAdMobAppId     = @"ca-app-pub-3940256099942544~1458002511";
-static NSString * const XRGoogleRewardVideoAdUnitID  = @"ca-app-pub-3940256099942544/1712485313";
-#else
-static NSString * const XRGoogleAdMobAppId     = @"ca-app-pub-8596277139718627~5131573533";
-static NSString * const XRGoogleRewardVideoAdUnitID  = @"ca-app-pub-8596277139718627/7400559948";
-#endif
+static NSString * const XRMintegralAppId       = @"106618";
+static NSString * const XRMintegralAppkey      = @"fa3342fac400e33680d9375a8193ab3a";
+static NSString * const XRMintegralAdId        = @"58344";
+static NSString * const XRMintegralAdUnitId    = @"58344";
 
 #endif /* XRAppConst_h */

@@ -24,8 +24,6 @@ target 'ImageRecognition' do
     pod 'RTRootNavigationController'
     
     pod 'AlicloudFeedback', '~> 3.2.0'
-    
-    pod 'Google-Mobile-Ads-SDK'
-    
+        
 end
 
