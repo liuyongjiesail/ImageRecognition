@@ -15,8 +15,6 @@
     if (view == nil) view = [UIApplication sharedApplication].keyWindow;
 
     dispatch_async(dispatch_get_main_queue(), ^{
-        MBProgressHUD *hud11 = [self HUDForView:view];
-        if (!hud11.isUsed) [hud11 removeFromSuperview];
         // 快速显示一个提示信息
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
         hud.detailsLabel.text = text;

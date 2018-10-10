@@ -9,8 +9,6 @@
 
 @interface MBProgressHUD (MJ)
 
-@property (assign, nonatomic) BOOL isUsed;
-
 + (void)showSuccess:(NSString *)success toView:(UIView *)view;
 + (void)showError:(NSString *)error toView:(UIView *)view;
 

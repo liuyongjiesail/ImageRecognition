@@ -15,7 +15,11 @@ static NSString * const XRBaiduYunAppID        = @"14300809";
 static NSString * const XRBaiduYunAPIKey       = @"gOmMHGFsZy9XjgnFkj3RaLbY";
 static NSString * const XRBaiduYunSecretKey    = @"r5cCjYGEweMRtnbxbv7fzhHqxH36GU8a";
 
+#ifdef DEBUG
 static NSString * const XRTakingDataAppID      = @"9C6EA335B0F44CB5AAB80C01DEAE77B8";
+#else
+static NSString * const XRTakingDataAppID      = @"169A0DB953264F01B645C7EED3C02212";
+#endif
 static NSString * const XRTakingDataAppChannel = @"AppStore";
 
 static NSString * const XRJuHeAppKey           = @"25cc8fdf2560a96d9227ab2f2aa4a610";

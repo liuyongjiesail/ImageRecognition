@@ -35,7 +35,11 @@
             [alert addAction:action];
             
             if (i == actionTitles.count - 1) {
-                alert.preferredAction = action;
+                if (@available(iOS 9.0, *)) {
+                    alert.preferredAction = action;
+                } else {
+                    // Fallback on earlier versions
+                }
             }
         }
         

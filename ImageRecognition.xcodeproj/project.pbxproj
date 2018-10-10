@@ -854,14 +854,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
-				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMBase64/GTMBase64.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
@@ -869,14 +866,11 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMBase64.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTRootNavigationController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
@@ -1059,11 +1053,6 @@
 				DEVELOPMENT_TEAM = B9842T9339;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Mintegral_M_SDK_450",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Mintegral_M_SDK_450/Mintegral_M_SDK_450",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/MTG",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Mobvista_M_SDK_2.9.0",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Mobvista_M_SDK_450",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor",
 					"$(PROJECT_DIR)",
 				);
@@ -1072,10 +1061,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ImageRecognition/Supporting Files/ImageRecognition-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ImageRecognition/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
@@ -1097,11 +1083,6 @@
 				DEVELOPMENT_TEAM = B9842T9339;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Mintegral_M_SDK_450",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Mintegral_M_SDK_450/Mintegral_M_SDK_450",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/MTG",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Mobvista_M_SDK_2.9.0",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Mobvista_M_SDK_450",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor",
 					"$(PROJECT_DIR)",
 				);
@@ -1110,10 +1091,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ImageRecognition/Supporting Files/ImageRecognition-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ImageRecognition/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",

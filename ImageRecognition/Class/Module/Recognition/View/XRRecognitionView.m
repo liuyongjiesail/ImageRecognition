@@ -182,8 +182,8 @@
     
     [UIView animateWithDuration:0.5 animations:^{
         
-        _cancleButton.centerX = _leftplace.centerX;
-        _sureButton.centerX = _rightplace.centerX;
+        self.cancleButton.centerX = self.leftplace.centerX;
+        self.sureButton.centerX = self.rightplace.centerX;
         
     }];
 }
@@ -228,15 +228,15 @@
 - (void)cancleReshoot {
     [UIView animateWithDuration:0.25 animations:^{
         
-        _cancleButton.centerX = _shootButton.centerX;
-        _sureButton.centerX = _shootButton.centerX;
+        self.cancleButton.centerX = self.shootButton.centerX;
+        self.sureButton.centerX = self.shootButton.centerX;
         
     } completion:^(BOOL finished) {
         
-        _cancleButton.hidden = YES;
-        _sureButton.hidden = YES;
-        _shootButton.hidden = NO;
-        _photosButton.hidden = NO;
+        self.cancleButton.hidden = YES;
+        self.sureButton.hidden = YES;
+        self.shootButton.hidden = NO;
+        self.photosButton.hidden = NO;
         
     }];
 }
@@ -251,12 +251,12 @@
     _focusView.center = point;
     _focusView.hidden = NO;
     [UIView animateWithDuration:0.3 animations:^{
-        _focusView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+        self.focusView.transform = CGAffineTransformMakeScale(1.2, 1.2);
     }completion:^(BOOL finished) {
         [UIView animateWithDuration:0.5 animations:^{
-            _focusView.transform = CGAffineTransformIdentity;
+            self.focusView.transform = CGAffineTransformIdentity;
         } completion:^(BOOL finished) {
-            _focusView.hidden = YES;
+            self.focusView.hidden = YES;
         }];
     }];
     if (self.delegate && [self.delegate respondsToSelector:@selector(focusingActionAtPoint:)]) {
