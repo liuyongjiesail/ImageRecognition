@@ -24,15 +24,14 @@ static NSString * const XRTakingDataAppChannel = @"AppStore";
 
 static NSString * const XRJuHeAppKey           = @"25cc8fdf2560a96d9227ab2f2aa4a610";
 
-static NSString * const XRGDTAppId             = @"1105344611";
-static NSString * const XRGDTBannerPlacementId = @"4090812164690039";
+static NSString * const XRGoogleAppId          = @"ca-app-pub-8596277139718627~5131573533";
+static NSString * const XRGoogleBannerUnitId   = @"ca-app-pub-8596277139718627/5684007803";
 
 static NSString * const XRAliyunAppKey         = @"25099258";
 static NSString * const XRAliyunAppSecret      = @"da67c96d09e0ee219cce9022a4a61650";
 
 static NSString * const XRMintegralAppId       = @"106618";
 static NSString * const XRMintegralAppkey      = @"fa3342fac400e33680d9375a8193ab3a";
-static NSString * const XRMintegralAdId        = @"58344";
 static NSString * const XRMintegralAdUnitId    = @"58344";
 
 #endif /* XRAppConst_h */

@@ -9,7 +9,7 @@
 #import "XRSettingViewController.h"
 #import "XRWebViewController.h"
 #import "XRSettingManager.h"
-#import "XRGDTBannerApi.h"
+#import "XRGADBannerApi.h"
 #import "XRMintegralRewardVideoApi.h"
 #import "XRMirrorViewController.h"
 
@@ -18,7 +18,7 @@
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSArray *dataArray;
 
-@property (strong, nonatomic) XRGDTBannerApi *bannerApi;
+@property (strong, nonatomic) XRGADBannerApi *bannerApi;
 
 @end
 
@@ -131,9 +131,9 @@
     return _tableView;
 }
 
-- (XRGDTBannerApi *)bannerApi {
+- (XRGADBannerApi *)bannerApi {
     if (!_bannerApi) {
-        _bannerApi = [XRGDTBannerApi new];
+        _bannerApi = [XRGADBannerApi new];
     }
     return _bannerApi;
 }

@@ -56,7 +56,7 @@ static NSString *const MintegralRewardAdRewardSuccess = @"MintegralRewardAdRewar
     //展示广告之前检查视频广告是否已经下载成功
     if ([MTGRewardAdManager.sharedInstance isVideoReadyToPlay:XRMintegralAdUnitId]) {
         //展示视频广告
-        [MTGRewardAdManager.sharedInstance showVideo:XRMintegralAdUnitId withRewardId:@"123456" userId:nil delegate:self viewController:viewController];
+        [MTGRewardAdManager.sharedInstance showVideo:XRMintegralAdUnitId withRewardId:@"" userId:nil delegate:self viewController:viewController];
     } else{
         [self requestRewardedVideo];
     }

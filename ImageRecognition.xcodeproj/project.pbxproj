@@ -17,11 +17,9 @@
 		EDB75B922163474400FFA793 /* XRBestResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B912163474400FFA793 /* XRBestResultCell.m */; };
 		EDB75B95216364CA00FFA793 /* XRCorrelationResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B94216364CA00FFA793 /* XRCorrelationResultCell.m */; };
 		EDB75B992163C43700FFA793 /* XRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B982163C43700FFA793 /* XRWebViewController.m */; };
-		EDB75BA821645C2200FFA793 /* XRGDTBannerApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BA721645C2200FFA793 /* XRGDTBannerApi.m */; };
 		EDB75BAA2164742C00FFA793 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BA92164742C00FFA793 /* StoreKit.framework */; };
 		EDB75BAC2164744D00FFA793 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BAB2164744D00FFA793 /* CoreLocation.framework */; };
 		EDB75BAE2164746300FFA793 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BAD2164746300FFA793 /* QuartzCore.framework */; };
-		EDB75BD321647B6C00FFA793 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BD121647B6C00FFA793 /* libGDTMobSDK.a */; };
 		EDB75BD721647CB700FFA793 /* UIButton+XRBigFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BD621647CB700FFA793 /* UIButton+XRBigFrame.m */; };
 		EDB75BDB2164973E00FFA793 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BDA2164973E00FFA793 /* MBProgressHUD+MJ.m */; };
 		EDB75BED216504B600FFA793 /* XRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BEC216504B600FFA793 /* XRSettingViewController.m */; };
@@ -46,6 +44,7 @@
 		EDB75C75216CAFC800FFA793 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C74216CAFC800FFA793 /* WebKit.framework */; };
 		EDB75C87216CB1CA00FFA793 /* MTGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C85216CB1CA00FFA793 /* MTGSDK.framework */; };
 		EDB75C91216CBF2600FFA793 /* MTGSDKReward.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C90216CBF2600FFA793 /* MTGSDKReward.framework */; };
+		EDB75CCD216F054300FFA793 /* XRGADBannerApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75CCC216F054300FFA793 /* XRGADBannerApi.m */; };
 		EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */; };
 		EDDF26C421607A7300D7A3E3 /* XRVendorServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */; };
 		EDDF26C8216081D000D7A3E3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C7216081D000D7A3E3 /* AdSupport.framework */; };
@@ -96,23 +95,12 @@
 		EDB75B94216364CA00FFA793 /* XRCorrelationResultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRCorrelationResultCell.m; sourceTree = "<group>"; };
 		EDB75B972163C43700FFA793 /* XRWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRWebViewController.h; sourceTree = "<group>"; };
 		EDB75B982163C43700FFA793 /* XRWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRWebViewController.m; sourceTree = "<group>"; };
-		EDB75BA621645C2200FFA793 /* XRGDTBannerApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRGDTBannerApi.h; sourceTree = "<group>"; };
-		EDB75BA721645C2200FFA793 /* XRGDTBannerApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRGDTBannerApi.m; sourceTree = "<group>"; };
 		EDB75BA92164742C00FFA793 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EDB75BAB2164744D00FFA793 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EDB75BAD2164746300FFA793 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EDB75BBB2164789700FFA793 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		EDB75BBD216478D500FFA793 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EDB75BBF216478DC00FFA793 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		EDB75BCA21647B6A00FFA793 /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
-		EDB75BCB21647B6A00FFA793 /* GDTNativeExpressAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAd.h; sourceTree = "<group>"; };
-		EDB75BCC21647B6A00FFA793 /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
-		EDB75BCD21647B6A00FFA793 /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
-		EDB75BCE21647B6B00FFA793 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
-		EDB75BCF21647B6B00FFA793 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
-		EDB75BD021647B6B00FFA793 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
-		EDB75BD121647B6C00FFA793 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
-		EDB75BD221647B6C00FFA793 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
 		EDB75BD521647CB700FFA793 /* UIButton+XRBigFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+XRBigFrame.h"; sourceTree = "<group>"; };
 		EDB75BD621647CB700FFA793 /* UIButton+XRBigFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XRBigFrame.m"; sourceTree = "<group>"; };
 		EDB75BD92164973E00FFA793 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
@@ -146,6 +134,8 @@
 		EDB75C74216CAFC800FFA793 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EDB75C85216CB1CA00FFA793 /* MTGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MTGSDK.framework; sourceTree = "<group>"; };
 		EDB75C90216CBF2600FFA793 /* MTGSDKReward.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MTGSDKReward.framework; sourceTree = "<group>"; };
+		EDB75CCB216F054300FFA793 /* XRGADBannerApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRGADBannerApi.h; sourceTree = "<group>"; };
+		EDB75CCC216F054300FFA793 /* XRGADBannerApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRGADBannerApi.m; sourceTree = "<group>"; };
 		EDDF26B7215F647300D7A3E3 /* XRTodayHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRTodayHistoryViewController.h; sourceTree = "<group>"; };
 		EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRTodayHistoryViewController.m; sourceTree = "<group>"; };
 		EDDF26BA215F64AF00D7A3E3 /* XRAppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRAppMacro.h; sourceTree = "<group>"; };
@@ -230,7 +220,6 @@
 				EDDF26CC216081F000D7A3E3 /* CoreMotion.framework in Frameworks */,
 				EDDF26CA216081E100D7A3E3 /* CoreTelephony.framework in Frameworks */,
 				EDDF26C8216081D000D7A3E3 /* AdSupport.framework in Frameworks */,
-				EDB75BD321647B6C00FFA793 /* libGDTMobSDK.a in Frameworks */,
 				EDE56DBB215CDBEF009FD8D5 /* libTalkingData.a in Frameworks */,
 				10989DFF1966A097230EB41B /* Pods_ImageRecognition.framework in Frameworks */,
 			);
@@ -318,29 +307,13 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
-		EDB75BA521645BE400FFA793 /* GDTAd */ = {
+		EDB75BA521645BE400FFA793 /* GoogleAd */ = {
 			isa = PBXGroup;
 			children = (
-				EDB75BA621645C2200FFA793 /* XRGDTBannerApi.h */,
-				EDB75BA721645C2200FFA793 /* XRGDTBannerApi.m */,
+				EDB75CCB216F054300FFA793 /* XRGADBannerApi.h */,
+				EDB75CCC216F054300FFA793 /* XRGADBannerApi.m */,
 			);
-			path = GDTAd;
-			sourceTree = "<group>";
-		};
-		EDB75BB0216475B900FFA793 /* GDTMob */ = {
-			isa = PBXGroup;
-			children = (
-				EDB75BCF21647B6B00FFA793 /* GDTMobBannerView.h */,
-				EDB75BD021647B6B00FFA793 /* GDTMobInterstitial.h */,
-				EDB75BCE21647B6B00FFA793 /* GDTNativeAd.h */,
-				EDB75BCB21647B6A00FFA793 /* GDTNativeExpressAd.h */,
-				EDB75BCD21647B6A00FFA793 /* GDTNativeExpressAdView.h */,
-				EDB75BCC21647B6A00FFA793 /* GDTSDKConfig.h */,
-				EDB75BCA21647B6A00FFA793 /* GDTSDKDefines.h */,
-				EDB75BD221647B6C00FFA793 /* GDTSplashAd.h */,
-				EDB75BD121647B6C00FFA793 /* libGDTMobSDK.a */,
-			);
-			path = GDTMob;
+			path = GoogleAd;
 			sourceTree = "<group>";
 		};
 		EDB75BD421647CA400FFA793 /* UIButton */ = {
@@ -505,7 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				EDB75C0D2168F2AB00FFA793 /* MintegralAd */,
-				EDB75BA521645BE400FFA793 /* GDTAd */,
+				EDB75BA521645BE400FFA793 /* GoogleAd */,
 				EDDF2706216219DA00D7A3E3 /* AVCaptureManager */,
 				EDDF26DC2160A4FD00D7A3E3 /* Network */,
 			);
@@ -686,7 +659,6 @@
 		EDE56DB6215CD8AB009FD8D5 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				EDB75BB0216475B900FFA793 /* GDTMob */,
 				EDE56DB8215CDBDA009FD8D5 /* TalkingData */,
 			);
 			path = Vendor;
@@ -903,6 +875,7 @@
 				EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */,
 				EDB75C132168F48700FFA793 /* XRMintegralRewardVideoApi.m in Sources */,
 				EDDF27012160CFBE00D7A3E3 /* UIColor+XRString.m in Sources */,
+				EDB75CCD216F054300FFA793 /* XRGADBannerApi.m in Sources */,
 				EDB75BED216504B600FFA793 /* XRSettingViewController.m in Sources */,
 				EDB75B8C216341AA00FFA793 /* XRIdentifyResultsModel.m in Sources */,
 				EDDF270921621A3600D7A3E3 /* AVCaptureManager.m in Sources */,
@@ -916,7 +889,6 @@
 				EDB75C19216B427500FFA793 /* XRMirrorViewController.m in Sources */,
 				EDDF26FD2160CF2900D7A3E3 /* UILabel+XRInitialize.m in Sources */,
 				EDB75BF82165132400FFA793 /* UIApplication+XRAppStore.m in Sources */,
-				EDB75BA821645C2200FFA793 /* XRGDTBannerApi.m in Sources */,
 				EDB75B922163474400FFA793 /* XRBestResultCell.m in Sources */,
 				EDDF26DA216092C400D7A3E3 /* UITableView+XRRegister.m in Sources */,
 				EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */,
@@ -1061,11 +1033,15 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ImageRecognition/Supporting Files/ImageRecognition-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ImageRecognition/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/GDTMob",
+					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Qumi",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sail.xrecognition.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1091,11 +1067,15 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ImageRecognition/Supporting Files/ImageRecognition-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ImageRecognition/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/GDTMob",
+					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Qumi",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sail.xrecognition.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -11,12 +11,12 @@
 #import "XRCorrelationResultCell.h"
 #import "XRIdentifyResultsModel.h"
 #import "XRWebViewController.h"
-#import "XRGDTBannerApi.h"
+#import "XRGADBannerApi.h"
 
 @interface XRRecognitionListViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
-@property (strong, nonatomic) XRGDTBannerApi *bannerApi;
+@property (strong, nonatomic) XRGADBannerApi *bannerApi;
 
 @end
 
@@ -105,9 +105,9 @@
     return _tableView;
 }
 
-- (XRGDTBannerApi *)bannerApi {
+- (XRGADBannerApi *)bannerApi {
     if (!_bannerApi) {
-        _bannerApi = [XRGDTBannerApi new];
+        _bannerApi = [XRGADBannerApi new];
     }
     return _bannerApi;
 }

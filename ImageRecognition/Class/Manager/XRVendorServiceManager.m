@@ -8,6 +8,7 @@
 
 #import "XRVendorServiceManager.h"
 #import "XRMintegralRewardVideoApi.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @implementation XRVendorServiceManager
 
@@ -29,8 +30,11 @@
         //开启崩溃日志捕获
         [TalkingData setExceptionReportEnabled:YES];
         
-        /** Google Ad **/
+        /** Mintegral Ad **/
         [XRMintegralRewardVideoApi sharedReward];
+        
+        /** Google Ad **/
+        [GADMobileAds configureWithApplicationID:XRGoogleAppId];
         
     }
     return self;
