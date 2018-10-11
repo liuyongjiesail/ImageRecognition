@@ -28,7 +28,10 @@
     [viewController.view addSubview:bannerView];
     
     GADRequest *request = [GADRequest new];
+    #ifdef DEBUG
     request.testDevices = @[@"dd49d1cae00d5e50a0a37e679291c784"];
+    #else
+    #endif
     [bannerView loadRequest:request];
     
     return bannerView;
