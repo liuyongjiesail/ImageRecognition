@@ -1040,8 +1040,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/GDTMob",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Qumi",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sail.xrecognition.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1074,8 +1072,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/GDTMob",
-					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/Qumi",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sail.xrecognition.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";

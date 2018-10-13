@@ -31,12 +31,12 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     
+    [self setNavigationBar];
+
     self.sessionManager = [AVCaptureManager sharedManager];
     if ([self.sessionManager isCanUseCamera]) {
         [self initCaptureDevice];
     }
-    
-    [self setNavigationBar];
     
     [XRBaiduYunApi fetchBaiduYunTokenSuccess:^(id responseDict) {
         
@@ -57,6 +57,11 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(settingAction)];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    //自定义图层
+    self.recognitionView = [[XRRecognitionView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.recognitionView.delegate = self;
+    [self.view addSubview:self.recognitionView];
     
 }
 
@@ -85,11 +90,6 @@
             });
         }];
     });
-    
-    //自定义图层
-    self.recognitionView = [[XRRecognitionView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.recognitionView.delegate = self;
-    [self.view addSubview:self.recognitionView];
     
 }
 
@@ -144,7 +144,14 @@
     [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
          dispatch_async(dispatch_get_main_queue(),^{
             if (status != PHAuthorizationStatusAuthorized) {
-                [self showAlertWithTitle:@"相册访问权限关闭了" message:@"请前往iPhone的“设置-隐私-照片”中打开识图相机的相册访问权限" actionTitles:@[@"好"] actionHandler:nil];
+                [self showAlertWithTitle:@"无法使用相册" message:@"为了选择照片识别，请前往设备中的【设置】>【隐私】>【照片】中允许识图相机使用" actionTitles:@[@"知道了", @"去设置"] actionHandler:^(NSInteger index) {
+                    if (index == 1) {
+                        NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                        if([[UIApplication sharedApplication] canOpenURL:url]) {
+                            NSURL *url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];           [[UIApplication sharedApplication] openURL:url];
+                        }
+                    }
+                }];
                 return;
             }
              UIImagePickerController *pickerController = [[UIImagePickerController alloc]init];

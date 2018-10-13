@@ -220,7 +220,14 @@
     
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     if (authStatus == AVAuthorizationStatusDenied) {
-        [[UIViewController currentViewController] showAlertWithTitle:@"相机访问权限关闭了" message:@"请前往iPhone的“设置-隐私-相机”中打开识图相机的相机访问权限" actionTitles:@[@"好"] actionHandler:nil];
+        [[UIViewController currentViewController] showAlertWithTitle:@"无法使用相机" message:@"为了正常拍摄，请前往设备中的【设置】>【隐私】>【相机】中允许识图相机使用" actionTitles:@[@"知道了", @"去设置"] actionHandler:^(NSInteger index) {
+            if (index == 1) {
+                NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                if([[UIApplication sharedApplication] canOpenURL:url]) {
+                    NSURL *url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];           [[UIApplication sharedApplication] openURL:url];
+                }
+            }
+        }];
         return NO;
     }
     else {
