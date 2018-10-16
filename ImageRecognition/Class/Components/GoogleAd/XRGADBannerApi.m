@@ -16,15 +16,14 @@
 @implementation XRGADBannerApi
 
 - (UIView *)loadBannerAdView:(UIViewController *)viewController {
-
-    GADAdSize customSize;
-    customSize.size.width = SCREEN_WIDTH;
-    customSize.size.height = kGADAdSizeBanner.size.height;
     
-    GADBannerView *bannerView = [[GADBannerView alloc] initWithAdSize:customSize origin:CGPointMake(0, viewController.view.height - customSize.size.height)];
+    GADBannerView *bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
     bannerView.adUnitID = XRGoogleBannerUnitId;
     bannerView.delegate = self;
     bannerView.rootViewController = viewController;
+    bannerView.centerX = viewController.view.centerX;
+    bannerView.y = viewController.view.height - bannerView.height;
+    
     [viewController.view addSubview:bannerView];
     
     GADRequest *request = [GADRequest new];
