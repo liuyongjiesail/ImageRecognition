@@ -69,7 +69,6 @@ static NSString *const MintegralRewardAdRewardSuccess = @"MintegralRewardAdRewar
 
 - (void)onVideoAdLoadFailed:(nullable NSString *)unitId error:(nonnull NSError *)error {
     [TalkingData trackEvent:MintegralRewardAdLoadFailed];
-    [self requestRewardedVideo];
 }
 
 #pragma mark - MTGRewardAdShowDelegate
@@ -79,7 +78,6 @@ static NSString *const MintegralRewardAdRewardSuccess = @"MintegralRewardAdRewar
 
 - (void)onVideoAdShowFailed:(nullable NSString *)unitId withError:(nonnull NSError *)error {
     [TalkingData trackEvent:MintegralRewardAdShowFailed];
-    [self requestRewardedVideo];
 }
 
 - (void)onVideoAdClicked:(nullable NSString *)unitId {

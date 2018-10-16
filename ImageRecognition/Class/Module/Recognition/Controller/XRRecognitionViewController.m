@@ -38,11 +38,7 @@
         [self initCaptureDevice];
     }
     
-    [XRBaiduYunApi fetchBaiduYunTokenSuccess:^(id responseDict) {
-        
-    } failure:^(NSInteger errorCode) {
-        
-    }];
+    [XRBaiduYunApi fetchBaiduYunTokenSuccess:^(id responseDict) {} failure:^(NSInteger errorCode) {}];
     
 }
 
@@ -114,7 +110,7 @@
         
     } failure:^(NSInteger errorCode) {
         [MBProgressHUD hideHUD];
-        [MBProgressHUD showError:@"识别失败"];
+        [MBProgressHUD showError:@"识别失败，请检查网络连接"];
     }];
 }
 
