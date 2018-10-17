@@ -12,8 +12,6 @@
 
 @interface XRRecognitionView ()<XRClassifySelectViewDelegate>
 
-@property (strong, nonatomic) UIButton *sureButton;    //完成
-@property (strong, nonatomic) UIButton *cancleButton;  //取消
 @property (strong, nonatomic) UIView   *focusplace;
 @property (strong, nonatomic) UIView   *leftplace;     //左占位
 @property (strong, nonatomic) UIView   *rightplace;    //右占位
@@ -22,7 +20,6 @@
 @property (strong, nonatomic) UIImageView *focusView;  //对焦框
 @property (strong, nonatomic) XRClassifySelectView *classifySelectView; //分段选择
 @property (strong, nonatomic) UIImageView *classifyImageView; //分段选择
-@property (strong, nonatomic) UILabel *reminderLabel; //提示文字
 @property (strong, nonatomic) UILabel *titleLabel;
 
 @property (strong, nonatomic) NSArray <XRClassifyModel *>*classifyModelArray;
@@ -46,7 +43,7 @@
     self.titleLabel.font = [UIFont boldSystemFontOfSize:18];
     [self addSubview:self.titleLabel];
     
-    self.reminderLabel = [UILabel labWithText:@"" fontSize:13 textColorString:COLORFFFFFF];
+    self.reminderLabel = [UILabel labWithText:@"" fontSize:15 textColorString:COLORFFFFFF];
     [self addSubview:self.reminderLabel];
     
     //初始化

@@ -15,6 +15,7 @@
 #import "XRRecognitionListViewController.h"
 #import "XRSettingViewController.h"
 #import <Photos/Photos.h>
+#import "XRNetworkManager.h"
 
 @interface XRRecognitionViewController () <XRRecognitionViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -93,13 +94,21 @@
 
 - (void)recognitionAction:(UIImage *)image {
     
-    [MBProgressHUD showMessage:@"识别中..."];
+    self.recognitionView.reminderLabel.hidden = NO;
+    self.recognitionView.reminderLabel.text = @"识别中...";
+    
     [XRBaiduYunApi recognitionImage:image classify:self.recognitionView.imageClassifyURL success:^(id responseDict) {
         [MBProgressHUD hideHUD];
+        self.recognitionView.reminderLabel.hidden = YES;
+        self.recognitionView.sureButton.userInteractionEnabled = YES;
         NSMutableArray<XRIdentifyResultsModel *> *dataArray = [NSArray yy_modelArrayWithClass:XRIdentifyResultsModel.class json:responseDict[@"result"]].mutableCopy;
         
         if (dataArray.count == 0 || (dataArray.count == 1 && [dataArray.firstObject.name hasPrefix:@"非"])) {
             [MBProgressHUD showError:[NSString stringWithFormat:@"该物体不是%@，换个类别试试看！", self.recognitionView.imageClassifyString] time:3];
+            return;
+        }
+        
+        if (self.recognitionView.cancleButton.hidden && self.tempImage) {
             return;
         }
         
@@ -110,6 +119,8 @@
         
     } failure:^(NSInteger errorCode) {
         [MBProgressHUD hideHUD];
+        self.recognitionView.reminderLabel.hidden = YES;
+        self.recognitionView.sureButton.userInteractionEnabled = YES;
         [MBProgressHUD showError:@"识别失败，请检查网络连接"];
     }];
 }
@@ -118,7 +129,9 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info {
     
     UIImage *resultImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    self.tempImage = resultImage;
+    self.tempImage = nil;
+    
+    [MBProgressHUD showMessage:@"识别中..."];
     [self recognitionAction:resultImage];
     
 }
@@ -172,10 +185,15 @@
 - (void)shootAction {
     
     if ([self.sessionManager isCanUseCamera]) {
+        
+        self.recognitionView.reminderLabel.text = @"取景中...";
+        self.recognitionView.reminderLabel.hidden = NO;
+
         [self.sessionManager shootImage:^(UIImage *image) {
             [self.recognitionView shootComplete];
             [self.sessionManager stopRunning];
             self.tempImage = image;
+            self.recognitionView.sureButton.userInteractionEnabled = NO;
             
             [self recognitionAction:image];
             
@@ -189,12 +207,14 @@
  */
 - (void)cancleAction {
     [self.sessionManager startRunning];
+    self.recognitionView.reminderLabel.hidden = YES;
 }
 
 /**
  完成拍照
  */
 - (void)sureAction {
+    self.recognitionView.sureButton.userInteractionEnabled = NO;
     [self recognitionAction:self.tempImage];
 }
 
