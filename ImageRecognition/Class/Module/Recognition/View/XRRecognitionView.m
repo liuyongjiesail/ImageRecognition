@@ -7,8 +7,10 @@
 //
 
 #import "XRRecognitionView.h"
+#import "XRClassifyModel.h"
+#import "XRClassifySelectView.h"
 
-@interface XRRecognitionView ()
+@interface XRRecognitionView ()<XRClassifySelectViewDelegate>
 
 @property (strong, nonatomic) UIButton *sureButton;    //完成
 @property (strong, nonatomic) UIButton *cancleButton;  //取消
@@ -18,11 +20,12 @@
 @property (strong, nonatomic) UIButton *photosButton;   //相册
 @property (strong, nonatomic) UIButton *shootButton;   //拍照
 @property (strong, nonatomic) UIImageView *focusView;  //对焦框
-@property (strong, nonatomic) UISegmentedControl *segmentedView; //分段选择
+@property (strong, nonatomic) XRClassifySelectView *classifySelectView; //分段选择
+@property (strong, nonatomic) UIImageView *classifyImageView; //分段选择
 @property (strong, nonatomic) UILabel *reminderLabel; //提示文字
 @property (strong, nonatomic) UILabel *titleLabel;
 
-@property (strong, nonatomic) NSArray *titleArray;
+@property (strong, nonatomic) NSArray <XRClassifyModel *>*classifyModelArray;
 
 @end
 
@@ -30,24 +33,29 @@
 
 - (void)setupViews {
     
+    //创建手势
+    UISwipeGestureRecognizer *leftSwipe= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeAction:)];
+    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self addGestureRecognizer:leftSwipe];
+    
+    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeAction:)];
+    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [self addGestureRecognizer:rightSwipe];
+    
     self.titleLabel = [UILabel labWithText:@"" fontSize:18 textColorString:COLORFFFFFF];
     self.titleLabel.font = [UIFont boldSystemFontOfSize:18];
     [self addSubview:self.titleLabel];
     
-    self.reminderLabel = [UILabel labWithText:@"选择合适的类别，有助于更准确识别哦！" fontSize:13 textColorString:COLORD09A6A];
+    self.reminderLabel = [UILabel labWithText:@"" fontSize:13 textColorString:COLORFFFFFF];
     [self addSubview:self.reminderLabel];
     
-    //初始化UISegmentedControl
-    self.segmentedView = [[UISegmentedControl alloc] initWithItems:self.titleArray];
-    self.segmentedView.apportionsSegmentWidthsByContent = YES;
-    self.segmentedView.tintColor = [UIColor whiteColor];
-    [self.segmentedView setSelectedSegmentIndex:2];
-    [self.titleArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [self.segmentedView setWidth:60.0 forSegmentAtIndex:idx];
-    }];
-    [self.segmentedView setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17]} forState:UIControlStateNormal];
+    //初始化
+    self.classifySelectView = [XRClassifySelectView new];
+    [self.classifySelectView configureDelegate:self classifyArray:[self.classifyModelArray valueForKeyPath:@"title"]];
+    [self.classifySelectView setSelectedIndex:3 animation:NO];
+    
     //添加到视图
-    [self addSubview:self.segmentedView];
+    [self addSubview:self.classifySelectView];
     
     //拍照
     UIButton *shootButton = [self createButtonWithImageNormal:@"camera_shoot" Highlighted:nil];
@@ -93,6 +101,10 @@
     [self addSubview:_focusView];
     _focusView.hidden = YES;
     
+    self.classifyImageView = [UIImageView new];
+    self.classifyImageView.image = [UIImage imageNamed:self.imageClassifyImageName];
+    [shootButton addSubview:self.classifyImageView];
+    
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(focusingGesture:)];
     [_focusplace addGestureRecognizer:tapGesture];
     
@@ -103,13 +115,14 @@
     
     [self.reminderLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
-        make.bottom.equalTo(self.segmentedView.mas_top).offset(-15);
+        make.bottom.equalTo(self.classifySelectView.mas_top).offset(-25);
     }];
     
-    [self.segmentedView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.classifySelectView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
-        make.bottom.equalTo(self.shootButton.mas_top).offset(-30);
-        make.height.mas_equalTo(35);
+        make.bottom.equalTo(self.shootButton.mas_top).offset(-10);
+        make.height.mas_equalTo(40);
+        make.width.mas_equalTo(SCREEN_WIDTH-40);
     }];
     
     //layout
@@ -117,6 +130,10 @@
         
         make.centerX.equalTo(self);
         make.bottom.equalTo(self).offset(-30);
+    }];
+    
+    [self.classifyImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(shootButton);
     }];
     
     [leftplace mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -159,18 +176,15 @@
 #pragma mark - public methond
 
 - (NSString *)imageClassifyURL {
-    switch (self.segmentedView.selectedSegmentIndex) {
-        case 0: return baiduYunClassifyCar;
-        case 1: return baiduYunClassifyAnimal;
-        case 2: return baiduYunClassifyGeneral;
-        case 3: return baiduYunClassifyPlant;
-        case 4: return baiduYunClassifyLogo;
-    }
-    return baiduYunClassifyGeneral;
+    return [self.classifyModelArray objectAtIndex:self.classifySelectView.selectedIndex].classifyURL;
 }
 
 - (NSString *)imageClassifyString {
-    return [self.titleArray objectAtIndex:self.segmentedView.selectedSegmentIndex];
+    return [self.classifyModelArray objectAtIndex:self.classifySelectView.selectedIndex].title;
+}
+
+- (NSString *)imageClassifyImageName {
+    return [self.classifyModelArray objectAtIndex:self.classifySelectView.selectedIndex].imageName;
 }
 
 //拍照完成
@@ -186,6 +200,31 @@
         self.sureButton.centerX = self.rightplace.centerX;
         
     }];
+}
+
+#pragma mark - XRClassifySelectViewDelegate
+
+- (void)classifySelectView:(XRClassifySelectView *)view didSelectIndex:(NSInteger)index {
+    
+    self.classifyImageView.image = [UIImage imageNamed:self.imageClassifyImageName];
+}
+
+#pragma mark - swipe轻扫手势事件
+-(void)swipeAction:(UISwipeGestureRecognizer *)sender{
+    
+    NSInteger currentIndex = self.classifySelectView.selectedIndex;
+    
+    if (sender.direction == UISwipeGestureRecognizerDirectionRight) {
+        if (currentIndex <= 0) {
+            return;
+        }
+        [self.classifySelectView setSelectedIndex:currentIndex-1 animation:YES];
+    } else {
+        if (currentIndex >= self.classifyModelArray.count - 1) {
+            return;
+        }
+        [self.classifySelectView setSelectedIndex:currentIndex+1 animation:YES];
+    }
 }
 
 #pragma mark - private methond
@@ -278,11 +317,22 @@
     return button;
 }
 
-- (NSArray *)titleArray {
-    if (!_titleArray) {
-        _titleArray = [NSArray arrayWithObjects:@"车型",@"动物",@"通用",@"植物", @"Logo", nil];
+- (NSArray *)classifyModelArray {
+    if (!_classifyModelArray) {
+        NSMutableArray *resultArray = [NSMutableArray array];
+        NSArray *titleArray = @[@"菜品", @"车型",@"动物",@"通用",@"植物", @"Logo"];
+        NSArray *urlArray = @[baiduYunClassifyDish, baiduYunClassifyCar,baiduYunClassifyAnimal,baiduYunClassifyGeneral,baiduYunClassifyPlant, baiduYunClassifyLogo];
+        NSArray *imageArray = @[@"dish", @"car",@"animal",@"general",@"plant", @"logo"];
+        [titleArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            XRClassifyModel *model = [XRClassifyModel new];
+            model.title = titleArray[idx];
+            model.classifyURL = urlArray[idx];
+            model.imageName = imageArray[idx];
+            [resultArray addObject:model];
+        }];
+        _classifyModelArray = resultArray.mutableCopy;
     }
-    return _titleArray;
+    return _classifyModelArray;
 }
 
 /*

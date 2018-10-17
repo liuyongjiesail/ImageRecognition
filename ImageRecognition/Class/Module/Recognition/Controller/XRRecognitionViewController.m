@@ -99,7 +99,7 @@
         NSMutableArray<XRIdentifyResultsModel *> *dataArray = [NSArray yy_modelArrayWithClass:XRIdentifyResultsModel.class json:responseDict[@"result"]].mutableCopy;
         
         if (dataArray.count == 0 || (dataArray.count == 1 && [dataArray.firstObject.name hasPrefix:@"非"])) {
-            [MBProgressHUD showError:[NSString stringWithFormat:@"该物体不是%@，请选择其他类别试试看！", self.recognitionView.imageClassifyString] time:3];
+            [MBProgressHUD showError:[NSString stringWithFormat:@"该物体不是%@，换个类别试试看！", self.recognitionView.imageClassifyString] time:3];
             return;
         }
         

@@ -226,5 +226,6 @@
 #define COLORFB3958 @"#FB3958"
 #define COLOR07A9F5 @"#07A9F5"
 #define COLORD09A6A @"#D09A6A"
+#define COLORDF55E6 @"#DF55E6"
 
 #endif /* XLColorMacro_h */

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		10989DFF1966A097230EB41B /* Pods_ImageRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31147586824DACC4ADE079E1 /* Pods_ImageRecognition.framework */; };
+		ED50959A21771A8300C16EC6 /* XRClassifySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959921771A8300C16EC6 /* XRClassifySelectView.m */; };
+		ED50959D21771A9100C16EC6 /* XRClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959C21771A9100C16EC6 /* XRClassifyModel.m */; };
 		EDB75B782162248000FFA793 /* XRRecognitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B772162248000FFA793 /* XRRecognitionView.m */; };
 		EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7A216224B900FFA793 /* XRBaseView.m */; };
 		EDB75B7F2162297900FFA793 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7E2162297900FFA793 /* UIView+Frame.m */; };
@@ -77,6 +79,10 @@
 		31147586824DACC4ADE079E1 /* Pods_ImageRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70BA1C708399CB34E47972F /* Pods-ImageRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageRecognition.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition.release.xcconfig"; sourceTree = "<group>"; };
 		DEED075A4ACF632C117A8499 /* Pods-ImageRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition.debug.xcconfig"; sourceTree = "<group>"; };
+		ED50959821771A8200C16EC6 /* XRClassifySelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRClassifySelectView.h; sourceTree = "<group>"; };
+		ED50959921771A8300C16EC6 /* XRClassifySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRClassifySelectView.m; sourceTree = "<group>"; };
+		ED50959B21771A9000C16EC6 /* XRClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRClassifyModel.h; sourceTree = "<group>"; };
+		ED50959C21771A9100C16EC6 /* XRClassifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRClassifyModel.m; sourceTree = "<group>"; };
 		EDB75B762162248000FFA793 /* XRRecognitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRecognitionView.h; sourceTree = "<group>"; };
 		EDB75B772162248000FFA793 /* XRRecognitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRecognitionView.m; sourceTree = "<group>"; };
 		EDB75B79216224B900FFA793 /* XRBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRBaseView.h; sourceTree = "<group>"; };
@@ -253,6 +259,8 @@
 			children = (
 				EDB75B762162248000FFA793 /* XRRecognitionView.h */,
 				EDB75B772162248000FFA793 /* XRRecognitionView.m */,
+				ED50959821771A8200C16EC6 /* XRClassifySelectView.h */,
+				ED50959921771A8300C16EC6 /* XRClassifySelectView.m */,
 				EDB75B902163474400FFA793 /* XRBestResultCell.h */,
 				EDB75B912163474400FFA793 /* XRBestResultCell.m */,
 				EDB75B93216364CA00FFA793 /* XRCorrelationResultCell.h */,
@@ -294,6 +302,8 @@
 			children = (
 				EDB75B8A216341AA00FFA793 /* XRIdentifyResultsModel.h */,
 				EDB75B8B216341AA00FFA793 /* XRIdentifyResultsModel.m */,
+				ED50959B21771A9000C16EC6 /* XRClassifyModel.h */,
+				ED50959C21771A9100C16EC6 /* XRClassifyModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -869,6 +879,7 @@
 				EDB75C16216B335600FFA793 /* XREventListCell.m in Sources */,
 				EDDF26EB2160BD0900D7A3E3 /* XRHistoryEventModel.m in Sources */,
 				EDB75BFC2165159500FFA793 /* XRRecognitionManager.m in Sources */,
+				ED50959D21771A9100C16EC6 /* XRClassifyModel.m in Sources */,
 				EDE56D9B215CD4E8009FD8D5 /* AppDelegate.m in Sources */,
 				EDB75B8421630A5B00FFA793 /* XRBaiduYunApi.m in Sources */,
 				EDDF26E42160AE9600D7A3E3 /* XRNetworkManager.m in Sources */,
@@ -894,6 +905,7 @@
 				EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */,
 				EDDF2705216217D600D7A3E3 /* XRRecognitionViewController.m in Sources */,
 				EDB75BD721647CB700FFA793 /* UIButton+XRBigFrame.m in Sources */,
+				ED50959A21771A8300C16EC6 /* XRClassifySelectView.m in Sources */,
 				EDDF26F92160CDE300D7A3E3 /* XREventDetailImageCell.m in Sources */,
 				EDDF26E82160B33300D7A3E3 /* XRJuHeApi.m in Sources */,
 				EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */,
