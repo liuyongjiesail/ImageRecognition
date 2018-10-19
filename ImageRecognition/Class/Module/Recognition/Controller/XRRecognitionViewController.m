@@ -128,12 +128,31 @@
 
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info {
-    
-    UIImage *resultImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    self.tempImage = nil;
-    
+
     [MBProgressHUD showMessage:@"识别中..."];
-    [self recognitionAction:resultImage];
+    self.tempImage = nil;
+    [self assetThumbImage:info[@"UIImagePickerControllerPHAsset"] width:224 completion:^(UIImage *thumbImage) {
+        [self recognitionAction:thumbImage];
+    }];
+    
+}
+
+- (void)assetThumbImage:(PHAsset *)asset width:(CGFloat)width completion:(void (^)(UIImage *thumbImage))completion {
+    
+    PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
+    options.synchronous = YES;
+    options.resizeMode = PHImageRequestOptionsResizeModeFast;
+    
+    CGFloat aspectRatio = asset.pixelWidth / (CGFloat)asset.pixelHeight;
+    CGFloat pixelWidth = width;
+    CGFloat pixelHeight = pixelWidth / aspectRatio;
+    
+    // 从asset中获得图片
+    [[PHImageManager defaultManager] requestImageForAsset:asset targetSize:CGSizeMake(pixelWidth, pixelHeight) contentMode:PHImageContentModeAspectFill options:options resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
+        if (completion) {
+            completion(result);
+        }
+    }];
     
 }
 

@@ -38,6 +38,7 @@
         [NSUserDefaults.standardUserDefaults synchronize];
         [UIApplication.sharedApplication commentApplicationToAppStore];
     }
+    
 }
 
 - (void)shareAction {
