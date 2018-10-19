@@ -72,7 +72,9 @@
         case 1: {
             switch (indexPath.row) {
                 case 0: {
-                    [self showAlertWithTitle:[NSString stringWithFormat:@"如果您有意见和建议，欢迎加入qq群反馈：\n\n群号码：738874700"] message:@"" actionTitles:@[@"好的"] actionHandler:nil];
+                    UIPasteboard *pboard = [UIPasteboard generalPasteboard];
+                    pboard.string = @"738874700";
+                    [self showAlertWithTitle:[NSString stringWithFormat:@"如果您有意见和建议，欢迎加入qq群反馈：\n\n群号码：738874700"] message:@"已复制到剪切板" actionTitles:@[@"好的"] actionHandler:nil];
                     break;
                 }
                 case 1: {

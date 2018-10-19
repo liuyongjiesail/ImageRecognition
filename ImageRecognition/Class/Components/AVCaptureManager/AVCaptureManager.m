@@ -50,6 +50,7 @@
     
     //使用AVMediaTypeVideo 默认使用后置摄像头进行初始化
     self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
     //使用设备初始化输入
     self.input = [[AVCaptureDeviceInput alloc] initWithDevice:self.device error:nil];
     //生成输出对象
@@ -58,8 +59,8 @@
     
     //生成会话，用来结合输入输出
     self.session = [[AVCaptureSession alloc]init];
-    if ([self.session canSetSessionPreset:AVCaptureSessionPreset1280x720]) {
-        self.session.sessionPreset = AVCaptureSessionPreset1280x720;
+    if ([self.session canSetSessionPreset:AVCaptureSessionPreset1920x1080]) {
+        self.session.sessionPreset = AVCaptureSessionPreset1920x1080;
     }
     if ([self.session canAddInput:self.input]) {
         [self.session addInput:self.input];
@@ -81,6 +82,8 @@
         if ([_device isWhiteBalanceModeSupported:AVCaptureWhiteBalanceModeAutoWhiteBalance]) {
             [_device setWhiteBalanceMode:AVCaptureWhiteBalanceModeAutoWhiteBalance];
         }
+        [self focusingAtPoint:CGPointMake(SCREEN_WIDTH/2.0, SCREEN_WIDTH/2.0)];
+        
         [_device unlockForConfiguration];
     }
     if (previewLayer) {
