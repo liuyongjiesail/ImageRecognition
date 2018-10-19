@@ -15,6 +15,7 @@
 - (void)photosAction;
 - (void)cancleAction;
 - (void)sureAction;
+- (void)giftAction;
 - (void)focusingActionAtPoint:(CGPoint)point;
 
 @end

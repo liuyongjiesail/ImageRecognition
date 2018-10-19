@@ -9,6 +9,7 @@
 #import "XRVendorServiceManager.h"
 #import "XRMintegralRewardVideoApi.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
+#import "XRGADInterstitialApi.h"
 
 @implementation XRVendorServiceManager
 
@@ -30,11 +31,15 @@
         //开启崩溃日志捕获
         [TalkingData setExceptionReportEnabled:YES];
         
-        /** Mintegral Ad **/
-        [XRMintegralRewardVideoApi sharedReward];
-        
         /** Google Ad **/
         [GADMobileAds configureWithApplicationID:XRGoogleAppId];
+        
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            /** Mintegral Ad **/
+            [XRMintegralRewardVideoApi sharedReward];
+            /** Google Interstitial **/
+            [XRGADInterstitialApi shared];
+        });
         
     }
     return self;

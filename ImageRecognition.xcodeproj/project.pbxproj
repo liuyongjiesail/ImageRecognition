@@ -10,6 +10,7 @@
 		10989DFF1966A097230EB41B /* Pods_ImageRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31147586824DACC4ADE079E1 /* Pods_ImageRecognition.framework */; };
 		ED50959A21771A8300C16EC6 /* XRClassifySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959921771A8300C16EC6 /* XRClassifySelectView.m */; };
 		ED50959D21771A9100C16EC6 /* XRClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959C21771A9100C16EC6 /* XRClassifyModel.m */; };
+		ED5095B92179B9B600C16EC6 /* XRGADInterstitialApi.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5095B82179B9B600C16EC6 /* XRGADInterstitialApi.m */; };
 		EDB75B782162248000FFA793 /* XRRecognitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B772162248000FFA793 /* XRRecognitionView.m */; };
 		EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7A216224B900FFA793 /* XRBaseView.m */; };
 		EDB75B7F2162297900FFA793 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7E2162297900FFA793 /* UIView+Frame.m */; };
@@ -82,6 +83,8 @@
 		ED50959921771A8300C16EC6 /* XRClassifySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRClassifySelectView.m; sourceTree = "<group>"; };
 		ED50959B21771A9000C16EC6 /* XRClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRClassifyModel.h; sourceTree = "<group>"; };
 		ED50959C21771A9100C16EC6 /* XRClassifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRClassifyModel.m; sourceTree = "<group>"; };
+		ED5095B72179B9B500C16EC6 /* XRGADInterstitialApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRGADInterstitialApi.h; sourceTree = "<group>"; };
+		ED5095B82179B9B600C16EC6 /* XRGADInterstitialApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRGADInterstitialApi.m; sourceTree = "<group>"; };
 		EDB75B762162248000FFA793 /* XRRecognitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRecognitionView.h; sourceTree = "<group>"; };
 		EDB75B772162248000FFA793 /* XRRecognitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRecognitionView.m; sourceTree = "<group>"; };
 		EDB75B79216224B900FFA793 /* XRBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRBaseView.h; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 			children = (
 				EDB75CCB216F054300FFA793 /* XRGADBannerApi.h */,
 				EDB75CCC216F054300FFA793 /* XRGADBannerApi.m */,
+				ED5095B72179B9B500C16EC6 /* XRGADInterstitialApi.h */,
+				ED5095B82179B9B600C16EC6 /* XRGADInterstitialApi.m */,
 			);
 			path = GoogleAd;
 			sourceTree = "<group>";
@@ -851,6 +856,7 @@
 				EDB75B782162248000FFA793 /* XRRecognitionView.m in Sources */,
 				EDB75B95216364CA00FFA793 /* XRCorrelationResultCell.m in Sources */,
 				EDB75BF12165108500FFA793 /* NSBundle+XLAppInfo.m in Sources */,
+				ED5095B92179B9B600C16EC6 /* XRGADInterstitialApi.m in Sources */,
 				EDB75BDB2164973E00FFA793 /* MBProgressHUD+MJ.m in Sources */,
 				EDB75C16216B335600FFA793 /* XREventListCell.m in Sources */,
 				EDDF26EB2160BD0900D7A3E3 /* XRHistoryEventModel.m in Sources */,

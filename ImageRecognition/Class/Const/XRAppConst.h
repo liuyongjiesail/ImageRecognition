@@ -26,6 +26,7 @@ static NSString * const XRJuHeAppKey           = @"25cc8fdf2560a96d9227ab2f2aa4a
 
 static NSString * const XRGoogleAppId          = @"ca-app-pub-8596277139718627~5131573533";
 static NSString * const XRGoogleBannerUnitId   = @"ca-app-pub-8596277139718627/5684007803";
+static NSString * const XRGoogleInterstitialUnitId   = @"ca-app-pub-8596277139718627/7627864032";
 
 static NSString * const XRAliyunAppKey         = @"25099258";
 static NSString * const XRAliyunAppSecret      = @"da67c96d09e0ee219cce9022a4a61650";

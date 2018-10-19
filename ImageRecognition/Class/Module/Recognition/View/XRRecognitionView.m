@@ -17,6 +17,7 @@
 @property (strong, nonatomic) UIView   *rightplace;    //右占位
 @property (strong, nonatomic) UIButton *photosButton;   //相册
 @property (strong, nonatomic) UIButton *shootButton;   //拍照
+@property (strong, nonatomic) UIButton *giftButton;    //礼品
 @property (strong, nonatomic) UIImageView *focusView;  //对焦框
 @property (strong, nonatomic) XRClassifySelectView *classifySelectView; //分段选择
 @property (strong, nonatomic) UIImageView *classifyImageView; //分段选择
@@ -81,6 +82,13 @@
     cancleButton.hidden = YES;
     [self addSubview:cancleButton];
     _cancleButton = cancleButton;
+    
+    //礼物
+    UIButton *giftButton = [self createButtonWithImageNormal:@"gift" Highlighted:nil];
+    giftButton.hidden = NO;
+    [self addSubview:giftButton];
+    _giftButton = giftButton;
+    
     
     //右占位
     UIView *rightplace = [UIView new];
@@ -152,6 +160,14 @@
         
         make.right.equalTo(self);
         make.left.equalTo(shootButton.mas_right);
+        
+    }];
+    
+    [giftButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerY.equalTo(shootButton);
+        make.centerX.equalTo(rightplace).offset(40);
+        make.width.height.equalTo(shootButton);
         
     }];
     
@@ -235,6 +251,7 @@
     if ([sender isEqual:_shootButton]) {
         //隐藏相册按钮
         _photosButton.hidden = YES;
+        _giftButton.hidden = YES;
         if (self.delegate && [self.delegate respondsToSelector:@selector(shootAction)]) {
             [self.delegate shootAction];
         }
@@ -256,6 +273,10 @@
         if (self.delegate && [self.delegate respondsToSelector:@selector(sureAction)]) {
             [self.delegate sureAction];
         }
+    } else if ([sender isEqual:_giftButton]) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(giftAction)]) {
+            [self.delegate giftAction];
+        }
     }
     
 }
@@ -273,6 +294,7 @@
         self.sureButton.hidden = YES;
         self.shootButton.hidden = NO;
         self.photosButton.hidden = NO;
+        self.giftButton.hidden = NO;
         
     }];
 }

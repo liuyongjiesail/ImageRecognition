@@ -16,6 +16,7 @@
 #import "XRSettingViewController.h"
 #import <Photos/Photos.h>
 #import "XRNetworkManager.h"
+#import "XRGADInterstitialApi.h"
 
 @interface XRRecognitionViewController () <XRRecognitionViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -216,6 +217,13 @@
 - (void)sureAction {
     self.recognitionView.sureButton.userInteractionEnabled = NO;
     [self recognitionAction:self.tempImage];
+}
+
+/**
+ 插屏广告
+ */
+- (void)giftAction {
+    [XRGADInterstitialApi.shared showInterstitialViewController:self];
 }
 
 @end
