@@ -28,7 +28,6 @@
 		EDB75BF12165108500FFA793 /* NSBundle+XLAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BF02165108500FFA793 /* NSBundle+XLAppInfo.m */; };
 		EDB75BF82165132400FFA793 /* UIApplication+XRAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BF72165132400FFA793 /* UIApplication+XRAppStore.m */; };
 		EDB75BFC2165159500FFA793 /* XRRecognitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BFB2165159500FFA793 /* XRRecognitionManager.m */; };
-		EDB75BFF216515A400FFA793 /* XRSettingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BFE216515A400FFA793 /* XRSettingManager.m */; };
 		EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C01216526F200FFA793 /* UIViewController+Alert.m */; };
 		EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C05216527D100FFA793 /* UIViewController+Find.m */; };
 		EDB75C0921653CF500FFA793 /* user_protocol.html in Resources */ = {isa = PBXBuildFile; fileRef = EDB75C0821653CF500FFA793 /* user_protocol.html */; };
@@ -119,8 +118,6 @@
 		EDB75BF72165132400FFA793 /* UIApplication+XRAppStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+XRAppStore.m"; sourceTree = "<group>"; };
 		EDB75BFA2165159500FFA793 /* XRRecognitionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRRecognitionManager.h; sourceTree = "<group>"; };
 		EDB75BFB2165159500FFA793 /* XRRecognitionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRRecognitionManager.m; sourceTree = "<group>"; };
-		EDB75BFD216515A400FFA793 /* XRSettingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRSettingManager.h; sourceTree = "<group>"; };
-		EDB75BFE216515A400FFA793 /* XRSettingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRSettingManager.m; sourceTree = "<group>"; };
 		EDB75C01216526F200FFA793 /* UIViewController+Alert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
 		EDB75C02216526F200FFA793 /* UIViewController+Alert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
 		EDB75C04216527D100FFA793 /* UIViewController+Find.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Find.h"; sourceTree = "<group>"; };
@@ -451,8 +448,6 @@
 				EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */,
 				EDB75BFA2165159500FFA793 /* XRRecognitionManager.h */,
 				EDB75BFB2165159500FFA793 /* XRRecognitionManager.m */,
-				EDB75BFD216515A400FFA793 /* XRSettingManager.h */,
-				EDB75BFE216515A400FFA793 /* XRSettingManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -734,7 +729,6 @@
 				EDE56D93215CD4E8009FD8D5 /* Frameworks */,
 				EDE56D94215CD4E8009FD8D5 /* Resources */,
 				A3B4FA193CEE1224780E0125 /* [CP] Embed Pods Frameworks */,
-				753F412B7AB31DB53E61C71D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -809,24 +803,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		753F412B7AB31DB53E61C71D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-resources.sh",
-				"${PODS_ROOT}/AlicloudFeedback/feedback/YWFeedbackBundle.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YWFeedbackBundle.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A3B4FA193CEE1224780E0125 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -892,7 +868,6 @@
 				EDDF270921621A3600D7A3E3 /* AVCaptureManager.m in Sources */,
 				EDDF26EE2160C16D00D7A3E3 /* XREventDetailViewController.m in Sources */,
 				EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */,
-				EDB75BFF216515A400FFA793 /* XRSettingManager.m in Sources */,
 				EDB75B992163C43700FFA793 /* XRWebViewController.m in Sources */,
 				EDB75B8F2163459800FFA793 /* XRRecognitionListViewController.m in Sources */,
 				EDDF26F32160CB8500D7A3E3 /* XRBaseTableViewCell.m in Sources */,

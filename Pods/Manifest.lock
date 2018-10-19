@@ -14,14 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - AlicloudFeedback (3.2.2):
-    - AlicloudUT
-    - AlicloudUtils
-  - AlicloudUT (5.2.0.5):
-    - AlicloudUTDID
-  - AlicloudUTDID (1.1.0.19)
-  - AlicloudUtils (1.3.5):
-    - AlicloudUTDID
   - FDFullscreenPopGesture (1.1)
   - Google-Mobile-Ads-SDK (7.33.1)
   - GTMBase64 (1.0.1)
@@ -38,7 +30,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - AlicloudFeedback
   - FDFullscreenPopGesture
   - Google-Mobile-Ads-SDK
   - GTMBase64
@@ -50,11 +41,6 @@ DEPENDENCIES:
   - YYModel
 
 SPEC REPOS:
-  https://github.com/aliyun/aliyun-specs.git:
-    - AlicloudFeedback
-    - AlicloudUT
-    - AlicloudUTDID
-    - AlicloudUtils
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - FDFullscreenPopGesture
@@ -69,10 +55,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AlicloudFeedback: 0887b49a73d6fc172f4a986cae1f92ae4100341e
-  AlicloudUT: 1b52965b97c5fc0b630901ce184391fbe1ef8479
-  AlicloudUTDID: 14b582e41b39bc66e5a3420b61dafd0567ef4603
-  AlicloudUtils: 36bd836fdd5c040ee0c9c06b0e1e1096a8c59c44
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Google-Mobile-Ads-SDK: 71c6d3e8d8f52673fa5a83fc0d027623b11fde16
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
@@ -83,6 +65,6 @@ SPEC CHECKSUMS:
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 46657aee84c7ede63da09426c9060048102b0286
+PODFILE CHECKSUM: 6f91a380af3b3a481bb039268438c9d4f8f7227d
 
 COCOAPODS: 1.5.0

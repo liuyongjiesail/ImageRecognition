@@ -18,7 +18,6 @@ target 'ImageRecognition' do
     pod 'UITableView+FDTemplateLayoutCell'
     pod 'RTRootNavigationController'
     
-    pod 'AlicloudFeedback'
     pod 'Google-Mobile-Ads-SDK'
     
 end

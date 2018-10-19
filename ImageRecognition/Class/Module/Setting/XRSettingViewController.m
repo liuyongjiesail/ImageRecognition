@@ -8,7 +8,6 @@
 
 #import "XRSettingViewController.h"
 #import "XRWebViewController.h"
-#import "XRSettingManager.h"
 #import "XRGADBannerApi.h"
 #import "XRMintegralRewardVideoApi.h"
 #import "XRMirrorViewController.h"
@@ -73,7 +72,7 @@
         case 1: {
             switch (indexPath.row) {
                 case 0: {
-                    [XRSettingManager.shared openFeedbackViewController];
+                    [self showAlertWithTitle:[NSString stringWithFormat:@"如果您有意见和建议，欢迎加入qq群反馈：\n\n群号码：738874700"] message:@"" actionTitles:@[@"好的"] actionHandler:nil];
                     break;
                 }
                 case 1: {

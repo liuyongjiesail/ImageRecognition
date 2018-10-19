@@ -31,6 +31,13 @@
     [self.view addSubview:self.tableView];
     //添加广告
     [self.bannerApi loadBannerAdView:self];
+    
+    //随机弹出评价
+    if (arc4random()%3 == 0 && ![NSUserDefaults.standardUserDefaults objectForKey:@"NewComment"]) {
+        [NSUserDefaults.standardUserDefaults setObject:@"1" forKey:@"NewComment"];
+        [NSUserDefaults.standardUserDefaults synchronize];
+        [UIApplication.sharedApplication commentApplicationToAppStore];
+    }
 }
 
 - (void)shareAction {
