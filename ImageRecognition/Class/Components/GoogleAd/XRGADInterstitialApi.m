@@ -12,6 +12,7 @@
 @interface XRGADInterstitialApi ()<GADInterstitialDelegate>
 
 @property(nonatomic, strong) GADInterstitial *interstitial;
+@property (copy, nonatomic) void(^tempSuccess)(void);
 
 @end
 
@@ -26,24 +27,17 @@
     return manager;
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        [self requestInterstitial];
-    }
-    return self;
-}
-
 - (void)showInterstitialViewController:(UIViewController *)viewController {
     if (self.interstitial.isReady) {
         [self.interstitial presentFromRootViewController:viewController];
     } else {
         XRLog(@"Ad wasn't ready");
-        [self requestInterstitial];
     }
 }
 
-- (void)requestInterstitial {
+- (void)requestInterstitialSuccess:(void(^)(void))success {
+    self.tempSuccess = success;
+    
     self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:XRGoogleInterstitialUnitId];
     self.interstitial.delegate = self;
     GADRequest *request = [GADRequest new];
@@ -58,6 +52,10 @@
 /// Tells the delegate an ad request succeeded.
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
     XRLog(@"interstitialDidReceiveAd");
+    if (self.tempSuccess) {
+        self.tempSuccess();
+    }
+    [TalkingData trackEvent:@"interstitialDidReceiveAd"];
 }
 
 /// Tells the delegate an ad request failed.
@@ -69,6 +67,8 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
 /// Tells the delegate that an interstitial will be presented.
 - (void)interstitialWillPresentScreen:(GADInterstitial *)ad {
     XRLog(@"interstitialWillPresentScreen");
+    [self requestInterstitialSuccess:nil];
+    [TalkingData trackEvent:@"interstitialWillPresentScreen"];
 }
 
 /// Tells the delegate the interstitial is to be animated off the screen.
@@ -79,7 +79,6 @@ didFailToReceiveAdWithError:(GADRequestError *)error {
 /// Tells the delegate the interstitial had been animated off the screen.
 - (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
     XRLog(@"interstitialDidDismissScreen");
-    [self requestInterstitial];
 }
 
 /// Tells the delegate that a user click will open another app

@@ -12,6 +12,8 @@
 
 + (instancetype)shared;
 
+- (void)requestInterstitialSuccess:(void(^)(void))success;
+
 - (void)showInterstitialViewController:(UIViewController *)viewController;
 
 @end

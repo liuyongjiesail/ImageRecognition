@@ -17,7 +17,6 @@
 @property (strong, nonatomic) UIView   *rightplace;    //右占位
 @property (strong, nonatomic) UIButton *photosButton;   //相册
 @property (strong, nonatomic) UIButton *shootButton;   //拍照
-@property (strong, nonatomic) UIButton *giftButton;    //礼品
 @property (strong, nonatomic) UIImageView *focusView;  //对焦框
 @property (strong, nonatomic) XRClassifySelectView *classifySelectView; //分段选择
 @property (strong, nonatomic) UIImageView *classifyImageView; //分段选择
@@ -85,7 +84,7 @@
     
     //礼物
     UIButton *giftButton = [self createButtonWithImageNormal:@"gift" Highlighted:nil];
-    giftButton.hidden = NO;
+    giftButton.hidden = YES;
     [self addSubview:giftButton];
     _giftButton = giftButton;
     

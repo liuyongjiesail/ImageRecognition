@@ -29,6 +29,7 @@
 
 @property (strong, nonatomic) UIButton *sureButton;    //完成
 @property (strong, nonatomic) UIButton *cancleButton;  //取消
+@property (strong, nonatomic) UIButton *giftButton;    //礼品
 
 //拍照完成
 - (void)shootComplete;

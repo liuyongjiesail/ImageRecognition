@@ -42,6 +42,9 @@
     
     [XRBaiduYunApi fetchBaiduYunTokenSuccess:^(id responseDict) {} failure:^(NSInteger errorCode) {}];
     
+    [XRGADInterstitialApi.shared requestInterstitialSuccess:^{
+        self.recognitionView.giftButton.hidden = NO;
+    }];
 }
 
 #pragma mark - CustomEvent
