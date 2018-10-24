@@ -67,10 +67,12 @@
 }
 
 - (void)leftBarButtonItemAction {
+    [TalkingData trackEvent:@"leftBarButtonItemAction"];
     [self showViewController:[XRTodayHistoryViewController new] sender:nil];
 }
 
 - (void)settingAction {
+    [TalkingData trackEvent:@"settingAction"];
     [self showViewController:[XRSettingViewController new] sender:nil];
 }
 
@@ -246,6 +248,7 @@
  */
 - (void)giftAction {
     [XRGADInterstitialApi.shared showInterstitialViewController:self];
+    [TalkingData trackEvent:@"giftAction"];
 }
 
 @end

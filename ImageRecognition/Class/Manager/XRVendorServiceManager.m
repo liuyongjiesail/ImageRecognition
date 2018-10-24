@@ -7,7 +7,6 @@
 //
 
 #import "XRVendorServiceManager.h"
-#import "XRMintegralRewardVideoApi.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import "XRGADInterstitialApi.h"
 
@@ -35,8 +34,6 @@
         [GADMobileAds configureWithApplicationID:XRGoogleAppId];
         
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            /** Mintegral Ad **/
-            [XRMintegralRewardVideoApi sharedReward];
             /** Google Interstitial **/
             [XRGADInterstitialApi shared];
         });

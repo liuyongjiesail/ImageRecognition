@@ -9,8 +9,8 @@
 #import "XRSettingViewController.h"
 #import "XRWebViewController.h"
 #import "XRGADBannerApi.h"
-#import "XRMintegralRewardVideoApi.h"
 #import "XRMirrorViewController.h"
+#import "XRGADInterstitialApi.h"
 
 @interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -91,7 +91,7 @@
                     break;
                 }
                 case 1: {
-                    [XRMintegralRewardVideoApi.sharedReward showRewardedVideoForViewController:self];
+                    [XRGADInterstitialApi.shared showInterstitialViewController:self];
                     break;
                 }
             }

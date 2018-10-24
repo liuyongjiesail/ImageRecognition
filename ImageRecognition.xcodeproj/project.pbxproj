@@ -33,7 +33,6 @@
 		EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C05216527D100FFA793 /* UIViewController+Find.m */; };
 		EDB75C0921653CF500FFA793 /* user_protocol.html in Resources */ = {isa = PBXBuildFile; fileRef = EDB75C0821653CF500FFA793 /* user_protocol.html */; };
 		EDB75C0A2165CF0E00FFA793 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BBB2164789700FFA793 /* libxml2.tbd */; };
-		EDB75C132168F48700FFA793 /* XRMintegralRewardVideoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C122168F48600FFA793 /* XRMintegralRewardVideoApi.m */; };
 		EDB75C16216B335600FFA793 /* XREventListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C15216B335600FFA793 /* XREventListCell.m */; };
 		EDB75C19216B427500FFA793 /* XRMirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C18216B427500FFA793 /* XRMirrorViewController.m */; };
 		EDB75C69216CAF6100FFA793 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C68216CAF6100FFA793 /* CoreGraphics.framework */; };
@@ -44,8 +43,6 @@
 		EDB75C71216CAFB600FFA793 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C70216CAFB600FFA793 /* Accelerate.framework */; };
 		EDB75C73216CAFC200FFA793 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C72216CAFC200FFA793 /* AVFoundation.framework */; };
 		EDB75C75216CAFC800FFA793 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C74216CAFC800FFA793 /* WebKit.framework */; };
-		EDB75C87216CB1CA00FFA793 /* MTGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C85216CB1CA00FFA793 /* MTGSDK.framework */; };
-		EDB75C91216CBF2600FFA793 /* MTGSDKReward.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C90216CBF2600FFA793 /* MTGSDKReward.framework */; };
 		EDB75CCD216F054300FFA793 /* XRGADBannerApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75CCC216F054300FFA793 /* XRGADBannerApi.m */; };
 		EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */; };
 		EDDF26C421607A7300D7A3E3 /* XRVendorServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */; };
@@ -126,8 +123,6 @@
 		EDB75C04216527D100FFA793 /* UIViewController+Find.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Find.h"; sourceTree = "<group>"; };
 		EDB75C05216527D100FFA793 /* UIViewController+Find.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Find.m"; sourceTree = "<group>"; };
 		EDB75C0821653CF500FFA793 /* user_protocol.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = user_protocol.html; sourceTree = "<group>"; };
-		EDB75C112168F48600FFA793 /* XRMintegralRewardVideoApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRMintegralRewardVideoApi.h; sourceTree = "<group>"; };
-		EDB75C122168F48600FFA793 /* XRMintegralRewardVideoApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRMintegralRewardVideoApi.m; sourceTree = "<group>"; };
 		EDB75C14216B335600FFA793 /* XREventListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XREventListCell.h; sourceTree = "<group>"; };
 		EDB75C15216B335600FFA793 /* XREventListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XREventListCell.m; sourceTree = "<group>"; };
 		EDB75C17216B427500FFA793 /* XRMirrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRMirrorViewController.h; sourceTree = "<group>"; };
@@ -138,8 +133,6 @@
 		EDB75C70216CAFB600FFA793 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		EDB75C72216CAFC200FFA793 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EDB75C74216CAFC800FFA793 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		EDB75C85216CB1CA00FFA793 /* MTGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MTGSDK.framework; sourceTree = "<group>"; };
-		EDB75C90216CBF2600FFA793 /* MTGSDKReward.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MTGSDKReward.framework; sourceTree = "<group>"; };
 		EDB75CCB216F054300FFA793 /* XRGADBannerApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRGADBannerApi.h; sourceTree = "<group>"; };
 		EDB75CCC216F054300FFA793 /* XRGADBannerApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRGADBannerApi.m; sourceTree = "<group>"; };
 		EDDF26B7215F647300D7A3E3 /* XRTodayHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRTodayHistoryViewController.h; sourceTree = "<group>"; };
@@ -206,7 +199,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB75C75216CAFC800FFA793 /* WebKit.framework in Frameworks */,
-				EDB75C91216CBF2600FFA793 /* MTGSDKReward.framework in Frameworks */,
 				EDB75C73216CAFC200FFA793 /* AVFoundation.framework in Frameworks */,
 				EDB75C71216CAFB600FFA793 /* Accelerate.framework in Frameworks */,
 				EDB75C6F216CAFAB00FFA793 /* MobileCoreServices.framework in Frameworks */,
@@ -220,7 +212,6 @@
 				EDB75BAA2164742C00FFA793 /* StoreKit.framework in Frameworks */,
 				EDDF26D42160822400D7A3E3 /* libc++.tbd in Frameworks */,
 				EDDF26D22160821800D7A3E3 /* libz.tbd in Frameworks */,
-				EDB75C87216CB1CA00FFA793 /* MTGSDK.framework in Frameworks */,
 				EDDF26D02160820A00D7A3E3 /* SystemConfiguration.framework in Frameworks */,
 				EDDF26CE216081FF00D7A3E3 /* Security.framework in Frameworks */,
 				EDDF26CC216081F000D7A3E3 /* CoreMotion.framework in Frameworks */,
@@ -386,15 +377,6 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
-		EDB75C0D2168F2AB00FFA793 /* MintegralAd */ = {
-			isa = PBXGroup;
-			children = (
-				EDB75C112168F48600FFA793 /* XRMintegralRewardVideoApi.h */,
-				EDB75C122168F48600FFA793 /* XRMintegralRewardVideoApi.m */,
-			);
-			path = MintegralAd;
-			sourceTree = "<group>";
-		};
 		EDDF26B6215F645C00D7A3E3 /* History */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,7 +469,6 @@
 		EDDF26DB2160A4E000D7A3E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EDB75C0D2168F2AB00FFA793 /* MintegralAd */,
 				EDB75BA521645BE400FFA793 /* GoogleAd */,
 				EDDF2706216219DA00D7A3E3 /* AVCaptureManager */,
 				EDDF26DC2160A4FD00D7A3E3 /* Network */,
@@ -696,8 +677,6 @@
 		FBDAFE211613956B50F982C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EDB75C90216CBF2600FFA793 /* MTGSDKReward.framework */,
-				EDB75C85216CB1CA00FFA793 /* MTGSDK.framework */,
 				EDB75C74216CAFC800FFA793 /* WebKit.framework */,
 				EDB75C72216CAFC200FFA793 /* AVFoundation.framework */,
 				EDB75C70216CAFB600FFA793 /* Accelerate.framework */,
@@ -866,7 +845,6 @@
 				EDB75B8421630A5B00FFA793 /* XRBaiduYunApi.m in Sources */,
 				EDDF26E42160AE9600D7A3E3 /* XRNetworkManager.m in Sources */,
 				EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */,
-				EDB75C132168F48700FFA793 /* XRMintegralRewardVideoApi.m in Sources */,
 				EDDF27012160CFBE00D7A3E3 /* UIColor+XRString.m in Sources */,
 				EDB75CCD216F054300FFA793 /* XRGADBannerApi.m in Sources */,
 				EDB75BED216504B600FFA793 /* XRSettingViewController.m in Sources */,
