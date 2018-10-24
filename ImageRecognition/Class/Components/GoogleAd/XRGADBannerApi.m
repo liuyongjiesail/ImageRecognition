@@ -22,7 +22,7 @@
     bannerView.delegate = self;
     bannerView.rootViewController = viewController;
     bannerView.centerX = viewController.view.centerX;
-    bannerView.y = viewController.view.height - bannerView.height;
+    bannerView.y = viewController.view.height - bannerView.height - SAFEAREINSETS.bottom;
     
     [viewController.view addSubview:bannerView];
     

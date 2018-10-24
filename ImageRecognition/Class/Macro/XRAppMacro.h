@@ -20,4 +20,6 @@
 #define SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height
 #define SCREEN_BOUNDS   [UIScreen mainScreen].bounds
 
+#define SAFEAREINSETS ({UIEdgeInsets insets; if(@available(iOS 11.0, *)) {insets = UIApplication.sharedApplication.keyWindow.safeAreaInsets;} else {insets = UIEdgeInsetsZero;} insets;})
+
 #endif /* XRAppMacro_h */

@@ -125,7 +125,7 @@
     
     [self.classifySelectView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
-        make.bottom.equalTo(self.shootButton.mas_top).offset(-10);
+        make.bottom.equalTo(self.shootButton.mas_top).offset(-15);
         make.height.mas_equalTo(40);
         make.width.mas_equalTo(SCREEN_WIDTH-40);
     }];
@@ -134,7 +134,7 @@
     [shootButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.centerX.equalTo(self);
-        make.bottom.equalTo(self).offset(-30);
+        make.bottom.equalTo(self).offset(-(35+SAFEAREINSETS.bottom));
     }];
     
     [self.classifyImageView mas_makeConstraints:^(MASConstraintMaker *make) {
