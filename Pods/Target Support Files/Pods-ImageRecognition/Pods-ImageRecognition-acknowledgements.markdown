@@ -76,10 +76,6 @@ SOFTWARE.
 
 
 
-## Google-Mobile-Ads-SDK
-
-Copyright 2018 Google
-
 ## MBProgressHUD
 
 Copyright © 2009-2016 Matej Bukovinski

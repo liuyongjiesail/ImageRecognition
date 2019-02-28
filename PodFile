@@ -1,10 +1,6 @@
 platform :ios, '8.0'
 use_frameworks!
 
-# 指定 Master 仓库和阿里云仓库
-source 'https://github.com/CocoaPods/Specs.git'
-source 'https://github.com/aliyun/aliyun-specs.git'
-
 target 'ImageRecognition' do
     
     pod 'AFNetworking'
@@ -17,8 +13,6 @@ target 'ImageRecognition' do
     pod 'Masonry'
     pod 'UITableView+FDTemplateLayoutCell'
     pod 'RTRootNavigationController'
-    
-    pod 'Google-Mobile-Ads-SDK'
     
 end
 

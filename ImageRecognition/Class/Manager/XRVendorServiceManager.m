@@ -7,8 +7,6 @@
 //
 
 #import "XRVendorServiceManager.h"
-#import <GoogleMobileAds/GoogleMobileAds.h>
-#import "XRGADInterstitialApi.h"
 
 @implementation XRVendorServiceManager
 
@@ -29,14 +27,6 @@
         [TalkingData sessionStarted:XRTakingDataAppID withChannelId:XRTakingDataAppChannel];
         //开启崩溃日志捕获
         [TalkingData setExceptionReportEnabled:YES];
-        
-        /** Google Ad **/
-        [GADMobileAds configureWithApplicationID:XRGoogleAppId];
-        
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            /** Google Interstitial **/
-            [XRGADInterstitialApi shared];
-        });
         
     }
     return self;

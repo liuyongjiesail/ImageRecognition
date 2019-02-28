@@ -10,7 +10,6 @@
 		10989DFF1966A097230EB41B /* Pods_ImageRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31147586824DACC4ADE079E1 /* Pods_ImageRecognition.framework */; };
 		ED50959A21771A8300C16EC6 /* XRClassifySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959921771A8300C16EC6 /* XRClassifySelectView.m */; };
 		ED50959D21771A9100C16EC6 /* XRClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959C21771A9100C16EC6 /* XRClassifyModel.m */; };
-		ED5095B92179B9B600C16EC6 /* XRGADInterstitialApi.m in Sources */ = {isa = PBXBuildFile; fileRef = ED5095B82179B9B600C16EC6 /* XRGADInterstitialApi.m */; };
 		EDB75B782162248000FFA793 /* XRRecognitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B772162248000FFA793 /* XRRecognitionView.m */; };
 		EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7A216224B900FFA793 /* XRBaseView.m */; };
 		EDB75B7F2162297900FFA793 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7E2162297900FFA793 /* UIView+Frame.m */; };
@@ -34,7 +33,6 @@
 		EDB75C0921653CF500FFA793 /* user_protocol.html in Resources */ = {isa = PBXBuildFile; fileRef = EDB75C0821653CF500FFA793 /* user_protocol.html */; };
 		EDB75C0A2165CF0E00FFA793 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BBB2164789700FFA793 /* libxml2.tbd */; };
 		EDB75C16216B335600FFA793 /* XREventListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C15216B335600FFA793 /* XREventListCell.m */; };
-		EDB75C19216B427500FFA793 /* XRMirrorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75C18216B427500FFA793 /* XRMirrorViewController.m */; };
 		EDB75C69216CAF6100FFA793 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C68216CAF6100FFA793 /* CoreGraphics.framework */; };
 		EDB75C6A216CAF6C00FFA793 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BBD216478D500FFA793 /* Foundation.framework */; };
 		EDB75C6B216CAF7200FFA793 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BBF216478DC00FFA793 /* UIKit.framework */; };
@@ -43,7 +41,6 @@
 		EDB75C71216CAFB600FFA793 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C70216CAFB600FFA793 /* Accelerate.framework */; };
 		EDB75C73216CAFC200FFA793 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C72216CAFC200FFA793 /* AVFoundation.framework */; };
 		EDB75C75216CAFC800FFA793 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C74216CAFC800FFA793 /* WebKit.framework */; };
-		EDB75CCD216F054300FFA793 /* XRGADBannerApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75CCC216F054300FFA793 /* XRGADBannerApi.m */; };
 		EDDF26B9215F647300D7A3E3 /* XRTodayHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */; };
 		EDDF26C421607A7300D7A3E3 /* XRVendorServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */; };
 		EDDF26C8216081D000D7A3E3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C7216081D000D7A3E3 /* AdSupport.framework */; };
@@ -80,8 +77,6 @@
 		ED50959921771A8300C16EC6 /* XRClassifySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRClassifySelectView.m; sourceTree = "<group>"; };
 		ED50959B21771A9000C16EC6 /* XRClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRClassifyModel.h; sourceTree = "<group>"; };
 		ED50959C21771A9100C16EC6 /* XRClassifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRClassifyModel.m; sourceTree = "<group>"; };
-		ED5095B72179B9B500C16EC6 /* XRGADInterstitialApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRGADInterstitialApi.h; sourceTree = "<group>"; };
-		ED5095B82179B9B600C16EC6 /* XRGADInterstitialApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRGADInterstitialApi.m; sourceTree = "<group>"; };
 		EDB75B762162248000FFA793 /* XRRecognitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRecognitionView.h; sourceTree = "<group>"; };
 		EDB75B772162248000FFA793 /* XRRecognitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRecognitionView.m; sourceTree = "<group>"; };
 		EDB75B79216224B900FFA793 /* XRBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRBaseView.h; sourceTree = "<group>"; };
@@ -125,16 +120,12 @@
 		EDB75C0821653CF500FFA793 /* user_protocol.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = user_protocol.html; sourceTree = "<group>"; };
 		EDB75C14216B335600FFA793 /* XREventListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XREventListCell.h; sourceTree = "<group>"; };
 		EDB75C15216B335600FFA793 /* XREventListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XREventListCell.m; sourceTree = "<group>"; };
-		EDB75C17216B427500FFA793 /* XRMirrorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRMirrorViewController.h; sourceTree = "<group>"; };
-		EDB75C18216B427500FFA793 /* XRMirrorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRMirrorViewController.m; sourceTree = "<group>"; };
 		EDB75C68216CAF6100FFA793 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		EDB75C6C216CAF8300FFA793 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		EDB75C6E216CAFAB00FFA793 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EDB75C70216CAFB600FFA793 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		EDB75C72216CAFC200FFA793 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EDB75C74216CAFC800FFA793 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		EDB75CCB216F054300FFA793 /* XRGADBannerApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRGADBannerApi.h; sourceTree = "<group>"; };
-		EDB75CCC216F054300FFA793 /* XRGADBannerApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRGADBannerApi.m; sourceTree = "<group>"; };
 		EDDF26B7215F647300D7A3E3 /* XRTodayHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRTodayHistoryViewController.h; sourceTree = "<group>"; };
 		EDDF26B8215F647300D7A3E3 /* XRTodayHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRTodayHistoryViewController.m; sourceTree = "<group>"; };
 		EDDF26BA215F64AF00D7A3E3 /* XRAppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRAppMacro.h; sourceTree = "<group>"; };
@@ -308,17 +299,6 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
-		EDB75BA521645BE400FFA793 /* GoogleAd */ = {
-			isa = PBXGroup;
-			children = (
-				EDB75CCB216F054300FFA793 /* XRGADBannerApi.h */,
-				EDB75CCC216F054300FFA793 /* XRGADBannerApi.m */,
-				ED5095B72179B9B500C16EC6 /* XRGADInterstitialApi.h */,
-				ED5095B82179B9B600C16EC6 /* XRGADInterstitialApi.m */,
-			);
-			path = GoogleAd;
-			sourceTree = "<group>";
-		};
 		EDB75BD421647CA400FFA793 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,8 +322,6 @@
 			children = (
 				EDB75BEB216504B600FFA793 /* XRSettingViewController.h */,
 				EDB75BEC216504B600FFA793 /* XRSettingViewController.m */,
-				EDB75C17216B427500FFA793 /* XRMirrorViewController.h */,
-				EDB75C18216B427500FFA793 /* XRMirrorViewController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -469,7 +447,6 @@
 		EDDF26DB2160A4E000D7A3E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EDB75BA521645BE400FFA793 /* GoogleAd */,
 				EDDF2706216219DA00D7A3E3 /* AVCaptureManager */,
 				EDDF26DC2160A4FD00D7A3E3 /* Network */,
 			);
@@ -835,7 +812,6 @@
 				EDB75B782162248000FFA793 /* XRRecognitionView.m in Sources */,
 				EDB75B95216364CA00FFA793 /* XRCorrelationResultCell.m in Sources */,
 				EDB75BF12165108500FFA793 /* NSBundle+XLAppInfo.m in Sources */,
-				ED5095B92179B9B600C16EC6 /* XRGADInterstitialApi.m in Sources */,
 				EDB75BDB2164973E00FFA793 /* MBProgressHUD+MJ.m in Sources */,
 				EDB75C16216B335600FFA793 /* XREventListCell.m in Sources */,
 				EDDF26EB2160BD0900D7A3E3 /* XRHistoryEventModel.m in Sources */,
@@ -846,7 +822,6 @@
 				EDDF26E42160AE9600D7A3E3 /* XRNetworkManager.m in Sources */,
 				EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */,
 				EDDF27012160CFBE00D7A3E3 /* UIColor+XRString.m in Sources */,
-				EDB75CCD216F054300FFA793 /* XRGADBannerApi.m in Sources */,
 				EDB75BED216504B600FFA793 /* XRSettingViewController.m in Sources */,
 				EDB75B8C216341AA00FFA793 /* XRIdentifyResultsModel.m in Sources */,
 				EDDF270921621A3600D7A3E3 /* AVCaptureManager.m in Sources */,
@@ -856,7 +831,6 @@
 				EDB75B8F2163459800FFA793 /* XRRecognitionListViewController.m in Sources */,
 				EDDF26F32160CB8500D7A3E3 /* XRBaseTableViewCell.m in Sources */,
 				EDDF26F62160CDCD00D7A3E3 /* XREventDetailContentCell.m in Sources */,
-				EDB75C19216B427500FFA793 /* XRMirrorViewController.m in Sources */,
 				EDDF26FD2160CF2900D7A3E3 /* UILabel+XRInitialize.m in Sources */,
 				EDB75BF82165132400FFA793 /* UIApplication+XRAppStore.m in Sources */,
 				EDB75B922163474400FFA793 /* XRBestResultCell.m in Sources */,

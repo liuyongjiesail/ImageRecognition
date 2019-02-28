@@ -16,7 +16,6 @@
 #import "XRSettingViewController.h"
 #import <Photos/Photos.h>
 #import "XRNetworkManager.h"
-#import "XRGADInterstitialApi.h"
 
 @interface XRRecognitionViewController () <XRRecognitionViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -42,9 +41,6 @@
     
     [XRBaiduYunApi fetchBaiduYunTokenSuccess:^(id responseDict) {} failure:^(NSInteger errorCode) {}];
     
-    [XRGADInterstitialApi.shared requestInterstitialSuccess:^{
-        self.recognitionView.giftButton.hidden = NO;
-    }];
 }
 
 #pragma mark - CustomEvent
@@ -241,14 +237,6 @@
 - (void)sureAction {
     self.recognitionView.sureButton.userInteractionEnabled = NO;
     [self recognitionAction:self.tempImage];
-}
-
-/**
- 插屏广告
- */
-- (void)giftAction {
-    [XRGADInterstitialApi.shared showInterstitialViewController:self];
-    [TalkingData trackEvent:@"giftAction"];
 }
 
 @end

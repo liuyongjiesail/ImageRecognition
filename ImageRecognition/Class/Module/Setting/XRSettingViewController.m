@@ -8,16 +8,11 @@
 
 #import "XRSettingViewController.h"
 #import "XRWebViewController.h"
-#import "XRGADBannerApi.h"
-#import "XRMirrorViewController.h"
-#import "XRGADInterstitialApi.h"
 
 @interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSArray *dataArray;
-
-@property (strong, nonatomic) XRGADBannerApi *bannerApi;
 
 @end
 
@@ -28,12 +23,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"设置";
     
-    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"镜子", @"精选APP与游戏（推荐）"], @[@"用户协议", @"关于"]];
+    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"用户协议", @"关于"]];
     
     [self.view addSubview:self.tableView];
-    
-    //添加广告
-    [self.bannerApi loadBannerAdView:self];
     
 }
 
@@ -68,8 +60,7 @@
                 }
             }
             break;
-        }
-        case 1: {
+        } case 1: {
             switch (indexPath.row) {
                 case 0: {
                     UIPasteboard *pboard = [UIPasteboard generalPasteboard];
@@ -83,21 +74,7 @@
                 }
             }
             break;
-        }
-        case 2: {
-            switch (indexPath.row) {
-                case 0: {
-                    [self presentViewController:[XRMirrorViewController new] animated:NO completion:nil];
-                    break;
-                }
-                case 1: {
-                    [XRGADInterstitialApi.shared showInterstitialViewController:self];
-                    break;
-                }
-            }
-            break;
-        }
-        case 3: {
+        } case 2: {
             switch (indexPath.row) {
                 case 0: {
                     NSString* path = [[NSBundle mainBundle] pathForResource:@"user_protocol" ofType:@"html"];
@@ -130,13 +107,6 @@
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
     }
     return _tableView;
-}
-
-- (XRGADBannerApi *)bannerApi {
-    if (!_bannerApi) {
-        _bannerApi = [XRGADBannerApi new];
-    }
-    return _bannerApi;
 }
 
 @end
