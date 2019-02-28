@@ -10,7 +10,6 @@
 #import "XRRecognitionView.h"
 #import "AVCaptureManager.h"
 #import "XRBaiduYunApi.h"
-#import "XRTodayHistoryViewController.h"
 #import "XRIdentifyResultsModel.h"
 #import "XRRecognitionListViewController.h"
 #import "XRSettingViewController.h"
@@ -50,7 +49,6 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"today_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(leftBarButtonItemAction)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(settingAction)];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
@@ -60,11 +58,6 @@
     self.recognitionView.delegate = self;
     [self.view addSubview:self.recognitionView];
     
-}
-
-- (void)leftBarButtonItemAction {
-    [TalkingData trackEvent:@"leftBarButtonItemAction"];
-    [self showViewController:[XRTodayHistoryViewController new] sender:nil];
 }
 
 - (void)settingAction {
