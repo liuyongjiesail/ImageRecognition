@@ -31,6 +31,8 @@ static NSString * const baiduYunClassifyCar       = @"v1/car";
 static NSString * const baiduYunClassifyAnimal    = @"v1/animal";
 static NSString * const baiduYunClassifyPlant     = @"v1/plant";
 static NSString * const baiduYunClassifyLogo      = @"v2/logo";
+static NSString * const baiduYunClassifyIngredient = @"v1/classify/ingredient";
+static NSString * const baiduYunClassifyFlower    = @"v1/flower";
 
 static NSString * const baiduYunClassifyObject    = @"v1/object_detect";
 

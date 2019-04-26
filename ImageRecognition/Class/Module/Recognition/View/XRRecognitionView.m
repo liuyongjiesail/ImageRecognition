@@ -318,9 +318,9 @@
 - (NSArray *)classifyModelArray {
     if (!_classifyModelArray) {
         NSMutableArray *resultArray = [NSMutableArray array];
-        NSArray *titleArray = @[@"菜品", @"车型",@"动物",@"通用",@"植物", @"Logo"];
-        NSArray *urlArray = @[baiduYunClassifyDish, baiduYunClassifyCar,baiduYunClassifyAnimal,baiduYunClassifyGeneral,baiduYunClassifyPlant, baiduYunClassifyLogo];
-        NSArray *imageArray = @[@"dish", @"car",@"animal",@"general",@"plant", @"logo"];
+        NSArray *titleArray = @[@"菜品", @"车型",@"动物",@"通用",@"植物", @"花卉", @"Logo", @"果蔬"];
+        NSArray *urlArray = @[baiduYunClassifyDish, baiduYunClassifyCar,baiduYunClassifyAnimal,baiduYunClassifyGeneral,baiduYunClassifyPlant,baiduYunClassifyFlower,baiduYunClassifyLogo,baiduYunClassifyIngredient];
+        NSArray *imageArray = @[@"dish", @"car",@"animal",@"general",@"plant", @"huahui", @"logo", @"boluo"];
         [titleArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             XRClassifyModel *model = [XRClassifyModel new];
             model.title = titleArray[idx];
