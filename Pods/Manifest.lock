@@ -18,12 +18,14 @@ PODS:
   - GTMBase64 (1.0.1)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
+  - MJRefresh (3.1.16)
   - RTRootNavigationController (0.6.7):
     - RTRootNavigationController/Core (= 0.6.7)
   - RTRootNavigationController/Core (0.6.7)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - UICKeyChainStore (2.1.2)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - YYModel (1.0.4)
 
@@ -33,8 +35,10 @@ DEPENDENCIES:
   - GTMBase64
   - Masonry
   - MBProgressHUD
+  - MJRefresh
   - RTRootNavigationController
   - SDWebImage
+  - UICKeyChainStore
   - "UITableView+FDTemplateLayoutCell"
   - YYModel
 
@@ -45,8 +49,10 @@ SPEC REPOS:
     - GTMBase64
     - Masonry
     - MBProgressHUD
+    - MJRefresh
     - RTRootNavigationController
     - SDWebImage
+    - UICKeyChainStore
     - "UITableView+FDTemplateLayoutCell"
     - YYModel
 
@@ -56,11 +62,13 @@ SPEC CHECKSUMS:
   GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   RTRootNavigationController: d6aa6cbb78a3eaecea4f6e4df63f15dd887836b8
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  UICKeyChainStore: 85db518bb1d294366d15ec9b92a416c4e670518f
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 8f3b7c7058e2fee35f0295ba1599fc5e1bd24fb9
+PODFILE CHECKSUM: 1f1ca907c8037b31669ea93fc9157172b26b0449
 
 COCOAPODS: 1.5.0

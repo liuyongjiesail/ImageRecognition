@@ -10,6 +10,14 @@
 		10989DFF1966A097230EB41B /* Pods_ImageRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31147586824DACC4ADE079E1 /* Pods_ImageRecognition.framework */; };
 		ED50959A21771A8300C16EC6 /* XRClassifySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959921771A8300C16EC6 /* XRClassifySelectView.m */; };
 		ED50959D21771A9100C16EC6 /* XRClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959C21771A9100C16EC6 /* XRClassifyModel.m */; };
+		ED6F3CAB22964902001FD2C2 /* XRMobileConfigListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CA922964902001FD2C2 /* XRMobileConfigListController.m */; };
+		ED6F3CB1229649E3001FD2C2 /* XRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CB0229649E3001FD2C2 /* XRSettingViewController.m */; };
+		ED6F3CB522964A79001FD2C2 /* UIDevice+Info.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CB422964A79001FD2C2 /* UIDevice+Info.m */; };
+		ED6F3CB922964AE0001FD2C2 /* KeychainService.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CB822964AE0001FD2C2 /* KeychainService.m */; };
+		ED6F3CC02296C12A001FD2C2 /* MobileconfigListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CBF2296C12A001FD2C2 /* MobileconfigListCell.m */; };
+		ED6F3CC62296C4E1001FD2C2 /* MobileconfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CC52296C4E1001FD2C2 /* MobileconfigModel.m */; };
+		ED6F3CCA2297E62A001FD2C2 /* XRMobileconfigApi.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CC92297E62A001FD2C2 /* XRMobileconfigApi.m */; };
+		ED6F3CD1229910F0001FD2C2 /* XRHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CD0229910EE001FD2C2 /* XRHelpViewController.m */; };
 		EDB75B782162248000FFA793 /* XRRecognitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B772162248000FFA793 /* XRRecognitionView.m */; };
 		EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7A216224B900FFA793 /* XRBaseView.m */; };
 		EDB75B7F2162297900FFA793 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7E2162297900FFA793 /* UIView+Frame.m */; };
@@ -24,7 +32,6 @@
 		EDB75BAE2164746300FFA793 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75BAD2164746300FFA793 /* QuartzCore.framework */; };
 		EDB75BD721647CB700FFA793 /* UIButton+XRBigFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BD621647CB700FFA793 /* UIButton+XRBigFrame.m */; };
 		EDB75BDB2164973E00FFA793 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BDA2164973E00FFA793 /* MBProgressHUD+MJ.m */; };
-		EDB75BED216504B600FFA793 /* XRSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BEC216504B600FFA793 /* XRSettingViewController.m */; };
 		EDB75BF12165108500FFA793 /* NSBundle+XLAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BF02165108500FFA793 /* NSBundle+XLAppInfo.m */; };
 		EDB75BF82165132400FFA793 /* UIApplication+XRAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BF72165132400FFA793 /* UIApplication+XRAppStore.m */; };
 		EDB75BFC2165159500FFA793 /* XRRecognitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75BFB2165159500FFA793 /* XRRecognitionManager.m */; };
@@ -70,6 +77,22 @@
 		ED50959921771A8300C16EC6 /* XRClassifySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRClassifySelectView.m; sourceTree = "<group>"; };
 		ED50959B21771A9000C16EC6 /* XRClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRClassifyModel.h; sourceTree = "<group>"; };
 		ED50959C21771A9100C16EC6 /* XRClassifyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRClassifyModel.m; sourceTree = "<group>"; };
+		ED6F3CA922964902001FD2C2 /* XRMobileConfigListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRMobileConfigListController.m; sourceTree = "<group>"; };
+		ED6F3CAA22964902001FD2C2 /* XRMobileConfigListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRMobileConfigListController.h; sourceTree = "<group>"; };
+		ED6F3CAF229649E3001FD2C2 /* XRSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSettingViewController.h; sourceTree = "<group>"; };
+		ED6F3CB0229649E3001FD2C2 /* XRSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSettingViewController.m; sourceTree = "<group>"; };
+		ED6F3CB322964A78001FD2C2 /* UIDevice+Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Info.h"; sourceTree = "<group>"; };
+		ED6F3CB422964A79001FD2C2 /* UIDevice+Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Info.m"; sourceTree = "<group>"; };
+		ED6F3CB722964AE0001FD2C2 /* KeychainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainService.h; sourceTree = "<group>"; };
+		ED6F3CB822964AE0001FD2C2 /* KeychainService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainService.m; sourceTree = "<group>"; };
+		ED6F3CBE2296C129001FD2C2 /* MobileconfigListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileconfigListCell.h; sourceTree = "<group>"; };
+		ED6F3CBF2296C12A001FD2C2 /* MobileconfigListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileconfigListCell.m; sourceTree = "<group>"; };
+		ED6F3CC42296C4E1001FD2C2 /* MobileconfigModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileconfigModel.h; sourceTree = "<group>"; };
+		ED6F3CC52296C4E1001FD2C2 /* MobileconfigModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileconfigModel.m; sourceTree = "<group>"; };
+		ED6F3CC82297E62A001FD2C2 /* XRMobileconfigApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRMobileconfigApi.h; sourceTree = "<group>"; };
+		ED6F3CC92297E62A001FD2C2 /* XRMobileconfigApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRMobileconfigApi.m; sourceTree = "<group>"; };
+		ED6F3CCF229910ED001FD2C2 /* XRHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRHelpViewController.h; sourceTree = "<group>"; };
+		ED6F3CD0229910EE001FD2C2 /* XRHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRHelpViewController.m; sourceTree = "<group>"; };
 		EDB75B762162248000FFA793 /* XRRecognitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRecognitionView.h; sourceTree = "<group>"; };
 		EDB75B772162248000FFA793 /* XRRecognitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRecognitionView.m; sourceTree = "<group>"; };
 		EDB75B79216224B900FFA793 /* XRBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRBaseView.h; sourceTree = "<group>"; };
@@ -98,8 +121,6 @@
 		EDB75BD621647CB700FFA793 /* UIButton+XRBigFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XRBigFrame.m"; sourceTree = "<group>"; };
 		EDB75BD92164973E00FFA793 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		EDB75BDA2164973E00FFA793 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
-		EDB75BEB216504B600FFA793 /* XRSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRSettingViewController.h; sourceTree = "<group>"; };
-		EDB75BEC216504B600FFA793 /* XRSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRSettingViewController.m; sourceTree = "<group>"; };
 		EDB75BEF2165108500FFA793 /* NSBundle+XLAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+XLAppInfo.h"; sourceTree = "<group>"; };
 		EDB75BF02165108500FFA793 /* NSBundle+XLAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+XLAppInfo.m"; sourceTree = "<group>"; };
 		EDB75BF62165132400FFA793 /* UIApplication+XRAppStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+XRAppStore.h"; sourceTree = "<group>"; };
@@ -204,6 +225,72 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ED6F3CA8229648F2001FD2C2 /* MobileConfig */ = {
+			isa = PBXGroup;
+			children = (
+				ED6F3CC32296C3B7001FD2C2 /* View */,
+				ED6F3CC22296C3B0001FD2C2 /* Model */,
+				ED6F3CC12296C3A8001FD2C2 /* Controller */,
+			);
+			path = MobileConfig;
+			sourceTree = "<group>";
+		};
+		ED6F3CB222964A72001FD2C2 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				ED6F3CB322964A78001FD2C2 /* UIDevice+Info.h */,
+				ED6F3CB422964A79001FD2C2 /* UIDevice+Info.m */,
+			);
+			path = UIDevice;
+			sourceTree = "<group>";
+		};
+		ED6F3CB622964ABD001FD2C2 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				ED6F3CB722964AE0001FD2C2 /* KeychainService.h */,
+				ED6F3CB822964AE0001FD2C2 /* KeychainService.m */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		ED6F3CC12296C3A8001FD2C2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED6F3CAA22964902001FD2C2 /* XRMobileConfigListController.h */,
+				ED6F3CA922964902001FD2C2 /* XRMobileConfigListController.m */,
+				ED6F3CCF229910ED001FD2C2 /* XRHelpViewController.h */,
+				ED6F3CD0229910EE001FD2C2 /* XRHelpViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ED6F3CC22296C3B0001FD2C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED6F3CC42296C4E1001FD2C2 /* MobileconfigModel.h */,
+				ED6F3CC52296C4E1001FD2C2 /* MobileconfigModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ED6F3CC32296C3B7001FD2C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED6F3CBE2296C129001FD2C2 /* MobileconfigListCell.h */,
+				ED6F3CBF2296C12A001FD2C2 /* MobileconfigListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED6F3CC72297E614001FD2C2 /* MobileconfigApi */ = {
+			isa = PBXGroup;
+			children = (
+				ED6F3CC82297E62A001FD2C2 /* XRMobileconfigApi.h */,
+				ED6F3CC92297E62A001FD2C2 /* XRMobileconfigApi.m */,
+			);
+			path = MobileconfigApi;
+			sourceTree = "<group>";
+		};
 		EDB75B742162246000FFA793 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,8 +386,8 @@
 		EDB75BEA216504B600FFA793 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				EDB75BEB216504B600FFA793 /* XRSettingViewController.h */,
-				EDB75BEC216504B600FFA793 /* XRSettingViewController.m */,
+				ED6F3CAF229649E3001FD2C2 /* XRSettingViewController.h */,
+				ED6F3CB0229649E3001FD2C2 /* XRSettingViewController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -349,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				EDDF26D62160927500D7A3E3 /* XRCategory.h */,
+				ED6F3CB222964A72001FD2C2 /* UIDevice */,
 				EDB75C00216526DE00FFA793 /* UIViewController */,
 				EDB75BF2216510AF00FFA793 /* UIApplication */,
 				EDB75BEE2165108500FFA793 /* NSBundle */,
@@ -375,6 +463,7 @@
 		EDDF26DB2160A4E000D7A3E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ED6F3CB622964ABD001FD2C2 /* Security */,
 				EDDF2706216219DA00D7A3E3 /* AVCaptureManager */,
 				EDDF26DC2160A4FD00D7A3E3 /* Network */,
 			);
@@ -384,6 +473,7 @@
 		EDDF26DC2160A4FD00D7A3E3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				ED6F3CC72297E614001FD2C2 /* MobileconfigApi */,
 				EDB75B8021630A0B00FFA793 /* BaiduYunApi */,
 				EDB75B8121630A1D00FFA793 /* Manager */,
 			);
@@ -504,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				EDDF26F02160CB6700D7A3E3 /* Base */,
+				ED6F3CA8229648F2001FD2C2 /* MobileConfig */,
 				EDE56DC0215CF2FB009FD8D5 /* Recognition */,
 				EDB75BEA216504B600FFA793 /* Setting */,
 				EDB75B962163C41400FFA793 /* WebView */,
@@ -692,9 +783,11 @@
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMBase64/GTMBase64.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
@@ -704,9 +797,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMBase64.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTRootNavigationController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
@@ -730,22 +825,29 @@
 				EDB75B95216364CA00FFA793 /* XRCorrelationResultCell.m in Sources */,
 				EDB75BF12165108500FFA793 /* NSBundle+XLAppInfo.m in Sources */,
 				EDB75BDB2164973E00FFA793 /* MBProgressHUD+MJ.m in Sources */,
+				ED6F3CCA2297E62A001FD2C2 /* XRMobileconfigApi.m in Sources */,
 				EDB75BFC2165159500FFA793 /* XRRecognitionManager.m in Sources */,
+				ED6F3CB922964AE0001FD2C2 /* KeychainService.m in Sources */,
 				ED50959D21771A9100C16EC6 /* XRClassifyModel.m in Sources */,
 				EDE56D9B215CD4E8009FD8D5 /* AppDelegate.m in Sources */,
 				EDB75B8421630A5B00FFA793 /* XRBaiduYunApi.m in Sources */,
+				ED6F3CB1229649E3001FD2C2 /* XRSettingViewController.m in Sources */,
 				EDDF26E42160AE9600D7A3E3 /* XRNetworkManager.m in Sources */,
+				ED6F3CC62296C4E1001FD2C2 /* MobileconfigModel.m in Sources */,
 				EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */,
+				ED6F3CB522964A79001FD2C2 /* UIDevice+Info.m in Sources */,
 				EDDF27012160CFBE00D7A3E3 /* UIColor+XRString.m in Sources */,
-				EDB75BED216504B600FFA793 /* XRSettingViewController.m in Sources */,
 				EDB75B8C216341AA00FFA793 /* XRIdentifyResultsModel.m in Sources */,
 				EDDF270921621A3600D7A3E3 /* AVCaptureManager.m in Sources */,
 				EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */,
 				EDB75B992163C43700FFA793 /* XRWebViewController.m in Sources */,
 				EDB75B8F2163459800FFA793 /* XRRecognitionListViewController.m in Sources */,
+				ED6F3CC02296C12A001FD2C2 /* MobileconfigListCell.m in Sources */,
 				EDDF26F32160CB8500D7A3E3 /* XRBaseTableViewCell.m in Sources */,
 				EDDF26FD2160CF2900D7A3E3 /* UILabel+XRInitialize.m in Sources */,
+				ED6F3CAB22964902001FD2C2 /* XRMobileConfigListController.m in Sources */,
 				EDB75BF82165132400FFA793 /* UIApplication+XRAppStore.m in Sources */,
+				ED6F3CD1229910F0001FD2C2 /* XRHelpViewController.m in Sources */,
 				EDB75B922163474400FFA793 /* XRBestResultCell.m in Sources */,
 				EDDF26DA216092C400D7A3E3 /* UITableView+XRRegister.m in Sources */,
 				EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */,

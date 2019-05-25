@@ -8,11 +8,13 @@
 
 #import "XRSettingViewController.h"
 #import "XRWebViewController.h"
+#import "XRMobileConfigListController.h"
+#import "XRMobileconfigApi.h"
 
 @interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
-@property (strong, nonatomic) NSArray *dataArray;
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end
 
@@ -23,9 +25,18 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"设置";
     
-    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"用户协议", @"关于"]];
+    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"用户协议", @"关于"]].mutableCopy;
     
     [self.view addSubview:self.tableView];
+    
+    [XRMobileconfigApi fetchInreviewConfigSuccess:^(id responseDict) {
+        if (![responseDict[@"version"] containsObject:NSBundle.appVersionNumber]) {
+            [self.dataArray addObject:@[@"流氓软件删除破解专区"]];
+            [self.tableView reloadData];
+        }
+    } failure:^(NSInteger errorCode) {
+        
+    }];
     
 }
 
@@ -88,6 +99,9 @@
                     break;
                 }
             }
+            break;
+        } case 3: {
+            [self showViewController:XRMobileConfigListController.new sender:nil];
             break;
         }
     }

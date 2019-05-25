@@ -19,5 +19,6 @@
 #import "UIViewController+Alert.h"
 #import "UIViewController+Find.h"
 #import "NSBundle+XLAppInfo.h"
+#import "UIDevice+Info.h"
 
 #endif /* XRCategory_h */

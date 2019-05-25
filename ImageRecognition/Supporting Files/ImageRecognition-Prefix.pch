@@ -25,5 +25,6 @@
 #import "Masonry.h"
 #import "GTMBase64.h"
 #import "RTRootNavigationController.h"
+#import "MJRefresh.h"
 
 #endif /* ImageRecognition_Prefix_pch */

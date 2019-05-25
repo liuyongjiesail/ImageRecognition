@@ -7,12 +7,14 @@ target 'ImageRecognition' do
     pod 'SDWebImage'
     pod 'YYModel'
     pod 'GTMBase64'
+    pod 'UICKeyChainStore'
     
     pod 'FDFullscreenPopGesture'
     pod 'MBProgressHUD'
     pod 'Masonry'
     pod 'UITableView+FDTemplateLayoutCell'
     pod 'RTRootNavigationController'
+    pod 'MJRefresh'
     
 end
 
