@@ -76,7 +76,7 @@
         [acceptContentTypes addObject:@"text/html"];
         // 给acceptableContentTypes赋值
         _manager.responseSerializer.acceptableContentTypes = acceptContentTypes;
-        
+        _manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalAndRemoteCacheData;
     }
     return _manager;
 }
