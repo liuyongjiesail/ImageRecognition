@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MobileconfigModel : NSObject
 
+@property (copy, nonatomic) NSString *configId;
+@property (copy, nonatomic) NSString *productId;
 @property (copy, nonatomic) NSString *title;
 @property (assign, nonatomic) BOOL   isFree;
 @property (copy, nonatomic) NSString *price;

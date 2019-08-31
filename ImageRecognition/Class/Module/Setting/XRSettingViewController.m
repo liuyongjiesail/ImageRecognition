@@ -11,7 +11,7 @@
 #import "XRMobileConfigListController.h"
 #import "XRMobileconfigApi.h"
 
-@interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArray;
@@ -25,7 +25,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"设置";
     
-    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"用户协议", @"关于"]].mutableCopy;
+    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"用户协议", @"关于"], @[@"打赏开发者"]].mutableCopy;
     
     [self.view addSubview:self.tableView];
     
@@ -101,11 +101,32 @@
             }
             break;
         } case 3: {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"期待您的打赏" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"3颗糖果(3元)", @"6颗糖果(6元)", @"12颗糖果(12元)", @"18颗糖果(18元)", @"25颗糖果(25元)", nil];
+            alertView.delegate = self;
+            [alertView show];
+            break;
+        } case 4: {
             [self showViewController:XRMobileConfigListController.new sender:nil];
             break;
         }
     }
     
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex != 0) {
+        [ApplePayComponent.sharedInstance purchase:[self tempArray][buttonIndex] success:^{
+            [MBProgressHUD showSuccess:@"感谢您的打赏"];
+        } failure:^(NSString * _Nonnull error) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [MBProgressHUD showError:error time:2];
+            });
+        }];
+    }
+}
+
+- (NSArray *)tempArray {
+    return @[@"", @"com.sail.xrecognition.release.3", @"com.sail.xrecognition.release.6", @"com.sail.xrecognition.release.12", @"com.sail.xrecognition.release.18", @"com.sail.xrecognition.release.25"];
 }
 
 #pragma mark - Lazy Loading

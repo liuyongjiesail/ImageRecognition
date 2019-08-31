@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MobileconfigModel.h"
 
 @interface MobileconfigListCell : UITableViewCell
 
-- (void)configModelData:(id)model indexPath:(NSIndexPath *)indexPath;
+@property (strong, nonatomic) MobileconfigModel *model;
 
 @end

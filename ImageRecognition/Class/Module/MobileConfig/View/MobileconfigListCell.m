@@ -7,7 +7,7 @@
 //
 
 #import "MobileconfigListCell.h"
-#import "MobileconfigModel.h"
+#import "KeychainService.h"
 
 @interface MobileconfigListCell ()
 
@@ -18,8 +18,6 @@
 @property (strong, nonatomic) UIImageView *priseImageView;
 @property (strong, nonatomic) UILabel *downNumberLabel;
 @property (strong, nonatomic) UIButton *downloadButton;
-
-@property (strong, nonatomic) MobileconfigModel *model;
 
 @end
 
@@ -68,7 +66,7 @@
     [self.contentView addSubview:_priseImageView];
     
     //下载数
-    _downNumberLabel = [UILabel labWithText:@"" fontSize:13 textColorString:COLORA9A9A9];
+    _downNumberLabel = [UILabel labWithText:@"" fontSize:15 textColorString:COLORA9A9A9];
     [self.contentView addSubview:_downNumberLabel];
     
     // downloadButton
@@ -136,7 +134,7 @@
     
     [self.recommendLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.downloadButton);
-        make.top.equalTo(self.downloadButton.mas_bottom).offset(5);
+        make.top.equalTo(self.downloadButton.mas_bottom).offset(8);
     }];
     
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -148,9 +146,8 @@
 
 }
 
-- (void)configModelData:(MobileconfigModel *)model indexPath:(NSIndexPath *)indexPath {
-    
-    self.model = model;
+- (void)setModel:(MobileconfigModel *)model {
+    _model = model;
     
     self.titleLabel.text = model.appName;
     if (model.isFree) {
@@ -159,7 +156,7 @@
         [self.downloadButton setTitle:@"安装" forState:UIControlStateNormal];
     } else {
         self.subTitleLabel.text = [NSString stringWithFormat:@"￥%@", model.price];
-        if ([model.userIds containsObject:UIDevice.keychainIDFA]) {
+        if ([model.userIds containsObject:UIDevice.keychainIDFA] || [[KeychainService itemForKey:model.configId] isEqualToString:@"YES"]) {
             self.downloadButton.backgroundColor = [UIColor colorWithString:@"#23C66A"];
             [self.downloadButton setTitle:@"安装" forState:UIControlStateNormal];
         } else {
@@ -176,7 +173,7 @@
     self.downNumberLabel.attributedText = attributeMarket;
     
     self.downNumberLabel.hidden = (model.originalPrice.integerValue == model.price.integerValue);
-    self.recommendLabel.text = [NSString stringWithFormat:@"%@次安装", model.sales];
+    self.recommendLabel.text = @"安装即可删除";
     
 }
 
@@ -184,10 +181,12 @@
     if ([self.downloadButton.titleLabel.text isEqualToString:@"安装"]) {
         [UIApplication.sharedApplication openURL:[NSURL URLWithString:self.model.downloadUrl]];
     } else {
-        [UIViewController.currentViewController showAlertWithTitle:@"注意事项" message:@"\n1.请务必提前在“如何解锁”页面将支付二维码保存到相册\n2.请务必在支付时将你的用户ID粘贴到支付备注中" actionTitles:@[@"取消", @"前往支付宝"] actionHandler:^(NSInteger index) {
-            if (index == 1) {
-                [UIApplication.sharedApplication openURL:[NSURL URLWithString:@"alipay://"]];
-            }
+        [ApplePayComponent.sharedInstance purchase:self.model.productId success:^{
+            [MBProgressHUD showSuccess:@"你已成功解锁，请去安装"];
+            [KeychainService setItem:@"YES" forKey:self.model.configId];
+            self.model = self.model;
+        } failure:^(NSString * _Nonnull error) {
+            [MBProgressHUD showError:error];
         }];
     }
 }

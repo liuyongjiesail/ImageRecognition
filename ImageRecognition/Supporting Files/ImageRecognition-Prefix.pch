@@ -26,5 +26,6 @@
 #import "GTMBase64.h"
 #import "RTRootNavigationController.h"
 #import "MJRefresh.h"
+#import "ApplePayComponent.h"
 
 #endif /* ImageRecognition_Prefix_pch */

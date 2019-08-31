@@ -71,8 +71,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MobileconfigListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    [cell configModelData:self.dataArray[indexPath.section][indexPath.row] indexPath:indexPath];
-    
+    cell.model = self.dataArray[indexPath.section][indexPath.row];
     return cell;
 }
 

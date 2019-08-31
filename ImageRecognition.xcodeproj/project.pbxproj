@@ -18,6 +18,7 @@
 		ED6F3CC62296C4E1001FD2C2 /* MobileconfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CC52296C4E1001FD2C2 /* MobileconfigModel.m */; };
 		ED6F3CCA2297E62A001FD2C2 /* XRMobileconfigApi.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CC92297E62A001FD2C2 /* XRMobileconfigApi.m */; };
 		ED6F3CD1229910F0001FD2C2 /* XRHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CD0229910EE001FD2C2 /* XRHelpViewController.m */; };
+		ED8029D322A66715004D04EF /* ApplePayComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8029D222A66715004D04EF /* ApplePayComponent.m */; };
 		EDB75B782162248000FFA793 /* XRRecognitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B772162248000FFA793 /* XRRecognitionView.m */; };
 		EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7A216224B900FFA793 /* XRBaseView.m */; };
 		EDB75B7F2162297900FFA793 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7E2162297900FFA793 /* UIView+Frame.m */; };
@@ -93,6 +94,9 @@
 		ED6F3CC92297E62A001FD2C2 /* XRMobileconfigApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRMobileconfigApi.m; sourceTree = "<group>"; };
 		ED6F3CCF229910ED001FD2C2 /* XRHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRHelpViewController.h; sourceTree = "<group>"; };
 		ED6F3CD0229910EE001FD2C2 /* XRHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRHelpViewController.m; sourceTree = "<group>"; };
+		ED8029CC22A54FC4004D04EF /* ImageRecognition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageRecognition.entitlements; sourceTree = "<group>"; };
+		ED8029D122A66715004D04EF /* ApplePayComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplePayComponent.h; sourceTree = "<group>"; };
+		ED8029D222A66715004D04EF /* ApplePayComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplePayComponent.m; sourceTree = "<group>"; };
 		EDB75B762162248000FFA793 /* XRRecognitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRecognitionView.h; sourceTree = "<group>"; };
 		EDB75B772162248000FFA793 /* XRRecognitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRecognitionView.m; sourceTree = "<group>"; };
 		EDB75B79216224B900FFA793 /* XRBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRBaseView.h; sourceTree = "<group>"; };
@@ -291,6 +295,15 @@
 			path = MobileconfigApi;
 			sourceTree = "<group>";
 		};
+		ED8029CD22A5531C004D04EF /* ApplePay */ = {
+			isa = PBXGroup;
+			children = (
+				ED8029D122A66715004D04EF /* ApplePayComponent.h */,
+				ED8029D222A66715004D04EF /* ApplePayComponent.m */,
+			);
+			path = ApplePay;
+			sourceTree = "<group>";
+		};
 		EDB75B742162246000FFA793 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +476,7 @@
 		EDDF26DB2160A4E000D7A3E3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ED8029CD22A5531C004D04EF /* ApplePay */,
 				ED6F3CB622964ABD001FD2C2 /* Security */,
 				EDDF2706216219DA00D7A3E3 /* AVCaptureManager */,
 				EDDF26DC2160A4FD00D7A3E3 /* Network */,
@@ -548,6 +562,7 @@
 		EDE56D98215CD4E8009FD8D5 /* ImageRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				ED8029CC22A54FC4004D04EF /* ImageRecognition.entitlements */,
 				EDE56DB1215CD822009FD8D5 /* Class */,
 				EDE56DAF215CD7E0009FD8D5 /* Supporting Files */,
 				EDE56DB0215CD80A009FD8D5 /* Resource */,
@@ -720,6 +735,14 @@
 				TargetAttributes = {
 					EDE56D95215CD4E8009FD8D5 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -852,6 +875,7 @@
 				EDDF26DA216092C400D7A3E3 /* UITableView+XRRegister.m in Sources */,
 				EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */,
 				EDDF2705216217D600D7A3E3 /* XRRecognitionViewController.m in Sources */,
+				ED8029D322A66715004D04EF /* ApplePayComponent.m in Sources */,
 				EDB75BD721647CB700FFA793 /* UIButton+XRBigFrame.m in Sources */,
 				ED50959A21771A8300C16EC6 /* XRClassifySelectView.m in Sources */,
 			);
@@ -997,6 +1021,33 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
+					"$(PROJECT_DIR)/ImageRecognition/Class/Components/ApplePay/UPPayPlugin",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"FDFullscreenPopGesture\"",
+					"-framework",
+					"\"GTMBase64\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"RTRootNavigationController\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"UICKeyChainStore\"",
+					"-framework",
+					"\"UITableView_FDTemplateLayoutCell\"",
+					"-framework",
+					"\"YYModel\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sail.xrecognition.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1029,6 +1080,33 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
+					"$(PROJECT_DIR)/ImageRecognition/Class/Components/ApplePay/UPPayPlugin",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"FDFullscreenPopGesture\"",
+					"-framework",
+					"\"GTMBase64\"",
+					"-framework",
+					"\"MBProgressHUD\"",
+					"-framework",
+					"\"MJRefresh\"",
+					"-framework",
+					"\"Masonry\"",
+					"-framework",
+					"\"RTRootNavigationController\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"UICKeyChainStore\"",
+					"-framework",
+					"\"UITableView_FDTemplateLayoutCell\"",
+					"-framework",
+					"\"YYModel\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sail.xrecognition.release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
