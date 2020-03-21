@@ -179,7 +179,9 @@
 
 - (void)buttonAction {
     if ([self.downloadButton.titleLabel.text isEqualToString:@"安装"]) {
-        [UIApplication.sharedApplication openURL:[NSURL URLWithString:self.model.downloadUrl]];
+        [XRGADInterstitialApi.shared showInterstitialViewController:UIViewController.currentViewController completion:^{
+            [UIApplication.sharedApplication openURL:[NSURL URLWithString:self.model.downloadUrl]];
+        }];
     } else {
         [ApplePayComponent.sharedInstance purchase:self.model.productId success:^{
             [MBProgressHUD showSuccess:@"你已成功解锁，请去安装"];

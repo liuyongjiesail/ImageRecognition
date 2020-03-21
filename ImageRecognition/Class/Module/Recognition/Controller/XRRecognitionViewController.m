@@ -15,6 +15,7 @@
 #import "XRSettingViewController.h"
 #import <Photos/Photos.h>
 #import "XRNetworkManager.h"
+#import "XRGADInterstitialApi.h"
 
 @interface XRRecognitionViewController () <XRRecognitionViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 

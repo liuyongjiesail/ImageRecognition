@@ -15,6 +15,7 @@
 @interface XRRecognitionListViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) XRGADBannerApi *bannerApi;
 
 @end
 
@@ -27,6 +28,8 @@
     
     // Do any additional setup after loading the view.
     [self.view addSubview:self.tableView];
+    //添加广告
+    [self.bannerApi loadBannerAdView:self];
     
     //随机弹出评价
     if (arc4random()%3 == 0 && ![NSUserDefaults.standardUserDefaults objectForKey:@"NewComment"]) {
@@ -34,6 +37,8 @@
         [NSUserDefaults.standardUserDefaults synchronize];
         [UIApplication.sharedApplication commentApplicationToAppStore];
     }
+    
+    [XRGADInterstitialApi.shared showInterstitialViewController:self completion:nil];
     
 }
 
@@ -107,6 +112,13 @@
         [_tableView xr_registerClass:[XRCorrelationResultCell class]];
     }
     return _tableView;
+}
+
+- (XRGADBannerApi *)bannerApi {
+    if (!_bannerApi) {
+        _bannerApi = XRGADBannerApi.new;
+    }
+    return _bannerApi;
 }
 
 @end

@@ -10,11 +10,13 @@
 #import "XRWebViewController.h"
 #import "XRMobileConfigListController.h"
 #import "XRMobileconfigApi.h"
+#import "XRGADBannerApi.h"
 
 @interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) XRGADBannerApi *bannerApi;
 
 @end
 
@@ -28,6 +30,9 @@
     self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"用户协议", @"关于"], @[@"打赏开发者"]].mutableCopy;
     
     [self.view addSubview:self.tableView];
+    
+    //添加广告
+    [self.bannerApi loadBannerAdView:self];
     
     [XRMobileconfigApi fetchInreviewConfigSuccess:^(id responseDict) {
         if (![responseDict[@"version"] containsObject:NSBundle.appVersionNumber]) {
@@ -142,6 +147,13 @@
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
     }
     return _tableView;
+}
+
+- (XRGADBannerApi *)bannerApi {
+    if (!_bannerApi) {
+        _bannerApi = XRGADBannerApi.new;
+    }
+    return _bannerApi;
 }
 
 @end

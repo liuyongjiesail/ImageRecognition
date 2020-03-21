@@ -28,4 +28,7 @@
 #import "MJRefresh.h"
 #import "ApplePayComponent.h"
 
+#import "XRGADBannerApi.h"
+#import "XRGADInterstitialApi.h"
+
 #endif /* ImageRecognition_Prefix_pch */

@@ -16,5 +16,7 @@ target 'ImageRecognition' do
     pod 'RTRootNavigationController'
     pod 'MJRefresh'
     
+    pod 'Google-Mobile-Ads-SDK'
+    
 end
 
