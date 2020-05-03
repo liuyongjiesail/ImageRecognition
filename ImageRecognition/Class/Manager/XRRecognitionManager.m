@@ -25,6 +25,11 @@
     [NSUserDefaults.standardUserDefaults setObject:[NSString stringWithFormat:@"%lld", time(0) + [expirationTime longLongValue]] forKey:XRUserDefaultsTokenExpirationTime];
 }
 
+- (void)setTextToken:(NSString *)token expirationTime:(NSString *)expirationTime {
+    [NSUserDefaults.standardUserDefaults setObject:token forKey:XRUserDefaultsBaiduYunTextToken];
+    [NSUserDefaults.standardUserDefaults setObject:[NSString stringWithFormat:@"%lld", time(0) + [expirationTime longLongValue]] forKey:XRUserDefaultsTextTokenExpirationTime];
+}
+
 - (BOOL)isExpiration {
     if ([[NSUserDefaults.standardUserDefaults objectForKey:XRUserDefaultsTokenExpirationTime] longLongValue] < time(0) + 129600) {  //暂定半个月请求一次
         return YES;
@@ -33,8 +38,20 @@
     return NO;
 }
 
+- (BOOL)isTextExpiration {
+    if ([[NSUserDefaults.standardUserDefaults objectForKey:XRUserDefaultsTextTokenExpirationTime] longLongValue] < time(0) + 129600) {  //暂定半个月请求一次
+        return YES;
+    }
+    XRLog(@"距离过期还剩：%lld 秒", [[NSUserDefaults.standardUserDefaults objectForKey:XRUserDefaultsTokenExpirationTime] longLongValue] - time(0));
+    return NO;
+}
+
 - (NSString *)baiduYunToken {
     return [NSUserDefaults.standardUserDefaults objectForKey:XRUserDefaultsBaiduYunToken];
+}
+
+- (NSString *)textToken {
+    return [NSUserDefaults.standardUserDefaults objectForKey:XRUserDefaultsBaiduYunTextToken];
 }
 
 @end

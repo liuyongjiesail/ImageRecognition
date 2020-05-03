@@ -36,4 +36,8 @@ static NSString * const baiduYunClassifyFlower    = @"v1/flower";
 
 static NSString * const baiduYunClassifyObject    = @"v1/object_detect";
 
+/// 文字识别
+static NSString * const baiduYunTextClassify      = @"rest/2.0/ocr";
+static NSString * const baiduYunClassifyText      = @"v1/accurate_basic";
+
 #endif /* XRNetworkConst_h */

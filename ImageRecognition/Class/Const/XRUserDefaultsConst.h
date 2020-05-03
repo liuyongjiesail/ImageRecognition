@@ -12,4 +12,7 @@
 static NSString * const XRUserDefaultsBaiduYunToken       = @"BaiduYun_Token";
 static NSString * const XRUserDefaultsTokenExpirationTime = @"Token_Expiration_Time";
 
+static NSString * const XRUserDefaultsBaiduYunTextToken       = @"BaiduYun_Text_Token";
+static NSString * const XRUserDefaultsTextTokenExpirationTime = @"Text_Token_Expiration_Time";
+
 #endif /* XRUserDefaultsConst_h */

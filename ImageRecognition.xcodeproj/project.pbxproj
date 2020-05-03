@@ -60,6 +60,7 @@
 		EDB75C71216CAFB600FFA793 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C70216CAFB600FFA793 /* Accelerate.framework */; };
 		EDB75C73216CAFC200FFA793 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C72216CAFC200FFA793 /* AVFoundation.framework */; };
 		EDB75C75216CAFC800FFA793 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB75C74216CAFC800FFA793 /* WebKit.framework */; };
+		EDDE670F245F10DE00027EB2 /* XRTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDE670E245F10DD00027EB2 /* XRTextViewController.m */; };
 		EDDF26C421607A7300D7A3E3 /* XRVendorServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDF26C321607A7300D7A3E3 /* XRVendorServiceManager.m */; };
 		EDDF26C8216081D000D7A3E3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C7216081D000D7A3E3 /* AdSupport.framework */; };
 		EDDF26CA216081E100D7A3E3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDF26C9216081E100D7A3E3 /* CoreTelephony.framework */; };
@@ -180,6 +181,8 @@
 		EDB75C70216CAFB600FFA793 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		EDB75C72216CAFC200FFA793 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EDB75C74216CAFC800FFA793 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		EDDE670D245F10DD00027EB2 /* XRTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRTextViewController.h; sourceTree = "<group>"; };
+		EDDE670E245F10DD00027EB2 /* XRTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRTextViewController.m; sourceTree = "<group>"; };
 		EDDF26BA215F64AF00D7A3E3 /* XRAppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRAppMacro.h; sourceTree = "<group>"; };
 		EDDF26BB215F652D00D7A3E3 /* XRUserDefaultsConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRUserDefaultsConst.h; sourceTree = "<group>"; };
 		EDDF26BC215F653D00D7A3E3 /* XRNetworkConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRNetworkConst.h; sourceTree = "<group>"; };
@@ -386,6 +389,8 @@
 				EDDF2704216217D600D7A3E3 /* XRRecognitionViewController.m */,
 				EDB75B8D2163459800FFA793 /* XRRecognitionListViewController.h */,
 				EDB75B8E2163459800FFA793 /* XRRecognitionListViewController.m */,
+				EDDE670D245F10DD00027EB2 /* XRTextViewController.h */,
+				EDDE670E245F10DD00027EB2 /* XRTextViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -977,6 +982,7 @@
 				ED9B04B2245AB7970039B91F /* NSURL+Query.m in Sources */,
 				EDDF270921621A3600D7A3E3 /* AVCaptureManager.m in Sources */,
 				EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */,
+				EDDE670F245F10DE00027EB2 /* XRTextViewController.m in Sources */,
 				EDB75B992163C43700FFA793 /* XRWebViewController.m in Sources */,
 				EDB75B8F2163459800FFA793 /* XRRecognitionListViewController.m in Sources */,
 				ED6F3CC02296C12A001FD2C2 /* MobileconfigListCell.m in Sources */,
@@ -1123,6 +1129,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 141;
 				DEVELOPMENT_TEAM = B9842T9339;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1143,6 +1150,7 @@
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Components/ApplePay/UPPayPlugin",
 				);
+				MARKETING_VERSION = 1.4.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1182,6 +1190,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 141;
 				DEVELOPMENT_TEAM = B9842T9339;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1202,6 +1211,7 @@
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Components/ApplePay/UPPayPlugin",
 				);
+				MARKETING_VERSION = 1.4.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",

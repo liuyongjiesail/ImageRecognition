@@ -74,9 +74,13 @@
         // 添加需要的类型
         acceptContentTypes.set = _manager.responseSerializer.acceptableContentTypes;
         [acceptContentTypes addObject:@"text/html"];
+//        [acceptContentTypes addObject:@"application/json"];
         // 给acceptableContentTypes赋值
         _manager.responseSerializer.acceptableContentTypes = acceptContentTypes;
         _manager.requestSerializer.cachePolicy = NSURLRequestReloadIgnoringLocalAndRemoteCacheData;
+        
+        _manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        _manager.responseSerializer = [AFJSONResponseSerializer serializer];
     }
     return _manager;
 }

@@ -15,6 +15,10 @@ static NSString * const XRBaiduYunAppID        = @"14300809";
 static NSString * const XRBaiduYunAPIKey       = @"gOmMHGFsZy9XjgnFkj3RaLbY";
 static NSString * const XRBaiduYunSecretKey    = @"r5cCjYGEweMRtnbxbv7fzhHqxH36GU8a";
 
+static NSString * const XRBaiduYunTextAppID        = @"16212450";
+static NSString * const XRBaiduYunTextAPIKey       = @"uY7uOzAZbEwm5zDwLcK0EgIH";
+static NSString * const XRBaiduYunTextSecretKey    = @"sD0DeXl3VmRKz5F39lwInEse4PuluEAN";
+
 #ifdef DEBUG
 static NSString * const XRTakingDataAppID      = @"9C6EA335B0F44CB5AAB80C01DEAE77B8";
 #else

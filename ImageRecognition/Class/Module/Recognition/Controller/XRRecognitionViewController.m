@@ -18,6 +18,7 @@
 #import "XRGADInterstitialApi.h"
 #import "XRMobileconfigApi.h"
 #import "XRGameViewController.h"
+#import "XRTextViewController.h"
 
 @interface XRRecognitionViewController () <XRRecognitionViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -114,6 +115,11 @@
         self.recognitionView.sureButton.userInteractionEnabled = YES;
         NSMutableArray<XRIdentifyResultsModel *> *dataArray = [NSArray yy_modelArrayWithClass:XRIdentifyResultsModel.class json:responseDict[@"result"]].mutableCopy;
         
+        if ([((NSDictionary *)responseDict).allKeys containsObject:@"words_result"]) {
+            [XRTextViewController showTextImage:image textArray:responseDict[@"words_result"]];
+            return;
+        }
+        
         if (dataArray.count == 0 || (dataArray.count == 1 && [dataArray.firstObject.name hasPrefix:@"非"])) {
             [MBProgressHUD showError:[NSString stringWithFormat:@"该物体不是%@，换个类别试试看！", self.recognitionView.imageClassifyString] time:3];
             return;
@@ -139,11 +145,15 @@
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey, id> *)info {
 
+    UIImage *resultImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    
     [MBProgressHUD showMessage:@"识别中..."];
     self.tempImage = nil;
-    [self assetThumbImage:info[@"UIImagePickerControllerPHAsset"] width:224 completion:^(UIImage *thumbImage) {
-        [self recognitionAction:thumbImage];
-    }];
+//    [self assetThumbImage:info[@"UIImagePickerControllerPHAsset"] width:SCREEN_WIDTH completion:^(UIImage *thumbImage) {
+//        [self recognitionAction:thumbImage];
+//    }];
+    [self recognitionAction:resultImage];
+
     
 }
 
@@ -246,6 +256,10 @@
 - (void)sureAction {
     self.recognitionView.sureButton.userInteractionEnabled = NO;
     [self recognitionAction:self.tempImage];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

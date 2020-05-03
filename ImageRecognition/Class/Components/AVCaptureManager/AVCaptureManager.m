@@ -127,7 +127,7 @@
     [image drawInRect:(CGRect){0, 0, image.size}];
     UIImage *normalizedImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    return [self imageWithImage:normalizedImage scaledToSize:CGSizeMake(224, 224)];
+    return [self imageWithImage:normalizedImage scaledToSize:CGSizeMake(image.size.width/3.0, image.size.height/3.0)];
 }
 
 //压缩图片
