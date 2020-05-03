@@ -20,6 +20,9 @@
 #define SCREEN_HEIGHT   [UIScreen mainScreen].bounds.size.height
 #define SCREEN_BOUNDS   [UIScreen mainScreen].bounds
 
+#define STATUS_BAR_HEIGHT  ([[UIApplication sharedApplication] statusBarFrame].size.height)
+#define NAVIGATION_BAR_HEIGHT (STATUS_BAR_HEIGHT + 44)
+
 #define SAFEAREINSETS ({UIEdgeInsets insets; if(@available(iOS 11.0, *)) {insets = UIApplication.sharedApplication.keyWindow.safeAreaInsets;} else {insets = UIEdgeInsetsZero;} insets;})
 
 #endif /* XRAppMacro_h */

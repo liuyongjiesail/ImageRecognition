@@ -30,5 +30,6 @@
 
 #import "XRGADBannerApi.h"
 #import "XRGADInterstitialApi.h"
+#import "MVWebViewController.h"
 
 #endif /* ImageRecognition_Prefix_pch */

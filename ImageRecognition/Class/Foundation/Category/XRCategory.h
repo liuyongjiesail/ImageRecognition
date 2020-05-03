@@ -20,5 +20,8 @@
 #import "UIViewController+Find.h"
 #import "NSBundle+XLAppInfo.h"
 #import "UIDevice+Info.h"
+#import "UINavigationBar+FixSpace.h"
+#import "NSString+MD5.h"
+#import "NSURL+Query.h"
 
 #endif /* XRCategory_h */

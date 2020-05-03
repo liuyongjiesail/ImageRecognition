@@ -13,4 +13,6 @@
 
 + (UIViewController *)currentViewController;
 
++ (UIViewController *)currentContentViewController;
+
 @end

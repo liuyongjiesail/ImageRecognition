@@ -16,6 +16,8 @@
 #import <Photos/Photos.h>
 #import "XRNetworkManager.h"
 #import "XRGADInterstitialApi.h"
+#import "XRMobileconfigApi.h"
+#import "XRGameViewController.h"
 
 @interface XRRecognitionViewController () <XRRecognitionViewDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
@@ -53,6 +55,15 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(settingAction)];
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    [UINavigationBar.appearance setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18.0f]}];
+    
+    [XRMobileconfigApi fetchInreviewConfigSuccess:^(id responseDict) {
+        if (![responseDict[@"version"] containsObject:NSBundle.appVersionNumber]) {
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" 娱乐" style:UIBarButtonItemStyleDone target:self action:@selector(gameAction)];
+            [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18.0f], NSForegroundColorAttributeName:UIColor.whiteColor} forState:UIControlStateNormal];
+            [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18.0f], NSForegroundColorAttributeName:[UIColor colorWithString:COLORDF55E6]} forState:UIControlStateHighlighted];
+        }
+    } failure:^(NSInteger errorCode) {}];
     
     //自定义图层
     self.recognitionView = [[XRRecognitionView alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -64,6 +75,10 @@
 - (void)settingAction {
     [TalkingData trackEvent:@"settingAction"];
     [self showViewController:[XRSettingViewController new] sender:nil];
+}
+
+- (void)gameAction {
+    [self showViewController:XRGameViewController.new sender:nil];
 }
 
 /**

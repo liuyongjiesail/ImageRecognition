@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "XRVendorServiceManager.h"
 #import "XRRecognitionViewController.h"
+#import "MXNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -31,13 +32,24 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-    RTRootNavigationController *rootNavigation =  [[RTRootNavigationController alloc] initWithRootViewController:[XRRecognitionViewController new]];
-    rootNavigation.useSystemBackBarButtonItem = YES;
+    MXNavigationController *rootNavigation =  [[MXNavigationController alloc] initWithRootViewController:[XRRecognitionViewController new]];
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
-
+    
     self.window.rootViewController = rootNavigation;
     [self.window makeKeyAndVisible];
     
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    if (self.isAllowRotation) {
+        return UIInterfaceOrientationMaskLandscape;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
+
+- (BOOL)shouldAutorotate {
+    return self.isAllowRotation;
 }
 
 @end

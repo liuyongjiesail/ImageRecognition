@@ -47,4 +47,8 @@
     return [UIViewController findBestViewController:viewController];
 }
 
++ (UIViewController *)currentContentViewController {
+    return UIViewController.currentViewController.rt_navigationController.rt_viewControllers.lastObject;
+}
+
 @end

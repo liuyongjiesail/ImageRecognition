@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)fetchHelpconfigSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
 
++ (void)fetchGameListSuccess:(SuccessBlock)success failure:(FailureBlock)failure;
+
 @end
 
 NS_ASSUME_NONNULL_END

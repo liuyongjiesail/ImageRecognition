@@ -19,6 +19,18 @@
 		ED6F3CCA2297E62A001FD2C2 /* XRMobileconfigApi.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CC92297E62A001FD2C2 /* XRMobileconfigApi.m */; };
 		ED6F3CD1229910F0001FD2C2 /* XRHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CD0229910EE001FD2C2 /* XRHelpViewController.m */; };
 		ED8029D322A66715004D04EF /* ApplePayComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8029D222A66715004D04EF /* ApplePayComponent.m */; };
+		ED8812762426063F002B6565 /* XRGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED8812752426063F002B6565 /* XRGameViewController.m */; };
+		ED88127924260B2A002B6565 /* MXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88127724260B2A002B6565 /* MXNavigationController.m */; };
+		ED88127D24260BF3002B6565 /* UINavigationBar+FixSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88127C24260BF2002B6565 /* UINavigationBar+FixSpace.m */; };
+		ED88128024274EEB002B6565 /* XRSectionTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88127F24274EEB002B6565 /* XRSectionTitleView.m */; };
+		ED9B04A0245A9F3C0039B91F /* XRSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B049F245A9F3C0039B91F /* XRSectionModel.m */; };
+		ED9B04A3245AA9780039B91F /* XRGameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B04A2245AA9780039B91F /* XRGameCell.m */; };
+		ED9B04A6245AB6380039B91F /* MVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B04A4245AB6380039B91F /* MVWebViewController.m */; };
+		ED9B04A9245AB6510039B91F /* MVGMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B04A8245AB6510039B91F /* MVGMWebViewController.m */; };
+		ED9B04AC245AB7010039B91F /* MVShandwApi.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B04AA245AB7010039B91F /* MVShandwApi.m */; };
+		ED9B04AF245AB7220039B91F /* MVGMExitFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B04AD245AB7210039B91F /* MVGMExitFloat.m */; };
+		ED9B04B2245AB7970039B91F /* NSURL+Query.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B04B1245AB7970039B91F /* NSURL+Query.m */; };
+		ED9B04B6245AB81B0039B91F /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9B04B5245AB81B0039B91F /* NSString+MD5.m */; };
 		EDB75B782162248000FFA793 /* XRRecognitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B772162248000FFA793 /* XRRecognitionView.m */; };
 		EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7A216224B900FFA793 /* XRBaseView.m */; };
 		EDB75B7F2162297900FFA793 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EDB75B7E2162297900FFA793 /* UIView+Frame.m */; };
@@ -99,6 +111,30 @@
 		ED8029CC22A54FC4004D04EF /* ImageRecognition.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageRecognition.entitlements; sourceTree = "<group>"; };
 		ED8029D122A66715004D04EF /* ApplePayComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplePayComponent.h; sourceTree = "<group>"; };
 		ED8029D222A66715004D04EF /* ApplePayComponent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplePayComponent.m; sourceTree = "<group>"; };
+		ED8812742426063F002B6565 /* XRGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRGameViewController.h; sourceTree = "<group>"; };
+		ED8812752426063F002B6565 /* XRGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRGameViewController.m; sourceTree = "<group>"; };
+		ED88127724260B2A002B6565 /* MXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXNavigationController.m; sourceTree = "<group>"; };
+		ED88127824260B2A002B6565 /* MXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXNavigationController.h; sourceTree = "<group>"; };
+		ED88127B24260BF2002B6565 /* UINavigationBar+FixSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+FixSpace.h"; sourceTree = "<group>"; };
+		ED88127C24260BF2002B6565 /* UINavigationBar+FixSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+FixSpace.m"; sourceTree = "<group>"; };
+		ED88127E24274EEB002B6565 /* XRSectionTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRSectionTitleView.h; sourceTree = "<group>"; };
+		ED88127F24274EEB002B6565 /* XRSectionTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRSectionTitleView.m; sourceTree = "<group>"; };
+		ED9B049E245A9F3C0039B91F /* XRSectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRSectionModel.h; sourceTree = "<group>"; };
+		ED9B049F245A9F3C0039B91F /* XRSectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRSectionModel.m; sourceTree = "<group>"; };
+		ED9B04A1245AA9780039B91F /* XRGameCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRGameCell.h; sourceTree = "<group>"; };
+		ED9B04A2245AA9780039B91F /* XRGameCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRGameCell.m; sourceTree = "<group>"; };
+		ED9B04A4245AB6380039B91F /* MVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVWebViewController.m; sourceTree = "<group>"; };
+		ED9B04A5245AB6380039B91F /* MVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVWebViewController.h; sourceTree = "<group>"; };
+		ED9B04A7245AB6510039B91F /* MVGMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGMWebViewController.h; sourceTree = "<group>"; };
+		ED9B04A8245AB6510039B91F /* MVGMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGMWebViewController.m; sourceTree = "<group>"; };
+		ED9B04AA245AB7010039B91F /* MVShandwApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVShandwApi.m; sourceTree = "<group>"; };
+		ED9B04AB245AB7010039B91F /* MVShandwApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVShandwApi.h; sourceTree = "<group>"; };
+		ED9B04AD245AB7210039B91F /* MVGMExitFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGMExitFloat.m; sourceTree = "<group>"; };
+		ED9B04AE245AB7210039B91F /* MVGMExitFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGMExitFloat.h; sourceTree = "<group>"; };
+		ED9B04B0245AB7970039B91F /* NSURL+Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Query.h"; sourceTree = "<group>"; };
+		ED9B04B1245AB7970039B91F /* NSURL+Query.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Query.m"; sourceTree = "<group>"; };
+		ED9B04B4245AB81A0039B91F /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		ED9B04B5245AB81B0039B91F /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		EDB75B762162248000FFA793 /* XRRecognitionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRRecognitionView.h; sourceTree = "<group>"; };
 		EDB75B772162248000FFA793 /* XRRecognitionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRRecognitionView.m; sourceTree = "<group>"; };
 		EDB75B79216224B900FFA793 /* XRBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRBaseView.h; sourceTree = "<group>"; };
@@ -310,6 +346,39 @@
 			path = ApplePay;
 			sourceTree = "<group>";
 		};
+		ED8812732426060B002B6565 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				ED8812742426063F002B6565 /* XRGameViewController.h */,
+				ED8812752426063F002B6565 /* XRGameViewController.m */,
+				ED88127E24274EEB002B6565 /* XRSectionTitleView.h */,
+				ED88127F24274EEB002B6565 /* XRSectionTitleView.m */,
+				ED9B04A1245AA9780039B91F /* XRGameCell.h */,
+				ED9B04A2245AA9780039B91F /* XRGameCell.m */,
+				ED9B049E245A9F3C0039B91F /* XRSectionModel.h */,
+				ED9B049F245A9F3C0039B91F /* XRSectionModel.m */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		ED88127A24260BF2002B6565 /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				ED88127B24260BF2002B6565 /* UINavigationBar+FixSpace.h */,
+				ED88127C24260BF2002B6565 /* UINavigationBar+FixSpace.m */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		ED9B04B3245AB8120039B91F /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				ED9B04B4245AB81A0039B91F /* NSString+MD5.h */,
+				ED9B04B5245AB81B0039B91F /* NSString+MD5.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		EDB75B742162246000FFA793 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +449,16 @@
 			children = (
 				EDB75B972163C43700FFA793 /* XRWebViewController.h */,
 				EDB75B982163C43700FFA793 /* XRWebViewController.m */,
+				ED9B04A5245AB6380039B91F /* MVWebViewController.h */,
+				ED9B04A4245AB6380039B91F /* MVWebViewController.m */,
+				ED9B04A7245AB6510039B91F /* MVGMWebViewController.h */,
+				ED9B04A8245AB6510039B91F /* MVGMWebViewController.m */,
+				ED9B04AB245AB7010039B91F /* MVShandwApi.h */,
+				ED9B04AA245AB7010039B91F /* MVShandwApi.m */,
+				ED9B04AE245AB7210039B91F /* MVGMExitFloat.h */,
+				ED9B04AD245AB7210039B91F /* MVGMExitFloat.m */,
+				ED9B04B0245AB7970039B91F /* NSURL+Query.h */,
+				ED9B04B1245AB7970039B91F /* NSURL+Query.m */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
@@ -455,6 +534,8 @@
 			isa = PBXGroup;
 			children = (
 				EDDF26D62160927500D7A3E3 /* XRCategory.h */,
+				ED9B04B3245AB8120039B91F /* NSString */,
+				ED88127A24260BF2002B6565 /* UINavigationBar */,
 				ED6F3CB222964A72001FD2C2 /* UIDevice */,
 				EDB75C00216526DE00FFA793 /* UIViewController */,
 				EDB75BF2216510AF00FFA793 /* UIApplication */,
@@ -582,6 +663,8 @@
 			children = (
 				EDE56D99215CD4E8009FD8D5 /* AppDelegate.h */,
 				EDE56D9A215CD4E8009FD8D5 /* AppDelegate.m */,
+				ED88127824260B2A002B6565 /* MXNavigationController.h */,
+				ED88127724260B2A002B6565 /* MXNavigationController.m */,
 				EDE56DA8215CD4EA009FD8D5 /* main.m */,
 				EDE56DA7215CD4EA009FD8D5 /* Info.plist */,
 				EDE56DC8215DBBCC009FD8D5 /* ImageRecognition-Prefix.pch */,
@@ -615,6 +698,7 @@
 		EDE56DB2215CD852009FD8D5 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				ED8812732426060B002B6565 /* Game */,
 				EDDF26F02160CB6700D7A3E3 /* Base */,
 				ED6F3CA8229648F2001FD2C2 /* MobileConfig */,
 				EDE56DC0215CF2FB009FD8D5 /* Recognition */,
@@ -870,33 +954,45 @@
 				EDB75B95216364CA00FFA793 /* XRCorrelationResultCell.m in Sources */,
 				EDB75BF12165108500FFA793 /* NSBundle+XLAppInfo.m in Sources */,
 				EDB75BDB2164973E00FFA793 /* MBProgressHUD+MJ.m in Sources */,
+				ED9B04A0245A9F3C0039B91F /* XRSectionModel.m in Sources */,
 				ED6F3CCA2297E62A001FD2C2 /* XRMobileconfigApi.m in Sources */,
 				EDB75BFC2165159500FFA793 /* XRRecognitionManager.m in Sources */,
 				ED6F3CB922964AE0001FD2C2 /* KeychainService.m in Sources */,
 				ED50959D21771A9100C16EC6 /* XRClassifyModel.m in Sources */,
 				EDE56D9B215CD4E8009FD8D5 /* AppDelegate.m in Sources */,
 				EDB75B8421630A5B00FFA793 /* XRBaiduYunApi.m in Sources */,
+				ED9B04AC245AB7010039B91F /* MVShandwApi.m in Sources */,
 				ED6F3CB1229649E3001FD2C2 /* XRSettingViewController.m in Sources */,
+				ED88127D24260BF3002B6565 /* UINavigationBar+FixSpace.m in Sources */,
 				EDDF26E42160AE9600D7A3E3 /* XRNetworkManager.m in Sources */,
+				ED9B04AF245AB7220039B91F /* MVGMExitFloat.m in Sources */,
 				ED6F3CC62296C4E1001FD2C2 /* MobileconfigModel.m in Sources */,
+				ED9B04A6245AB6380039B91F /* MVWebViewController.m in Sources */,
 				EDB75C03216526F200FFA793 /* UIViewController+Alert.m in Sources */,
 				ED6F3CB522964A79001FD2C2 /* UIDevice+Info.m in Sources */,
 				EDDF27012160CFBE00D7A3E3 /* UIColor+XRString.m in Sources */,
 				EDB75B8C216341AA00FFA793 /* XRIdentifyResultsModel.m in Sources */,
+				ED9B04A3245AA9780039B91F /* XRGameCell.m in Sources */,
 				EDE9FB892354A70300994E76 /* XRGADInterstitialApi.m in Sources */,
+				ED9B04B2245AB7970039B91F /* NSURL+Query.m in Sources */,
 				EDDF270921621A3600D7A3E3 /* AVCaptureManager.m in Sources */,
 				EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */,
 				EDB75B992163C43700FFA793 /* XRWebViewController.m in Sources */,
 				EDB75B8F2163459800FFA793 /* XRRecognitionListViewController.m in Sources */,
 				ED6F3CC02296C12A001FD2C2 /* MobileconfigListCell.m in Sources */,
 				EDDF26F32160CB8500D7A3E3 /* XRBaseTableViewCell.m in Sources */,
+				ED88127924260B2A002B6565 /* MXNavigationController.m in Sources */,
 				EDDF26FD2160CF2900D7A3E3 /* UILabel+XRInitialize.m in Sources */,
+				ED8812762426063F002B6565 /* XRGameViewController.m in Sources */,
 				EDE9FB882354A70300994E76 /* XRGADBannerApi.m in Sources */,
 				ED6F3CAB22964902001FD2C2 /* XRMobileConfigListController.m in Sources */,
 				EDB75BF82165132400FFA793 /* UIApplication+XRAppStore.m in Sources */,
+				ED9B04A9245AB6510039B91F /* MVGMWebViewController.m in Sources */,
+				ED88128024274EEB002B6565 /* XRSectionTitleView.m in Sources */,
 				ED6F3CD1229910F0001FD2C2 /* XRHelpViewController.m in Sources */,
 				EDB75B922163474400FFA793 /* XRBestResultCell.m in Sources */,
 				EDDF26DA216092C400D7A3E3 /* UITableView+XRRegister.m in Sources */,
+				ED9B04B6245AB81B0039B91F /* NSString+MD5.m in Sources */,
 				EDB75B7B216224B900FFA793 /* XRBaseView.m in Sources */,
 				EDDF2705216217D600D7A3E3 /* XRRecognitionViewController.m in Sources */,
 				ED8029D322A66715004D04EF /* ApplePayComponent.m in Sources */,

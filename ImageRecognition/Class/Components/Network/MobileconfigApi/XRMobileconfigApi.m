@@ -12,6 +12,7 @@
 static NSString * const MobileconfigListURL = @"http://sailip.com/mobileconfigList.json";
 static NSString * const InreviewconfigURL = @"http://sailip.com/inreviewconfig.json";
 static NSString * const HelpconfigURL = @"http://sailip.com/helpconfig.json";
+static NSString * const GameListURL = @"http://sailip.com/gameList.json";
 
 @implementation XRMobileconfigApi
 
@@ -25,6 +26,10 @@ static NSString * const HelpconfigURL = @"http://sailip.com/helpconfig.json";
 
 + (void)fetchHelpconfigSuccess:(SuccessBlock)success failure:(FailureBlock)failure {
     [XRNetworkManager.shared GET:HelpconfigURL parameters:@{} success:success failure:failure];
+}
+
++ (void)fetchGameListSuccess:(SuccessBlock)success failure:(FailureBlock)failure {
+    [XRNetworkManager.shared GET:GameListURL parameters:@{} success:success failure:failure];
 }
 
 @end

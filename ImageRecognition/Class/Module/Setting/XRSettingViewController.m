@@ -11,6 +11,7 @@
 #import "XRMobileConfigListController.h"
 #import "XRMobileconfigApi.h"
 #import "XRGADBannerApi.h"
+#import "XRGameViewController.h"
 
 @interface XRSettingViewController () <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
@@ -36,6 +37,7 @@
     
     [XRMobileconfigApi fetchInreviewConfigSuccess:^(id responseDict) {
         if (![responseDict[@"version"] containsObject:NSBundle.appVersionNumber]) {
+            [self.dataArray addObject:@[@"娱乐专区"]];
             [self.dataArray addObject:@[@"流氓软件删除破解专区"]];
             [self.tableView reloadData];
         }
@@ -111,6 +113,9 @@
             [alertView show];
             break;
         } case 4: {
+            [self showViewController:XRGameViewController.new sender:nil];
+            break;
+        } case 5: {
             [self showViewController:XRMobileConfigListController.new sender:nil];
             break;
         }
