@@ -16,5 +16,7 @@
 
 - (void)showInterstitialViewController:(UIViewController *)viewController completion:(void(^)(void))completion;
 
+- (void)removeAds;
+
 @end
 

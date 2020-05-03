@@ -36,7 +36,10 @@
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [XRMobileconfigApi fetchGameListSuccess:^(id responseDict) {
             self.dataArray = [NSArray yy_modelArrayWithClass:XRSectionModel.class json:responseDict[@"data"]].mutableCopy;
-            [self.collectionView reloadData];
+            [UIView performWithoutAnimation:^{
+                //刷新界面
+                [self.collectionView reloadData];
+            }];
             [self.collectionView.mj_header endRefreshing];
             
         } failure:^(NSInteger errorCode) {
@@ -46,7 +49,7 @@
     
     [self.collectionView.mj_header beginRefreshing];
     
-    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"去除广告" style:(UIBarButtonItemStylePlain) target:XRGADInterstitialApi.shared action:@selector(removeAds)];
 }
 
 #pragma mark - CollectionViewDelegate

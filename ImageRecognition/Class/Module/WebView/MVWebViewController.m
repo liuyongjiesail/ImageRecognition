@@ -248,7 +248,7 @@
 }
 
 - (NSInteger)delayTime {
-    return 1*60;
+    return 45;
 }
 
 - (XRGADBannerApi *)bannerApi {

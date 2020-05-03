@@ -28,9 +28,26 @@
     return manager;
 }
 
+- (void)removeAds {
+    [ApplePayComponent.sharedInstance purchase:@"com.sail.xrecognition.release.18" success:^{
+        
+        [MBProgressHUD showSuccess:@"您已成功移除强制性广告"];
+        [KeychainService setItem:@"YES" forKey:@"VIP"];
+        
+    } failure:^(NSString * _Nonnull error) {
+        [MBProgressHUD showError:error];
+    }];
+}
+
 - (void)showInterstitialViewController:(UIViewController *)viewController completion:(void(^)(void))completion {
     self.tempCompletion = completion;
     
+    if ([[KeychainService itemForKey:@"VIP"] isEqualToString:@"YES"]) {
+        if (completion) {
+            completion();
+        }
+        return;
+    }
     if (self.interstitial.isReady) {
         [self.interstitial presentFromRootViewController:viewController];
     } else {

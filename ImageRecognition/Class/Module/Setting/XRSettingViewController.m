@@ -28,7 +28,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"设置";
     
-    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"用户协议", @"关于"], @[@"打赏开发者"]].mutableCopy;
+    self.dataArray = @[@[@"分享给好友"], @[@"帮助与反馈", @"去评分"], @[@"用户协议", @"关于"], @[@"去除广告", @"打赏开发者"]].mutableCopy;
     
     [self.view addSubview:self.tableView];
     
@@ -108,9 +108,13 @@
             }
             break;
         } case 3: {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"期待您的打赏" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"3颗糖果(3元)", @"6颗糖果(6元)", @"12颗糖果(12元)", @"18颗糖果(18元)", @"25颗糖果(25元)", nil];
-            alertView.delegate = self;
-            [alertView show];
+            if (indexPath.row == 0) {
+                [XRGADInterstitialApi.shared removeAds];
+            } else {
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"期待您的打赏" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"3颗糖果(3元)", @"6颗糖果(6元)", @"12颗糖果(12元)", @"18颗糖果(18元)", @"25颗糖果(25元)", nil];
+                alertView.delegate = self;
+                [alertView show];
+            }
             break;
         } case 4: {
             [self showViewController:XRGameViewController.new sender:nil];

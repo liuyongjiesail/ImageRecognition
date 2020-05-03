@@ -87,7 +87,7 @@
 }
 
 - (NSInteger)delayTime {
-    return self.gameModel.delayTime == 0 ? 45 : self.gameModel.delayTime;
+    return self.gameModel.delayTime == 0 ? 30 : self.gameModel.delayTime;
 }
 
 @end
