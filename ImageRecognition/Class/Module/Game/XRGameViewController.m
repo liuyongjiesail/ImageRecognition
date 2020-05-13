@@ -49,7 +49,7 @@
     
     [self.collectionView.mj_header beginRefreshing];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"去除广告" style:(UIBarButtonItemStylePlain) target:XRGADInterstitialApi.shared action:@selector(removeAds)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"去除广告" style:(UIBarButtonItemStylePlain) target:XRGADRewardVideoApi.shared action:@selector(removeAds)];
 }
 
 #pragma mark - CollectionViewDelegate
@@ -99,14 +99,17 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    XRItemModel *model = self.dataArray[indexPath.section].items[indexPath.row];
-    if (model.type == MXItemTypeLinks) {
-        [MVWebViewController showWebURL:model.itemUrl];
-    } else if (model.type == MXItemTypeAds) {
-        [UIApplication.sharedApplication openURL:[NSURL URLWithString:model.itemUrl]];
-    } else {
-        [MVGMWebViewController showGM:model];
-    }
+    [XRGADRewardVideoApi.shared showCompletion:^{
+        XRItemModel *model = self.dataArray[indexPath.section].items[indexPath.row];
+        if (model.type == MXItemTypeLinks) {
+            [MVWebViewController showWebURL:model.itemUrl];
+        } else if (model.type == MXItemTypeAds) {
+            [UIApplication.sharedApplication openURL:[NSURL URLWithString:model.itemUrl]];
+        } else {
+            [MVGMWebViewController showGM:model];
+        }
+    }];
+    
 }
 
 - (UICollectionView *)collectionView {

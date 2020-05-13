@@ -15,7 +15,6 @@
 #import "XRSettingViewController.h"
 #import <Photos/Photos.h>
 #import "XRNetworkManager.h"
-#import "XRGADInterstitialApi.h"
 #import "XRMobileconfigApi.h"
 #import "XRGameViewController.h"
 #import "XRTextViewController.h"
@@ -60,7 +59,7 @@
     
     [XRMobileconfigApi fetchInreviewConfigSuccess:^(id responseDict) {
         if (![responseDict[@"version"] containsObject:NSBundle.appVersionNumber]) {
-            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" 娱乐" style:UIBarButtonItemStyleDone target:self action:@selector(gameAction)];
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"\t娱乐" style:UIBarButtonItemStyleDone target:self action:@selector(gameAction)];
             [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18.0f], NSForegroundColorAttributeName:UIColor.whiteColor} forState:UIControlStateNormal];
             [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:18.0f], NSForegroundColorAttributeName:[UIColor colorWithString:COLORDF55E6]} forState:UIControlStateHighlighted];
         }
@@ -113,10 +112,13 @@
         [MBProgressHUD hideHUD];
         self.recognitionView.reminderLabel.hidden = YES;
         self.recognitionView.sureButton.userInteractionEnabled = YES;
-        NSMutableArray<XRIdentifyResultsModel *> *dataArray = [NSArray yy_modelArrayWithClass:XRIdentifyResultsModel.class json:responseDict[@"result"]].mutableCopy;
         
+        NSMutableArray<XRIdentifyResultsModel *> *dataArray = [NSArray yy_modelArrayWithClass:XRIdentifyResultsModel.class json:responseDict[@"result"]].mutableCopy;
+                    
         if ([((NSDictionary *)responseDict).allKeys containsObject:@"words_result"]) {
-            [XRTextViewController showTextImage:image textArray:responseDict[@"words_result"]];
+            [XRGADRewardVideoApi.shared showCompletion:^{
+                [XRTextViewController showTextImage:image textArray:responseDict[@"words_result"]];
+            }];
             return;
         }
         
@@ -132,7 +134,9 @@
         XRRecognitionListViewController *listVC = [XRRecognitionListViewController new];
         listVC.title = [NSString stringWithFormat:@"%@ - AI 深度识别", self.recognitionView.imageClassifyString];
         listVC.dataArray = dataArray;
-        [[UIViewController currentViewController] showViewController:listVC sender:nil];
+        [XRGADRewardVideoApi.shared showCompletion:^{
+            [[UIViewController currentViewController] showViewController:listVC sender:nil];
+        }];
         
     } failure:^(NSInteger errorCode) {
         [MBProgressHUD hideHUD];

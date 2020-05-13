@@ -47,8 +47,6 @@
         make.top.equalTo(self.imageView.mas_bottom);
     }];
     
-    [XRGADInterstitialApi.shared showInterstitialViewController:self completion:nil];
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

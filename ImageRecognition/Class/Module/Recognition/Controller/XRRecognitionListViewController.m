@@ -38,8 +38,6 @@
         [UIApplication.sharedApplication commentApplicationToAppStore];
     }
     
-    [XRGADInterstitialApi.shared showInterstitialViewController:self completion:nil];
-    
 }
 
 - (void)shareAction {

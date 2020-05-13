@@ -109,7 +109,7 @@
             break;
         } case 3: {
             if (indexPath.row == 0) {
-                [XRGADInterstitialApi.shared removeAds];
+                [XRGADRewardVideoApi.shared removeAds];
             } else {
                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"期待您的打赏" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"3颗糖果(3元)", @"6颗糖果(6元)", @"12颗糖果(12元)", @"18颗糖果(18元)", @"25颗糖果(25元)", nil];
                 alertView.delegate = self;

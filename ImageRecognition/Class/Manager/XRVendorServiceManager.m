@@ -8,7 +8,6 @@
 
 #import "XRVendorServiceManager.h"
 #import <GoogleMobileAds/GoogleMobileAds.h>
-#import "XRGADInterstitialApi.h"
 
 @implementation XRVendorServiceManager
 
@@ -33,7 +32,7 @@
         /** Google Ad **/
         [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
         
-        [XRGADInterstitialApi.shared requestInterstitialSuccess:nil];
+        [XRGADRewardVideoApi.shared perloadAd];
         
     }
     return self;

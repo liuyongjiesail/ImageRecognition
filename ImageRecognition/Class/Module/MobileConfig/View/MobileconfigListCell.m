@@ -179,7 +179,7 @@
 
 - (void)buttonAction {
     if ([self.downloadButton.titleLabel.text isEqualToString:@"安装"]) {
-        [XRGADInterstitialApi.shared showInterstitialViewController:UIViewController.currentViewController completion:^{
+        [XRGADRewardVideoApi.shared showCompletion:^{
             [UIApplication.sharedApplication openURL:[NSURL URLWithString:self.model.downloadUrl]];
         }];
     } else {

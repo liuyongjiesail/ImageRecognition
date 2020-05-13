@@ -69,7 +69,7 @@
     if (appDelegate.allowRotation) {
         return;
     }
-    [XRGADInterstitialApi.shared showInterstitialViewController:UIViewController.currentContentViewController completion:^{
+    [XRGADRewardVideoApi.shared showCompletion:^{
         [self performSelector:@selector(showRewardAd) withObject:nil afterDelay:self.delayTime];
     }];
 }
@@ -114,7 +114,7 @@
 
 - (void)playNativeRewardVideoAd:(id)obj {
     
-    [XRGADInterstitialApi.shared showInterstitialViewController:UIViewController.currentContentViewController completion:^{
+    [XRGADRewardVideoApi.shared showCompletion:^{
         [self.webView evaluateJavaScript:@"nativeRewardVideoAdPlayComplete()" completionHandler:^(id _Nullable reponse, NSError * _Nullable error) {
             XRLog(@"%@",error);
         }];

@@ -30,7 +30,7 @@
 #import "KeychainService.h"
 
 #import "XRGADBannerApi.h"
-#import "XRGADInterstitialApi.h"
 #import "MVWebViewController.h"
+#import "XRGADRewardVideoApi.h"
 
 #endif /* ImageRecognition_Prefix_pch */

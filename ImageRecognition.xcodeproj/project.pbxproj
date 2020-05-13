@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		10989DFF1966A097230EB41B /* Pods_ImageRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31147586824DACC4ADE079E1 /* Pods_ImageRecognition.framework */; };
+		ED388894246BBC1700C7D448 /* XRGADRewardVideoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = ED388893246BBC1700C7D448 /* XRGADRewardVideoApi.m */; };
 		ED50959A21771A8300C16EC6 /* XRClassifySelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959921771A8300C16EC6 /* XRClassifySelectView.m */; };
 		ED50959D21771A9100C16EC6 /* XRClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ED50959C21771A9100C16EC6 /* XRClassifyModel.m */; };
 		ED6F3CAB22964902001FD2C2 /* XRMobileConfigListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6F3CA922964902001FD2C2 /* XRMobileConfigListController.m */; };
@@ -82,13 +83,14 @@
 		EDE56DA9215CD4EA009FD8D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE56DA8215CD4EA009FD8D5 /* main.m */; };
 		EDE56DBB215CDBEF009FD8D5 /* libTalkingData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE56DBA215CDBEE009FD8D5 /* libTalkingData.a */; };
 		EDE9FB882354A70300994E76 /* XRGADBannerApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FB842354A70300994E76 /* XRGADBannerApi.m */; };
-		EDE9FB892354A70300994E76 /* XRGADInterstitialApi.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FB852354A70300994E76 /* XRGADInterstitialApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		31147586824DACC4ADE079E1 /* Pods_ImageRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70BA1C708399CB34E47972F /* Pods-ImageRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageRecognition.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition.release.xcconfig"; sourceTree = "<group>"; };
 		DEED075A4ACF632C117A8499 /* Pods-ImageRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageRecognition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition.debug.xcconfig"; sourceTree = "<group>"; };
+		ED388892246BBC1700C7D448 /* XRGADRewardVideoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRGADRewardVideoApi.h; sourceTree = "<group>"; };
+		ED388893246BBC1700C7D448 /* XRGADRewardVideoApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XRGADRewardVideoApi.m; sourceTree = "<group>"; };
 		ED50959821771A8200C16EC6 /* XRClassifySelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRClassifySelectView.h; sourceTree = "<group>"; };
 		ED50959921771A8300C16EC6 /* XRClassifySelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRClassifySelectView.m; sourceTree = "<group>"; };
 		ED50959B21771A9000C16EC6 /* XRClassifyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRClassifyModel.h; sourceTree = "<group>"; };
@@ -228,8 +230,6 @@
 		EDE56DBC215CDD53009FD8D5 /* XRAppConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XRAppConst.h; sourceTree = "<group>"; };
 		EDE56DC8215DBBCC009FD8D5 /* ImageRecognition-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageRecognition-Prefix.pch"; sourceTree = "<group>"; };
 		EDE9FB842354A70300994E76 /* XRGADBannerApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRGADBannerApi.m; sourceTree = "<group>"; };
-		EDE9FB852354A70300994E76 /* XRGADInterstitialApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRGADInterstitialApi.m; sourceTree = "<group>"; };
-		EDE9FB862354A70300994E76 /* XRGADInterstitialApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRGADInterstitialApi.h; sourceTree = "<group>"; };
 		EDE9FB872354A70300994E76 /* XRGADBannerApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRGADBannerApi.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -775,8 +775,8 @@
 			children = (
 				EDE9FB872354A70300994E76 /* XRGADBannerApi.h */,
 				EDE9FB842354A70300994E76 /* XRGADBannerApi.m */,
-				EDE9FB862354A70300994E76 /* XRGADInterstitialApi.h */,
-				EDE9FB852354A70300994E76 /* XRGADInterstitialApi.m */,
+				ED388892246BBC1700C7D448 /* XRGADRewardVideoApi.h */,
+				ED388893246BBC1700C7D448 /* XRGADRewardVideoApi.m */,
 			);
 			path = GoogleAd;
 			sourceTree = "<group>";
@@ -907,41 +907,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMBase64/GTMBase64.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
-				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
-				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMBase64.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTRootNavigationController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageRecognition/Pods-ImageRecognition-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -978,9 +953,9 @@
 				EDDF27012160CFBE00D7A3E3 /* UIColor+XRString.m in Sources */,
 				EDB75B8C216341AA00FFA793 /* XRIdentifyResultsModel.m in Sources */,
 				ED9B04A3245AA9780039B91F /* XRGameCell.m in Sources */,
-				EDE9FB892354A70300994E76 /* XRGADInterstitialApi.m in Sources */,
 				ED9B04B2245AB7970039B91F /* NSURL+Query.m in Sources */,
 				EDDF270921621A3600D7A3E3 /* AVCaptureManager.m in Sources */,
+				ED388894246BBC1700C7D448 /* XRGADRewardVideoApi.m in Sources */,
 				EDB75C06216527D100FFA793 /* UIViewController+Find.m in Sources */,
 				EDDE670F245F10DE00027EB2 /* XRTextViewController.m in Sources */,
 				EDB75B992163C43700FFA793 /* XRWebViewController.m in Sources */,
@@ -1129,7 +1104,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 142;
+				CURRENT_PROJECT_VERSION = 1420;
 				DEVELOPMENT_TEAM = B9842T9339;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1150,7 +1125,7 @@
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Components/ApplePay/UPPayPlugin",
 				);
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 1.4.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -1190,7 +1165,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 142;
+				CURRENT_PROJECT_VERSION = 1420;
 				DEVELOPMENT_TEAM = B9842T9339;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1211,7 +1186,7 @@
 					"$(PROJECT_DIR)/ImageRecognition/Class/Vendor/TalkingData",
 					"$(PROJECT_DIR)/ImageRecognition/Class/Components/ApplePay/UPPayPlugin",
 				);
-				MARKETING_VERSION = 1.4.1;
+				MARKETING_VERSION = 1.4.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
